@@ -8378,7 +8378,7 @@
                 "description": "输入矢量图层。"
               },
               "near": {
-                "label": "近",
+                "label": "近邻",
                 "description": "邻近要素矢量图层。"
               },
               "max_distance": {
@@ -10336,7 +10336,7 @@
               },
               "dst_epsg": {
                 "label": "目标 EPSG",
-                "description": "目标 Epsg"
+                "description": "目标 EPSG"
               },
               "output": {
                 "label": "输出",
@@ -10344,7 +10344,7 @@
               },
               "use_3d_transform": {
                 "label": "使用 3D 变换",
-                "description": "使用 3d 变换"
+                "description": "使用 3D 变换"
               },
               "failure_policy": {
                 "label": "失败策略",
@@ -10368,7 +10368,7 @@
               },
               "prefer_official_operation": {
                 "label": "优先官方运算",
-                "description": "优先官方操作"
+                "description": "优先官方运算"
               },
               "epoch_policy": {
                 "label": "历元策略",
@@ -11686,7 +11686,7 @@
               },
               "zero_background": {
                 "label": "零背景",
-                "description": "背景为零"
+                "description": "零背景"
               },
               "output": {
                 "label": "输出",
@@ -11964,7 +11964,7 @@
               },
               "filter_size": {
                 "label": "滤镜大小",
-                "description": "滤波器大小"
+                "description": "滤镜大小"
               },
               "line_thin": {
                 "label": "线细化",
@@ -12022,7 +12022,7 @@
               },
               "all_vertices": {
                 "label": "全部顶点",
-                "description": "所有顶点"
+                "description": "全部顶点"
               },
               "esri_pntr": {
                 "label": "Esri 指针",
@@ -12047,11 +12047,11 @@
               },
               "use_feature_id": {
                 "label": "使用要素ID",
-                "description": "使用 Feature Id"
+                "description": "使用要素ID"
               },
               "zero_background": {
                 "label": "零背景",
-                "description": "背景为零"
+                "description": "零背景"
               },
               "output": {
                 "label": "输出",
@@ -12080,7 +12080,7 @@
               },
               "zero_background": {
                 "label": "零背景",
-                "description": "背景为零"
+                "description": "零背景"
               },
               "output": {
                 "label": "输出",
@@ -12143,7 +12143,7 @@
               },
               "zero_background": {
                 "label": "零背景",
-                "description": "背景为零"
+                "description": "零背景"
               },
               "output": {
                 "label": "输出",
@@ -12168,7 +12168,7 @@
               },
               "zero_background": {
                 "label": "零背景",
-                "description": "背景为零"
+                "description": "零背景"
               },
               "output": {
                 "label": "输出",
@@ -12193,7 +12193,7 @@
               },
               "zero_background": {
                 "label": "零背景",
-                "description": "背景为零"
+                "description": "零背景"
               },
               "output": {
                 "label": "输出",
@@ -12406,7 +12406,7 @@
               },
               "zero_background": {
                 "label": "零背景",
-                "description": "背景为零"
+                "description": "零背景"
               },
               "output": {
                 "label": "输出",
@@ -12431,7 +12431,7 @@
               },
               "zero_background": {
                 "label": "零背景",
-                "description": "背景为零"
+                "description": "零背景"
               },
               "output": {
                 "label": "输出",
@@ -12514,7 +12514,7 @@
               },
               "zero_background": {
                 "label": "零背景",
-                "description": "背景为零"
+                "description": "零背景"
               },
               "output": {
                 "label": "输出",
@@ -12539,7 +12539,7 @@
               },
               "zero_background": {
                 "label": "零背景",
-                "description": "背景为零"
+                "description": "零背景"
               },
               "output": {
                 "label": "输出",
@@ -12564,7 +12564,7 @@
               },
               "zero_background": {
                 "label": "零背景",
-                "description": "背景为零"
+                "description": "零背景"
               },
               "output": {
                 "label": "输出",
@@ -18832,6 +18832,7 @@
           },
           "add_surface_information": {
             "name": "添加地表信息",
+            "description": "从高程栅格为每个要素追加表面统计属性字段。",
             "params": {
               "input": {
                 "label": "输入",
@@ -18861,11 +18862,11 @@
                 "label": "波段",
                 "description": "要采样的基于 1 的表面波段（默认 1）。"
               }
-            },
-            "description": "从高程栅格为每个要素追加表面统计属性字段。"
+            }
           },
           "add_z_information": {
             "name": "添加 Z 信息",
+            "description": "为 3D 要素追加 Z 值、长度、面积、体积、坡度和顶点统计。",
             "params": {
               "input": {
                 "label": "输入",
@@ -18883,11 +18884,11 @@
                 "label": "噪声过滤",
                 "description": "在计算 min_z / max_z 前，从 Z 分布每端截除的百分比（0-50），避免单个尖峰顶点决定报告极值。默认 0。"
               }
-            },
-            "description": "为 3D 要素追加 Z 值、长度、面积、体积、坡度和顶点统计。"
+            }
           },
           "adjust_3d_z": {
             "name": "调整三维 Z 值",
+            "description": "对 3D 要素的 Z 坐标执行单位换算、偏移或缩放。",
             "params": {
               "input": {
                 "label": "输入",
@@ -18913,11 +18914,11 @@
                 "label": "到单位",
                 "description": "目标 Z 单位预设。需要 from_unit。Z 按（meters-per-from_unit / meters-per-to_unit）缩放。"
               }
-            },
-            "description": "对 3D 要素的 Z 坐标执行单位换算、偏移或缩放。"
+            }
           },
           "adjust_stream_to_raster": {
             "name": "河流与栅格对齐",
+            "description": "将河流折线顶点调整到 DEM 隐含的流向路径。",
             "params": {
               "input": {
                 "label": "输入",
@@ -18955,11 +18956,11 @@
                 "label": "输出拆分点",
                 "description": "指针追踪失败并使用最小成本回退的可选点。"
               }
-            },
-            "description": "将河流折线顶点调整到 DEM 隐含的流向路径。"
+            }
           },
           "aggregate_multidimensional_raster": {
             "name": "聚合多维栅格",
+            "description": "沿维度分箱聚合多维栅格并输出合成波段。",
             "params": {
               "input": {
                 "label": "输入",
@@ -19005,11 +19006,11 @@
                 "label": "忽略无数据",
                 "description": "按单元跳过无数据切片（默认 true）。为 false 时，一个无数据切片会使该单元整个分箱为无数据。"
               }
-            },
-            "description": "沿维度分箱聚合多维栅格并输出合成波段。"
+            }
           },
           "aggregate_points": {
             "name": "聚合点",
+            "description": "将彼此邻近的点聚合为带计数和汇总字段的聚类面。",
             "params": {
               "input": {
                 "label": "输入",
@@ -19035,11 +19036,11 @@
                 "label": "汇总字段",
                 "description": "按聚类求和的逗号分隔数值字段（输出列 'sum_<field>'）。"
               }
-            },
-            "description": "将彼此邻近的点聚合为带计数和汇总字段的聚类面。"
+            }
           },
           "aggregate_polygons": {
             "name": "聚合多边形",
+            "description": "合并邻近多边形并应用面积、孔洞和障碍约束。",
             "params": {
               "input": {
                 "label": "输入",
@@ -19065,11 +19066,11 @@
                 "label": "障碍",
                 "description": "聚合不可穿越的可选障碍矢量图层（线或多边形）；跨越障碍的桥会被切断。现有输入多边形不会被拆分。"
               }
-            },
-            "description": "合并邻近多边形并应用面积、孔洞和障碍约束。"
+            }
           },
           "align_features": {
             "name": "对齐要素",
+            "description": "在搜索距离内将源要素边对齐到可信目标图层。",
             "params": {
               "input": {
                 "label": "输入",
@@ -19095,11 +19096,11 @@
                 "label": "目标匹配字段",
                 "description": "与 match_field 比较的目标属性字段。省略时默认为 match_field 的名称；需要 match_field。"
               }
-            },
-            "description": "在搜索距离内将源要素边对齐到可信目标图层。"
+            }
           },
           "analyze_changes_ccdc": {
             "name": "CCDC 变化分析",
+            "description": "用 CCDC 回归和残差检测检测时序影像的连续变化。",
             "params": {
               "input": {
                 "label": "输入",
@@ -19153,11 +19154,11 @@
                 "label": "振幅输出",
                 "description": "初始分段第一谐波幅值 sqrt(a²+b²) 的可选栅格。"
               }
-            },
-            "description": "用 CCDC 回归和残差检测检测时序影像的连续变化。"
+            }
           },
           "apply_radiometric_calibration": {
             "name": "应用辐射定标",
+            "description": "将原始 SAR 数值校准为可比的后向散射系数。",
             "params": {
               "input": {
                 "label": "输入",
@@ -19195,11 +19196,11 @@
                 "label": "波段",
                 "description": "要校正的基于 1 的波段（默认 1）。"
               }
-            },
-            "description": "将原始 SAR 数值校准为可比的后向散射系数。"
+            }
           },
           "apportion_polygon": {
             "name": "按比例分配多边形",
+            "description": "按重叠面积把源多边形数值分摊到目标多边形。",
             "params": {
               "target": {
                 "label": "目标",
@@ -19229,11 +19230,11 @@
                 "label": "后缀",
                 "description": "分摊输出列的后缀。默认 '_app'。"
               }
-            },
-            "description": "按重叠面积把源多边形数值分摊到目标多边形。"
+            }
           },
           "areal_interpolation": {
             "name": "面积插值",
+            "description": "用平滑面插值在不同分区系统之间传递汇总值。",
             "params": {
               "input": {
                 "label": "输入",
@@ -19267,11 +19268,11 @@
                 "label": "保留总",
                 "description": "重标度计数预测，使目标总和匹配源总和（'count' 默认 true，'average' 始终关闭）。仅在目标覆盖源时应用；应用因子报告为 'mass_scale'，便于发现部分覆盖运行。"
               }
-            },
-            "description": "用平滑面插值在不同分区系统之间传递汇总值。"
+            }
           },
           "attribute_uncertainty": {
             "name": "属性不确定性",
+            "description": "用蒙特卡洛模拟传播属性误差并输出统计区间。",
             "params": {
               "input": {
                 "label": "输入",
@@ -19309,11 +19310,11 @@
                 "label": "输出",
                 "description": "追加了统计信息的输出矢量图层。省略时存储在内存中。"
               }
-            },
-            "description": "用蒙特卡洛模拟传播属性误差并输出统计区间。"
+            }
           },
           "band_collection_statistics": {
             "name": "波段集合统计",
+            "description": "计算栅格堆叠的波段统计、协方差和相关性。",
             "params": {
               "inputs": {
                 "label": "多个输入",
@@ -19327,11 +19328,11 @@
                 "label": "详情",
                 "description": "'detailed'（默认）包含协方差/相关矩阵；'brief' 仅返回逐波段统计。"
               }
-            },
-            "description": "计算栅格堆叠的波段统计、协方差和相关性。"
+            }
           },
           "bivariate_spatial_association": {
             "name": "双变量空间关联",
+            "description": "用 Lee's L 检验两个连续变量的空间共变关系。",
             "params": {
               "input": {
                 "label": "输入",
@@ -19361,11 +19362,11 @@
                 "label": "种子",
                 "description": "置换随机数生成器种子（默认 1），用于可复现结果。"
               }
-            },
-            "description": "用 Lee's L 检验两个连续变量的空间共变关系。"
+            }
           },
           "block_statistics": {
             "name": "块统计",
+            "description": "把栅格划分为非重叠块并对每块写回统计值。",
             "params": {
               "input": {
                 "label": "输入",
@@ -19403,11 +19404,11 @@
                 "label": "波段",
                 "description": "要读取的波段编号（从 1 开始，默认 1）。"
               }
-            },
-            "description": "把栅格划分为非重叠块并对每块写回统计值。"
+            }
           },
           "boundary_clean": {
             "name": "边界清理",
+            "description": "用多数滤波和边界清理去除分类栅格碎斑。",
             "params": {
               "input": {
                 "label": "输入",
@@ -19441,11 +19442,11 @@
                 "label": "波段",
                 "description": "要读取的波段编号（从 1 开始，默认 1）。"
               }
-            },
-            "description": "用多数滤波和边界清理去除分类栅格碎斑。"
+            }
           },
           "buffer_3d": {
             "name": "三维缓冲区",
+            "description": "将 3D 点和线缓冲为三角化的球体或胶囊体。",
             "params": {
               "input": {
                 "label": "输入",
@@ -19471,11 +19472,11 @@
                 "label": "质量",
                 "description": "细分分辨率：圆周分段数（默认 12，最小 4，最大 64）。"
               }
-            },
-            "description": "将 3D 点和线缓冲为三角化的球体或胶囊体。"
+            }
           },
           "buffer_vector": {
             "name": "矢量缓冲区",
+            "description": "按指定距离缓冲要素，可选端头、连接和融合方式。",
             "params": {
               "input": {
                 "label": "输入",
@@ -19509,11 +19510,11 @@
                 "label": "输出",
                 "description": "输出矢量路径。"
               }
-            },
-            "description": "按指定距离缓冲要素，可选端头、连接和融合方式。"
+            }
           },
           "build_balanced_zones": {
             "name": "构建均衡区域",
+            "description": "用 SKATER 生成数量、总量或同质性均衡的连通分区。",
             "params": {
               "input": {
                 "label": "输入",
@@ -19543,11 +19544,11 @@
                 "label": "容差",
                 "description": "两个边界段视为共享的最大距离（rook）。默认 1e-6。"
               }
-            },
-            "description": "用 SKATER 生成数量、总量或同质性均衡的连通分区。"
+            }
           },
           "build_seamlines": {
             "name": "构建接缝线",
+            "description": "为重叠影像计算最小可见接缝线多边形。",
             "params": {
               "inputs": {
                 "label": "多个输入",
@@ -19589,11 +19590,11 @@
                 "label": "混合类型",
                 "description": "'both'（默认）、'inside' 或 'outside'；作为属性写入。"
               }
-            },
-            "description": "为重叠影像计算最小可见接缝线多边形。"
+            }
           },
           "calculate_adjacent_fields": {
             "name": "计算相邻字段",
+            "description": "为图幅索引填写八个方向的邻接图幅字段。",
             "params": {
               "input": {
                 "label": "输入",
@@ -19615,11 +19616,11 @@
                 "label": "捕捉容差",
                 "description": "匹配边界前将顶点量化到该尺寸网格（CRS 单位）。默认 0（精确坐标）。"
               }
-            },
-            "description": "为图幅索引填写八个方向的邻接图幅字段。"
+            }
           },
           "calculate_central_meridian_and_parallels": {
             "name": "计算中央经线与纬线",
+            "description": "由每个要素范围计算中央经线和两条标准纬线。",
             "params": {
               "input": {
                 "label": "输入",
@@ -19637,11 +19638,11 @@
                 "label": "标准偏移",
                 "description": "用于从要素边缘内缩各标准纬线的纬度范围比例（默认 0.1667，Esri 的 1/6 规则）。必须在 [0, 0.5) 内。"
               }
-            },
-            "description": "由每个要素范围计算中央经线和两条标准纬线。"
+            }
           },
           "calculate_composite_index": {
             "name": "计算综合指数",
+            "description": "缩放、加权并合成多个数值属性为综合指数。",
             "params": {
               "input": {
                 "label": "输入",
@@ -19671,11 +19672,11 @@
                 "label": "输出范围",
                 "description": "重标度组合索引：'minmax'（0-1，默认）、'zero_to_100'、'zscore' 或 'none'。"
               }
-            },
-            "description": "缩放、加权并合成多个数值属性为综合指数。"
+            }
           },
           "calculate_distance_band": {
             "name": "计算距离带",
+            "description": "计算每个要素至少有 N 个邻域时的距离区间。",
             "params": {
               "input": {
                 "label": "输入",
@@ -19693,11 +19694,11 @@
                 "label": "输出",
                 "description": "feature_id,kth_neighbor_distance 表的可选 CSV 路径。"
               }
-            },
-            "description": "计算每个要素至少有 N 个邻域时的距离区间。"
+            }
           },
           "calculate_end_time": {
             "name": "计算结束时间",
+            "description": "按实体顺序从下一条记录起点填写结束时间。",
             "params": {
               "input": {
                 "label": "输入",
@@ -19727,11 +19728,11 @@
                 "label": "输出",
                 "description": "输出图层。省略时存储在内存中。"
               }
-            },
-            "description": "按实体顺序从下一条记录起点填写结束时间。"
+            }
           },
           "calculate_grid_convergence_angle": {
             "name": "计算网格收敛角",
+            "description": "计算格网北与真北之间的子午线收敛角。",
             "params": {
               "input": {
                 "label": "输入",
@@ -19753,11 +19754,11 @@
                 "label": "输出",
                 "description": "输出矢量路径（按扩展名选择驱动）。省略时存储在内存中。"
               }
-            },
-            "description": "计算格网北与真北之间的子午线收敛角。"
+            }
           },
           "calculate_missing_z_values": {
             "name": "计算缺失 Z 值",
+            "description": "用相邻有效 Z 值插值填补 3D 要素缺失高程。",
             "params": {
               "input": {
                 "label": "输入",
@@ -19779,11 +19780,11 @@
                 "label": "外推",
                 "description": "通过延伸最近有效顶点填充首尾空缺（默认 false；未填充顶点只计数）。"
               }
-            },
-            "description": "用相邻有效 Z 值插值填补 3D 要素缺失高程。"
+            }
           },
           "calculate_motion_statistics": {
             "name": "计算运动统计",
+            "description": "按轨迹计算速度、加速度、方位、距离和停留状态。",
             "params": {
               "input": {
                 "label": "输入",
@@ -19813,11 +19814,11 @@
                 "label": "空闲时长",
                 "description": "静止检测的回看窗口（秒）。默认 60。"
               }
-            },
-            "description": "按轨迹计算速度、加速度、方位、距离和停留状态。"
+            }
           },
           "calculate_polygon_main_angle": {
             "name": "计算多边形主角度",
+            "description": "把多边形主导方向写入角度字段。",
             "params": {
               "input": {
                 "label": "输入",
@@ -19835,11 +19836,11 @@
                 "label": "约定",
                 "description": "'arithmetic'（自东逆时针；默认）、'geographic'（自北顺时针）或 'graphic'（自东顺时针）。"
               }
-            },
-            "description": "把多边形主导方向写入角度字段。"
+            }
           },
           "calculate_rates": {
             "name": "计算变化率",
+            "description": "计算粗率和经验贝叶斯平滑后的比率。",
             "params": {
               "input": {
                 "label": "输入",
@@ -19869,11 +19870,11 @@
                 "label": "邻居数",
                 "description": "仅 eb_spatial：局部参考速率的最近邻数量（默认 8）。"
               }
-            },
-            "description": "计算粗率和经验贝叶斯平滑后的比率。"
+            }
           },
           "calculate_transformation_errors": {
             "name": "计算变换误差",
+            "description": "拟合变换链接并输出每条链接的残差和 RMSE。",
             "params": {
               "input": {
                 "label": "输入",
@@ -19891,11 +19892,11 @@
                 "label": "保留几何",
                 "description": "在输出中保留每个连接的几何（默认 true）。设为 false 可得到纯表。"
               }
-            },
-            "description": "拟合变换链接并输出每条链接的残差和 RMSE。"
+            }
           },
           "calculate_transit_service_frequency": {
             "name": "计算公交服务频率",
+            "description": "按服务日期和时间段统计 GTFS 公交服务频次。",
             "params": {
               "input": {
                 "label": "输入",
@@ -19925,11 +19926,11 @@
                 "label": "输出",
                 "description": "输出矢量路径（按扩展名选择驱动）。省略时存储在内存中。"
               }
-            },
-            "description": "按服务日期和时间段统计 GTFS 公交服务频次。"
+            }
           },
           "calculate_utm_zone": {
             "name": "计算 UTM 分带",
+            "description": "由要素经纬度计算最佳 UTM 分带和 EPSG 代码。",
             "params": {
               "input": {
                 "label": "输入",
@@ -19947,11 +19948,11 @@
                 "label": "输出",
                 "description": "输出矢量路径（按扩展名选择驱动）。省略时存储在内存中。"
               }
-            },
-            "description": "由要素经纬度计算最佳 UTM 分带和 EPSG 代码。"
+            }
           },
           "cartogram": {
             "name": "变形地图",
+            "description": "生成非连续或多林类型的统计制图多边形。",
             "params": {
               "input": {
                 "label": "输入",
@@ -19973,11 +19974,11 @@
                 "label": "迭代次数",
                 "description": "Dorling 重叠移除迭代次数（默认 100）。non_contiguous 会忽略此参数。"
               }
-            },
-            "description": "生成非连续或多林类型的统计制图多边形。"
+            }
           },
           "causal_inference_analysis": {
             "name": "因果推断分析",
+            "description": "用倾向得分匹配、加权或回归调整估计处理效应。",
             "params": {
               "input": {
                 "label": "输入",
@@ -20015,11 +20016,11 @@
                 "label": "种子",
                 "description": "用于确定性 bootstrap 置信区间的整数种子（默认 42）。"
               }
-            },
-            "description": "用倾向得分匹配、加权或回归调整估计处理效应。"
+            }
           },
           "cell_position_statistics": {
             "name": "像元位置统计",
+            "description": "在配准栅格堆叠中计算极值、众数和排名所在图层。",
             "params": {
               "inputs": {
                 "label": "多个输入",
@@ -20045,11 +20046,11 @@
                 "label": "处理作为多波段",
                 "description": "'single_band'（默认）：每个输入的每个波段都是单个堆栈的一层。'multi_band'：每个输入的第 i 个波段各自形成堆栈，得到多波段结果。"
               }
-            },
-            "description": "在配准栅格堆叠中计算极值、众数和排名所在图层。"
+            }
           },
           "cell_records_to_sectors": {
             "name": "像元记录转扇区",
+            "description": "由方位角、波束宽度和半径生成基站扇区几何。",
             "params": {
               "input": {
                 "label": "输入",
@@ -20091,11 +20092,11 @@
                 "label": "分段数",
                 "description": "用于近似每个扇形弧的直线段数量（≥ 1）。默认 16。"
               }
-            },
-            "description": "由方位角、波束宽度和半径生成基站扇区几何。"
+            }
           },
           "cell_statistics": {
             "name": "像元统计",
+            "description": "对配准栅格堆叠执行逐像元统计。",
             "params": {
               "inputs": {
                 "label": "多个输入",
@@ -20117,11 +20118,11 @@
                 "label": "百分位值",
                 "description": "统计量 'percentile' 的百分位，范围 [0, 100]（默认 50 = 中位数）。"
               }
-            },
-            "description": "对配准栅格堆叠执行逐像元统计。"
+            }
           },
           "central_feature": {
             "name": "中心要素",
+            "description": "计算中心要素或线要素的方向均值统计。",
             "params": {
               "input": {
                 "label": "输入",
@@ -20151,11 +20152,11 @@
                 "label": "仅方向",
                 "description": "对 linear_directional_mean 将线视为无向（方向 mod 180°）。默认 false。"
               }
-            },
-            "description": "计算中心要素或线要素的方向均值统计。"
+            }
           },
           "change_point_detection": {
             "name": "变点检测",
+            "description": "在时空立方体每个位置检测时序结构突变。",
             "params": {
               "input": {
                 "label": "输入",
@@ -20197,11 +20198,11 @@
                 "label": "分辨率",
                 "description": "H3 分辨率 0..15（默认 7）。"
               }
-            },
-            "description": "在时空立方体每个位置检测时序结构突变。"
+            }
           },
           "classification_accuracy_assessment": {
             "name": "分类精度评估",
+            "description": "用参考点评估分类结果的混淆矩阵、精度和 kappa。",
             "params": {
               "points": {
                 "label": "点",
@@ -20227,11 +20228,11 @@
                 "label": "输出",
                 "description": "标注 REF_CLASS、MAP_CLASS、CORRECT 的参考点输出矢量路径。若省略，则存储在内存中。"
               }
-            },
-            "description": "用参考点评估分类结果的混淆矩阵、精度和 kappa。"
+            }
           },
           "collapse_dual_lines_to_centerline": {
             "name": "双线合并为中心线",
+            "description": "把近似平行的双线路合并为一条中心线。",
             "params": {
               "input": {
                 "label": "输入",
@@ -20261,11 +20262,11 @@
                 "label": "最小重叠",
                 "description": "一条线必须与伙伴平行运行的最小比例，才能配对（0-1，默认 0.5）。"
               }
-            },
-            "description": "把近似平行的双线路合并为一条中心线。"
+            }
           },
           "collapse_hydro_polygon": {
             "name": "水系多边形合并",
+            "description": "按宽度阈值把窄水面收缩为中心线。",
             "params": {
               "input": {
                 "label": "输入",
@@ -20291,11 +20292,11 @@
                 "label": "保留",
                 "description": "宽（未收缩）河段的可选多边形输出图层。"
               }
-            },
-            "description": "按宽度阈值把窄水面收缩为中心线。"
+            }
           },
           "collapse_road_detail": {
             "name": "道路简化",
+            "description": "为小比例显示简化环形和偏移道路细节并保持连通。",
             "params": {
               "input": {
                 "label": "输入",
@@ -20317,11 +20318,11 @@
                 "label": "捕捉容差",
                 "description": "道路端点在该距离内即视为同一交叉口。默认 1e-6。"
               }
-            },
-            "description": "为小比例显示简化环形和偏移道路细节并保持连通。"
+            }
           },
           "collect_events": {
             "name": "收集事件",
+            "description": "把重合事件点折叠为带计数的唯一位置。",
             "params": {
               "input": {
                 "label": "输入",
@@ -20335,11 +20336,11 @@
                 "label": "容差",
                 "description": "地图单位中的捕捉容差；坐标四舍五入到同一格网的点视为重合（默认 1e-8，即实际上精确）。"
               }
-            },
-            "description": "把重合事件点折叠为带计数的唯一位置。"
+            }
           },
           "colocation_analysis": {
             "name": "协同定位分析",
+            "description": "用局部同位商检验两类点的邻域共位关系。",
             "params": {
               "input": {
                 "label": "输入",
@@ -20377,11 +20378,11 @@
                 "label": "种子",
                 "description": "置换随机数生成器种子（默认 1），用于可复现结果。"
               }
-            },
-            "description": "用局部同位商检验两类点的邻域共位关系。"
+            }
           },
           "color_polygons": {
             "name": "多边形着色",
+            "description": "为相邻多边形分配不重复的着色索引。",
             "params": {
               "input": {
                 "label": "输入",
@@ -20403,11 +20404,11 @@
                 "label": "捕捉容差",
                 "description": "匹配边界前用于捕捉顶点的格网尺寸（默认 0 = 精确）。"
               }
-            },
-            "description": "为相邻多边形分配不重复的着色索引。"
+            }
           },
           "combine": {
-            "name": "合并",
+            "name": "组合",
+            "description": "为多个分类栅格的唯一组合生成唯一分区 ID。",
             "params": {
               "inputs": {
                 "label": "多个输入",
@@ -20425,11 +20426,11 @@
                 "label": "波段",
                 "description": "从每个输入栅格读取的从 1 开始的波段。默认 1。"
               }
-            },
-            "description": "为多个分类栅格的唯一组合生成唯一分区 ID。"
+            }
           },
           "compare_spatial_weights": {
             "name": "比较空间权重",
+            "description": "用 Moran's I 比较候选空间权重构念。",
             "params": {
               "input": {
                 "label": "输入",
@@ -20459,11 +20460,11 @@
                 "label": "阈值距离",
                 "description": "地图单位中的距离带截断值。仅当方法包含 fixed_distance_band 时必填。"
               }
-            },
-            "description": "用 Moran's I 比较候选空间权重构念。"
+            }
           },
           "composite_bands": {
             "name": "波段合成",
+            "description": "按顺序把多个单波段栅格合成为多波段栅格。",
             "params": {
               "inputs": {
                 "label": "多个输入",
@@ -20485,11 +20486,11 @@
                 "label": "输出",
                 "description": "多波段输出栅格。若省略，则存储在内存中。"
               }
-            },
-            "description": "按顺序把多个单波段栅格合成为多波段栅格。"
+            }
           },
           "compute_accuracy_for_object_detection": {
             "name": "计算目标检测精度",
+            "description": "用 IoU 匹配评估目标检测精度和 mAP。",
             "params": {
               "detected": {
                 "label": "检测",
@@ -20519,11 +20520,11 @@
                 "label": "最小Iou",
                 "description": "检测结果计为匹配所需的最小交并比（默认 0.5）。"
               }
-            },
-            "description": "用 IoU 匹配评估目标检测精度和 mAP。"
+            }
           },
           "compute_sar_indices": {
             "name": "计算 SAR 指数",
+            "description": "由多极化 SAR 后向散射推导植被和结构指数。",
             "params": {
               "input": {
                 "label": "输入",
@@ -20545,11 +20546,11 @@
                 "label": "输入单位",
                 "description": "'linear'（默认）或 'db'。dB 输入会在比例运算前转换为线性功率，因为分贝的比值没有意义。"
               }
-            },
-            "description": "由多极化 SAR 后向散射推导植被和结构指数。"
+            }
           },
           "construct_sight_lines": {
             "name": "构建视线",
+            "description": "在观察点与目标要素之间构建视线并计算距离。",
             "params": {
               "observers": {
                 "label": "观察者",
@@ -20587,11 +20588,11 @@
                 "label": "距离方法",
                 "description": "DISTANCE 字段使用 '2d'（默认）或 '3d'。"
               }
-            },
-            "description": "在观察点与目标要素之间构建视线并计算距离。"
+            }
           },
           "contiguous_cartogram": {
             "name": "连续变形地图",
+            "description": "生成保持邻接关系的密度等值制图。",
             "params": {
               "input": {
                 "label": "输入",
@@ -20625,11 +20626,11 @@
                 "label": "输出",
                 "description": "位移后顶点及原属性的多边形输出图层。若省略，则存储在内存中。"
               }
-            },
-            "description": "生成保持邻接关系的密度等值制图。"
+            }
           },
           "contour_list": {
             "name": "等高线列表",
+            "description": "按显式值列表生成等值线或填充等值面。",
             "params": {
               "input": {
                 "label": "输入",
@@ -20659,11 +20660,11 @@
                 "label": "波段",
                 "description": "要生成等值线的从 1 开始的波段（默认 1）。"
               }
-            },
-            "description": "按显式值列表生成等值线或填充等值面。"
+            }
           },
           "contour_with_barriers": {
             "name": "带障碍等高线",
+            "description": "生成遇障碍终止的等值线。",
             "params": {
               "input": {
                 "label": "输入",
@@ -20693,11 +20694,11 @@
                 "label": "波段",
                 "description": "要读取的波段编号（从 1 开始，默认 1）。"
               }
-            },
-            "description": "生成遇障碍终止的等值线。"
+            }
           },
           "convert_coordinate_notation": {
             "name": "坐标格式转换",
+            "description": "在 DD、DMS、DDM、UTM 和 MGRS 坐标格式间转换。",
             "params": {
               "input": {
                 "label": "输入",
@@ -20731,11 +20732,11 @@
                 "label": "输出",
                 "description": "输出矢量路径（按扩展名选择驱动）。省略时存储在内存中。"
               }
-            },
-            "description": "在 DD、DMS、DDM、UTM 和 MGRS 坐标格式间转换。"
+            }
           },
           "convert_sar_units": {
             "name": "SAR 单位转换",
+            "description": "在 SAR 振幅、强度、功率、分贝和形变表示间转换。",
             "params": {
               "input": {
                 "label": "输入",
@@ -20757,11 +20758,11 @@
                 "label": "波段",
                 "description": "要读取的从 1 开始的波段（默认 1）。'complex_to_intensity' 忽略此参数，始终将波段 1 和 2 读作 I 与 Q。"
               }
-            },
-            "description": "在 SAR 振幅、强度、功率、分贝和形变表示间转换。"
+            }
           },
           "coregister_rasters": {
             "name": "栅格配准",
+            "description": "用互相关和最小二乘变换自动配准栅格。",
             "params": {
               "reference": {
                 "label": "参考",
@@ -20811,11 +20812,11 @@
                 "label": "重采样",
                 "description": "重采样方法：'bilinear'（默认）或 'nearest'。"
               }
-            },
-            "description": "用互相关和最小二乘变换自动配准栅格。"
+            }
           },
           "corridor": {
             "name": "廊道",
+            "description": "由两个成本距离面生成最小成本廊道。",
             "params": {
               "cost1": {
                 "label": "成本 1",
@@ -20853,11 +20854,11 @@
                 "label": "波段",
                 "description": "从输入栅格读取的从 1 开始的波段。默认 1。"
               }
-            },
-            "description": "由两个成本距离面生成最小成本廊道。"
+            }
           },
           "cost_back_link": {
             "name": "成本回溯链接",
+            "description": "输出返回最近源点的成本回溯方向和累积成本。",
             "params": {
               "source": {
                 "label": "数据源",
@@ -20883,11 +20884,11 @@
                 "label": "最大距离",
                 "description": "可选累积截断值：成本高于该值的像元保持不可达。"
               }
-            },
-            "description": "输出返回最近源点的成本回溯方向和累积成本。"
+            }
           },
           "cost_connectivity": {
             "name": "成本连通性",
+            "description": "构建连接多个区域的最小成本网络。",
             "params": {
               "sources": {
                 "label": "数据源",
@@ -20913,11 +20914,11 @@
                 "label": "波段",
                 "description": "成本栅格的从 1 开始的波段（默认 1）。"
               }
-            },
-            "description": "构建连接多个区域的最小成本网络。"
+            }
           },
           "count_overlapping_features": {
             "name": "重叠要素计数",
+            "description": "把重叠多边形展开为带覆盖计数的互不重叠区域。",
             "params": {
               "input": {
                 "label": "输入",
@@ -20939,11 +20940,11 @@
                 "label": "报告ID",
                 "description": "region_id,feature_id 连接表的可选 CSV 路径（每个覆盖要素一行）。"
               }
-            },
-            "description": "把重叠多边形展开为带覆盖计数的互不重叠区域。"
+            }
           },
           "create_accuracy_assessment_points": {
             "name": "创建精度评估点",
+            "description": "按分类层分层生成待标注的精度评估点。",
             "params": {
               "input": {
                 "label": "输入",
@@ -20977,11 +20978,11 @@
                 "label": "输出",
                 "description": "点输出图层，带 CLASSVALUE（地图类别）、GrndTruth（采集前为 -1）和 Stratum。若省略，则存储在内存中。"
               }
-            },
-            "description": "按分类层分层生成待标注的精度评估点。"
+            }
           },
           "create_cartographic_partitions": {
             "name": "创建制图分区",
+            "description": "生成自适应、互不重叠的制图处理分区。",
             "params": {
               "input": {
                 "label": "输入",
@@ -20995,11 +20996,11 @@
                 "label": "输出",
                 "description": "分区的多边形矢量输出（驱动由扩展名决定）。若省略，则存储在内存中。"
               }
-            },
-            "description": "生成自适应、互不重叠的制图处理分区。"
+            }
           },
           "create_overpass": {
             "name": "创建天桥",
+            "description": "在上下相交线路处生成上跨遮蔽掩膜。",
             "params": {
               "above": {
                 "label": "上方",
@@ -21029,11 +21030,11 @@
                 "label": "翼类型",
                 "description": "装饰样式：'none'、'perpendicular'（默认；在每个掩膜端部画一根横向刻线）或 'parallel'（沿两侧的轮廓线）。"
               }
-            },
-            "description": "在上下相交线路处生成上跨遮蔽掩膜。"
+            }
           },
           "create_routes": {
             "name": "创建路径",
+            "description": "按路径标识和测量字段构建线性参考路径。",
             "params": {
               "input": {
                 "label": "输入",
@@ -21075,11 +21076,11 @@
                 "label": "捕捉容差",
                 "description": "拼接段时，位于该距离内的端点视为重合（CRS 单位）。默认 1e-6。"
               }
-            },
-            "description": "按路径标识和测量字段构建线性参考路径。"
+            }
           },
           "create_spatial_sampling_locations": {
             "name": "创建空间采样点",
+            "description": "生成简单随机、分层、系统或聚类采样点。",
             "params": {
               "input": {
                 "label": "输入",
@@ -21129,11 +21130,11 @@
                 "label": "种子",
                 "description": "确定性随机数生成器种子（默认 1）。"
               }
-            },
-            "description": "生成简单随机、分层、系统或聚类采样点。"
+            }
           },
           "create_spatially_balanced_points": {
             "name": "创建空间均衡点",
+            "description": "在约束多边形内生成空间均衡的准随机样本点。",
             "params": {
               "constraint": {
                 "label": "约束",
@@ -21155,11 +21156,11 @@
                 "label": "种子",
                 "description": "用于可重复采样的随机种子（默认 1）。"
               }
-            },
-            "description": "在约束多边形内生成空间均衡的准随机样本点。"
+            }
           },
           "create_underpass": {
             "name": "创建地下通道",
+            "description": "生成立交下穿遮蔽并裁剪下层线要素。",
             "params": {
               "above": {
                 "label": "上方",
@@ -21189,11 +21190,11 @@
                 "label": "最小角度",
                 "description": "跳过两线交角小于该角度（度）的交叉，因为近似平行的掩膜不稳定。默认 15。"
               }
-            },
-            "description": "生成立交下穿遮蔽并裁剪下层线要素。"
+            }
           },
           "cul_de_sac_masks": {
             "name": "死胡同掩膜",
+            "description": "在道路尽头环路处生成比例感知的遮蔽面。",
             "params": {
               "input": {
                 "label": "输入",
@@ -21231,11 +21232,11 @@
                 "label": "属性",
                 "description": "ids_only（默认）| all，决定是否将源要素属性带到掩膜上。"
               }
-            },
-            "description": "在道路尽头环路处生成比例感知的遮蔽面。"
+            }
           },
           "cut_fill": {
             "name": "填挖",
+            "description": "计算两个 DEM 或基准面之间的挖方、填方和净体积。",
             "params": {
               "input": {
                 "label": "输入",
@@ -21269,11 +21270,11 @@
                 "label": "CSV输出",
                 "description": "逐区域体积表的可选 CSV 路径（region_id、type、cell_count、volume）。"
               }
-            },
-            "description": "计算两个 DEM 或基准面之间的挖方、填方和净体积。"
+            }
           },
           "darcy_flow": {
             "name": "达西流",
+            "description": "由水头、导水系数和孔隙度计算地下水流速场。",
             "params": {
               "input": {
                 "label": "输入",
@@ -21315,11 +21316,11 @@
                 "label": "最大步数",
                 "description": "每个粒子的最大积分步数（默认 1000）。"
               }
-            },
-            "description": "由水头、导水系数和孔隙度计算地下水流速场。"
+            }
           },
           "delineate_built_up_areas": {
             "name": "提取建成区",
+            "description": "把密集建筑轮廓概括为建成区或城市范围面。",
             "params": {
               "input": {
                 "label": "输入",
@@ -21345,11 +21346,11 @@
                 "label": "简化容差",
                 "description": "应用于建成区边界的 Douglas–Peucker 容差（CRS 单位），用于稀化顶点密集的圆角缓冲区。默认 0（不简化）。"
               }
-            },
-            "description": "把密集建筑轮廓概括为建成区或城市范围面。"
+            }
           },
           "delineate_depressions": {
             "name": "提取洼地",
+            "description": "用水平集方法从 DEM 提取嵌套洼地。",
             "params": {
               "input": {
                 "label": "输入",
@@ -21383,11 +21384,11 @@
                 "label": "间隔",
                 "description": "level-set 方法的切片间隔（默认 0.3）。"
               }
-            },
-            "description": "用水平集方法从 DEM 提取嵌套洼地。"
+            }
           },
           "delineate_mounts": {
             "name": "提取山体",
+            "description": "从 DEM 中提取嵌套隆起地形层级。",
             "params": {
               "input": {
                 "label": "输入",
@@ -21425,11 +21426,11 @@
                 "label": "增量",
                 "description": "翻转 DEM 时添加的基准值（默认 100）。"
               }
-            },
-            "description": "从 DEM 中提取嵌套隆起地形层级。"
+            }
           },
           "dem_filter": {
             "name": "DEM 滤波",
+            "description": "用均值、中值或高斯滤波平滑 DEM。",
             "params": {
               "input": {
                 "label": "输入",
@@ -21455,11 +21456,11 @@
                 "label": "波段",
                 "description": "要滤波的从 1 开始的波段（默认 1）。"
               }
-            },
-            "description": "用均值、中值或高斯滤波平滑 DEM。"
+            }
           },
           "dendrogram": {
             "name": "树状图",
+            "description": "构建类别签名层级树以评估类别可分性。",
             "params": {
               "input": {
                 "label": "输入",
@@ -21489,11 +21490,11 @@
                 "label": "输出文本",
                 "description": "纯文本缩进树渲染的可选路径。"
               }
-            },
-            "description": "构建类别签名层级树以评估类别可分性。"
+            }
           },
           "densify_sampling_network": {
             "name": "加密采样网络",
+            "description": "在预测误差最高处补充采样点并保持最小间距。",
             "params": {
               "prediction_error": {
                 "label": "预测误差",
@@ -21519,11 +21520,11 @@
                 "label": "波段",
                 "description": "要读取的预测误差栅格波段，从 1 开始编号（默认 1）。"
               }
-            },
-            "description": "在预测误差最高处补充采样点并保持最小间距。"
+            }
           },
           "detect_bright_ocean_objects": {
             "name": "检测明亮海面目标",
+            "description": "用 CFAR 检测 SAR 海面亮目标并输出外接框。",
             "params": {
               "input": {
                 "label": "输入",
@@ -21585,11 +21586,11 @@
                 "label": "波段",
                 "description": "要搜索的波段，从 1 开始编号（默认 1）。"
               }
-            },
-            "description": "用 CFAR 检测 SAR 海面亮目标并输出外接框。"
+            }
           },
           "detect_dark_ocean_areas": {
             "name": "检测暗色海面区域",
+            "description": "检测 SAR 海面异常暗斑并输出分贝对比度。",
             "params": {
               "input": {
                 "label": "输入",
@@ -21639,11 +21640,11 @@
                 "label": "波段",
                 "description": "要搜索的波段，从 1 开始编号（默认 1）。"
               }
-            },
-            "description": "检测 SAR 海面异常暗斑并输出分贝对比度。"
+            }
           },
           "detect_feature_changes": {
             "name": "检测要素变化",
+            "description": "匹配两版线数据并分类空间和属性变化。",
             "params": {
               "update": {
                 "label": "更新",
@@ -21669,11 +21670,11 @@
                 "label": "比较字段",
                 "description": "两个图层中均存在、用于比较属性变化的逗号分隔字段。"
               }
-            },
-            "description": "匹配两版线数据并分类空间和属性变化。"
+            }
           },
           "detect_graphic_conflict": {
             "name": "检测图形冲突",
+            "description": "检测符号化要素之间的重叠或拥挤冲突面。",
             "params": {
               "input": {
                 "label": "输入",
@@ -21703,11 +21704,11 @@
                 "label": "输出",
                 "description": "输出多边形矢量路径，包含 'input_fid'、'conflict_fid' 和 'overlap_area' 字段。省略时存储在内存中。"
               }
-            },
-            "description": "检测符号化要素之间的重叠或拥挤冲突面。"
+            }
           },
           "detect_image_anomalies": {
             "name": "影像异常检测",
+            "description": "用 Mahalanobis 距离和 RX 检测影像异常像元。",
             "params": {
               "input": {
                 "label": "输入",
@@ -21733,11 +21734,11 @@
                 "label": "掩膜输出",
                 "description": "二值异常遮罩的输出路径（需要 'threshold'）。设置阈值但省略路径时存储在内存中。"
               }
-            },
-            "description": "用 Mahalanobis 距离和 RX 检测影像异常像元。"
+            }
           },
           "detect_incidents": {
             "name": "检测事件",
+            "description": "沿轨迹检测条件开始和结束形成的事件段。",
             "params": {
               "input": {
                 "label": "输入",
@@ -21767,11 +21768,11 @@
                 "label": "输出",
                 "description": "输出矢量路径（按扩展名选择驱动）。省略时存储在内存中。"
               }
-            },
-            "description": "沿轨迹检测条件开始和结束形成的事件段。"
+            }
           },
           "dice": {
             "name": "Dice 系数",
+            "description": "把超大要素切分为低于顶点限制的小块。",
             "params": {
               "input": {
                 "label": "输入",
@@ -21785,18 +21786,18 @@
                 "label": "顶点限制",
                 "description": "每个输出要素的最大顶点数（默认 10000）。等于或低于该值的要素直接保留。"
               }
-            },
-            "description": "把超大要素切分为低于顶点限制的小块。"
+            }
           },
           "difference_3d": {
             "name": "三维差值",
+            "description": "计算 3D 体相减后的剩余和挖除体积。",
             "params": {
               "input": {
                 "label": "输入",
                 "description": "作为被减数的闭合三维实体（带 Z 的三角网格 MultiPolygons）。"
               },
               "subtract": {
-                "label": "相减",
+                "label": "减",
                 "description": "要从每个被减数中移除的作为减数的闭合三维实体。"
               },
               "output": {
@@ -21811,11 +21812,11 @@
                 "label": "保留几何",
                 "description": "将每个被减数的原始几何保留到其输出行（默认 false：仅属性表）。该几何是未切割的被减数，不生成精确合并网格。"
               }
-            },
-            "description": "计算 3D 体相减后的剩余和挖除体积。"
+            }
           },
           "diffusion_interpolation_with_barriers": {
             "name": "带障碍扩散插值",
+            "description": "用绕过障碍的热扩散方程进行点插值。",
             "params": {
               "input": {
                 "label": "输入",
@@ -21853,11 +21854,11 @@
                 "label": "EPSG",
                 "description": "覆盖输入 CRS 的 EPSG 代码（例如图层未标注时）。4326 会触发局部米制投影。"
               }
-            },
-            "description": "用绕过障碍的热扩散方程进行点插值。"
+            }
           },
           "dimension_reduction": {
             "name": "降维",
+            "description": "对要素属性执行主成分分析并写回成分得分。",
             "params": {
               "input": {
                 "label": "输入",
@@ -21887,11 +21888,11 @@
                 "label": "标准化",
                 "description": "PCA 前标准化每个字段（z-score），使尺度可比，即分析相关矩阵。默认 true；false 分析协方差矩阵。"
               }
-            },
-            "description": "对要素属性执行主成分分析并写回成分得分。"
+            }
           },
           "dimensional_moving_statistics": {
             "name": "维度移动统计",
+            "description": "沿多维栅格维度执行移动均值或中值。",
             "params": {
               "input": {
                 "label": "输入",
@@ -21933,11 +21934,11 @@
                 "label": "无数据处理",
                 "description": "'data'（默认；跳过 no-data 并由其余像元计算）、'nodata'（窗口内任一 no-data 使输出为 no-data）或 'fill_nodata'（中心切片本身为 no-data 时也写入值）。"
               }
-            },
-            "description": "沿多维栅格维度执行移动均值或中值。"
+            }
           },
           "directional_distribution": {
             "name": "方向分布",
+            "description": "计算均值中心、标准距离和标准差椭圆。",
             "params": {
               "input": {
                 "label": "输入",
@@ -21963,11 +21964,11 @@
                 "label": "N标准差",
                 "description": "标准距离圆和偏差椭圆的标准差倍数（1、2 或 3）。默认 1。"
               }
-            },
-            "description": "计算均值中心、标准距离和标准差椭圆。"
+            }
           },
           "directional_trend": {
             "name": "方向趋势",
+            "description": "沿指定方位拟合样点趋势多项式。",
             "params": {
               "input": {
                 "label": "输入",
@@ -21989,11 +21990,11 @@
                 "label": "输出",
                 "description": "可选输出矢量路径（驱动由扩展名确定）。省略时存储在内存中。点携带 proj_dist、value、fitted 和 residual。"
               }
-            },
-            "description": "沿指定方位拟合样点趋势多项式。"
+            }
           },
           "directional_variogram": {
             "name": "方向半变异函数分析",
+            "description": "计算多方向变异函数以识别各向异性。",
             "params": {
               "input": {
                 "label": "输入",
@@ -22027,11 +22028,11 @@
                 "label": "输出 HTML",
                 "description": "HTML 玫瑰图可视化的可选输出路径"
               }
-            },
-            "description": "计算多方向变异函数以识别各向异性。"
+            }
           },
           "disperse_markers": {
             "name": "标记散布",
+            "description": "按最小间距分散重叠点符号并保持可见性。",
             "params": {
               "input": {
                 "label": "输入",
@@ -22053,11 +22054,11 @@
                 "label": "种子",
                 "description": "成员初始完全重合时用于确定性平局处理的整数种子（默认 0）。"
               }
-            },
-            "description": "按最小间距分散重叠点符号并保持可见性。"
+            }
           },
           "dissolve_route_events": {
             "name": "融合路径事件",
+            "description": "合并同一路径上相接或重叠的线性参考事件。",
             "params": {
               "input": {
                 "label": "输入",
@@ -22095,11 +22096,11 @@
                 "label": "分隔符",
                 "description": "'concatenate' 模式中连接值所用的分隔符（默认 ', '）。"
               }
-            },
-            "description": "合并同一路径上相接或重叠的线性参考事件。"
+            }
           },
           "edgematch_features": {
             "name": "边缘匹配要素",
+            "description": "跨图幅边界匹配悬挂端点并协调线数据。",
             "params": {
               "input": {
                 "label": "输入",
@@ -22125,11 +22126,11 @@
                 "label": "链接",
                 "description": "可选匹配链接输出线图层（用于 QA）。"
               }
-            },
-            "description": "跨图幅边界匹配悬挂端点并协调线数据。"
+            }
           },
           "eighty_twenty_analysis": {
             "name": "二八分析",
+            "description": "计算事件点的 Pareto 集中度、排名和累积占比。",
             "params": {
               "input": {
                 "label": "输入",
@@ -22151,11 +22152,11 @@
                 "label": "阈值",
                 "description": "定义 Pareto 'head'（头部）的集中度阈值百分比（默认 80）。"
               }
-            },
-            "description": "计算事件点的 Pareto 集中度、排名和累积占比。"
+            }
           },
           "eliminate_polygon_part": {
             "name": "消除多边形部件",
+            "description": "按面积阈值删除多边形孔洞或小外部件。",
             "params": {
               "input": {
                 "label": "输入",
@@ -22181,11 +22182,11 @@
                 "label": "部分选项",
                 "description": "可移除对象：'CONTAINED_ONLY'（默认）仅移除内部环（洞）；'ANY' 还会移除小外部部件，但保留最大的单一部件。"
               }
-            },
-            "description": "按面积阈值删除多边形孔洞或小外部件。"
+            }
           },
           "eliminate_polygons": {
             "name": "消除小多边形",
+            "description": "把碎屑多边形合并到邻接多边形。",
             "params": {
               "input": {
                 "label": "输入",
@@ -22215,11 +22216,11 @@
                 "label": "容差",
                 "description": "两条边界线段视为共享边的最大垂直距离（CRS 单位）。默认 1e-6。"
               }
-            },
-            "description": "把碎屑多边形合并到邻接多边形。"
+            }
           },
           "emerging_hot_spot_analysis": {
             "name": "新兴热点分析",
+            "description": "在时空立方体上分类新兴、增强或衰减热点。",
             "params": {
               "input": {
                 "label": "输入",
@@ -22253,11 +22254,11 @@
                 "label": "时间窗口",
                 "description": "时间邻域半径，以时间步计（默认 1）。"
               }
-            },
-            "description": "在时空立方体上分类新兴、增强或衰减热点。"
+            }
           },
           "empirical_bayesian_kriging": {
             "name": "经验贝叶斯克里金",
+            "description": "用多个局部半变异函数模拟融合经验贝叶斯克里金。",
             "params": {
               "input": {
                 "label": "输入",
@@ -22303,11 +22304,11 @@
                 "label": "种子",
                 "description": "确定性半变异函数模拟 RNG 的种子（默认 42）。"
               }
-            },
-            "description": "用多个局部半变异函数模拟融合经验贝叶斯克里金。"
+            }
           },
           "enclose_multipatch": {
             "name": "封闭多面体",
+            "description": "封堵开放三角网边界形成封闭 3D 体。",
             "params": {
               "input": {
                 "label": "输入",
@@ -22321,11 +22322,11 @@
                 "label": "丢弃失败",
                 "description": "省略无法做成水密的要素（默认 false：这些要素会以 CAP_FAILED = true 输出，使失败可见而非静默）。"
               }
-            },
-            "description": "封堵开放三角网边界形成封闭 3D 体。"
+            }
           },
           "enforce_river_monotonicity": {
             "name": "强制河流单调性",
+            "description": "沿河流路径修改 DEM 保证下游高程单调下降。",
             "params": {
               "input": {
                 "label": "输入",
@@ -22351,11 +22352,11 @@
                 "label": "波段",
                 "description": "待校正 DEM 波段，从 1 开始编号（默认 1）。"
               }
-            },
-            "description": "沿河流路径修改 DEM 保证下游高程单调下降。"
+            }
           },
           "estimate_time_to_event": {
             "name": "估算事件发生时间",
+            "description": "用 Kaplan-Meier 曲线估计事件时间和中位生存时间。",
             "params": {
               "input": {
                 "label": "输入",
@@ -22377,11 +22378,11 @@
                 "label": "输出",
                 "description": "附加 km_survival、km_median 和 km_stratum 字段的输出图层。省略时存储在内存中。"
               }
-            },
-            "description": "用 Kaplan-Meier 曲线估计事件时间和中位生存时间。"
+            }
           },
           "estimate_variogram": {
             "name": "估计半变异函数",
+            "description": "由点观测计算经验半变异函数。",
             "params": {
               "input": {
                 "label": "输入",
@@ -22403,11 +22404,11 @@
                 "label": "最大滞后数量",
                 "description": "保留的最大滞后数（默认：20）"
               }
-            },
-            "description": "由点观测计算经验半变异函数。"
+            }
           },
           "euclidean_direction": {
             "name": "欧氏方向",
+            "description": "计算每个像元指向最近源点的方位角。",
             "params": {
               "input": {
                 "label": "输入",
@@ -22437,11 +22438,11 @@
                 "label": "波段",
                 "description": "要读取的源栅格波段，从 1 开始编号（默认 1）。"
               }
-            },
-            "description": "计算每个像元指向最近源点的方位角。"
+            }
           },
           "evaluate_bin_sizes": {
             "name": "评估分箱大小",
+            "description": "评估候选聚合单元并输出结构诊断。",
             "params": {
               "input": {
                 "label": "输入",
@@ -22467,11 +22468,11 @@
                 "label": "分析字段",
                 "description": "可选数值字段；按分箱汇总该字段而不是计数点。"
               }
-            },
-            "description": "评估候选聚合单元并输出结构诊断。"
+            }
           },
           "evaluate_variable_influence": {
             "name": "评估变量影响",
+            "description": "输出森林模型的变量重要性和部分依赖曲线。",
             "params": {
               "input": {
                 "label": "输入",
@@ -22517,11 +22518,11 @@
                 "label": "置换重复次数",
                 "description": "每个变量平均的不同置换数（默认 3）。越多越稳定但越慢。"
               }
-            },
-            "description": "输出森林模型的变量重要性和部分依赖曲线。"
+            }
           },
           "excel_to_table": {
             "name": "Excel 转表格",
+            "description": "读取 Excel 工作表为属性表并推断列类型。",
             "params": {
               "input": {
                 "label": "输入",
@@ -22543,11 +22544,11 @@
                 "label": "字段名称行",
                 "description": "所选范围内保存列名的行，从 1 开始编号（默认 1）。其上各行跳过；0 表示无表头行（自动生成 Field1、Field2、...）。"
               }
-            },
-            "description": "读取 Excel 工作表为属性表并推断列类型。"
+            }
           },
           "expand_shrink": {
             "name": "扩展/收缩",
+            "description": "按像元数扩展或收缩指定分类类别。",
             "params": {
               "input": {
                 "label": "输入",
@@ -22573,11 +22574,11 @@
                 "label": "波段",
                 "description": "要读取的波段编号（从 1 开始，默认 1）。"
               }
-            },
-            "description": "按像元数扩展或收缩指定分类类别。"
+            }
           },
           "exploratory_interpolation": {
             "name": "探索性插值",
+            "description": "交叉验证多种插值方法并按误差排序。",
             "params": {
               "input": {
                 "label": "输入",
@@ -22611,11 +22612,11 @@
                 "label": "像元大小",
                 "description": "优胜栅格像元大小，单位为 CRS 单位（地理 CRS 为度）。默认：较长轴约跨 256 个像元。"
               }
-            },
-            "description": "交叉验证多种插值方法并按误差排序。"
+            }
           },
           "exploratory_regression": {
             "name": "探索性回归",
+            "description": "枚举 OLS 模型并筛选显著、无共线和无自相关结果。",
             "params": {
               "input": {
                 "label": "输入",
@@ -22665,11 +22666,11 @@
                 "label": "输出",
                 "description": "报告表输出路径，格式为 CSV（扩展名 .csv）或无几何矢量表。"
               }
-            },
-            "description": "枚举 OLS 模型并筛选显著、无共线和无自相关结果。"
+            }
           },
           "extract_locations_from_text": {
             "name": "从文本提取位置",
+            "description": "从自由文本中提取坐标并输出 WGS84 点。",
             "params": {
               "input_text": {
                 "label": "输入文本",
@@ -22683,11 +22684,11 @@
                 "label": "输出",
                 "description": "输出矢量路径（按扩展名选择驱动）。省略时存储在内存中。"
               }
-            },
-            "description": "从自由文本中提取坐标并输出 WGS84 点。"
+            }
           },
           "extract_ocean_winds": {
             "name": "提取海面风场",
+            "description": "由校准 SAR 后向散射反演海面风速。",
             "params": {
               "input": {
                 "label": "输入",
@@ -22729,11 +22730,11 @@
                 "label": "输出",
                 "description": "输出风速栅格，单位 m/s。省略时存储在内存中。"
               }
-            },
-            "description": "由校准 SAR 后向散射反演海面风速。"
+            }
           },
           "extract_scanned_features": {
             "name": "提取扫描要素",
+            "description": "把二值扫描栅格矢量化为清理后的线或面。",
             "params": {
               "input": {
                 "label": "输入",
@@ -22775,11 +22776,11 @@
                 "label": "波段",
                 "description": "要读取的波段编号（从 1 开始，默认 1）。"
               }
-            },
-            "description": "把二值扫描栅格矢量化为清理后的线或面。"
+            }
           },
           "extract_sinks": {
             "name": "提取汇",
+            "description": "从 DEM 提取最大洼地范围的汇点。",
             "params": {
               "input": {
                 "label": "输入",
@@ -22817,11 +22818,11 @@
                 "label": "平坦区增量",
                 "description": "填充期间为强制排水而添加的平坦增量（默认 0）。"
               }
-            },
-            "description": "从 DEM 提取最大洼地范围的汇点。"
+            }
           },
           "extract_spectra_from_image": {
             "name": "从影像提取光谱",
+            "description": "由影像训练区生成光谱库 CSV。",
             "params": {
               "input": {
                 "label": "输入",
@@ -22859,11 +22860,11 @@
                 "label": "输出统计信息",
                 "description": "可选 CSV，接收逐类别、逐波段标准差和像元计数。单独保存以保持光谱库可解析。"
               }
-            },
-            "description": "由影像训练区生成光谱库 CSV。"
+            }
           },
           "extract_water_sar": {
             "name": "提取水体 (SAR)",
+            "description": "用 Otsu 和地形约束从 SAR 影像提取水体。",
             "params": {
               "input": {
                 "label": "输入",
@@ -22917,11 +22918,11 @@
                 "label": "波段",
                 "description": "待阈值化的波段，从 1 开始编号（默认 1）。"
               }
-            },
-            "description": "用 Otsu 和地形约束从 SAR 影像提取水体。"
+            }
           },
           "extrude_between": {
             "name": "按高程拉伸",
+            "description": "在两个表面之间按输入多边形构建封闭 3D 体。",
             "params": {
               "input": {
                 "label": "输入",
@@ -22947,11 +22948,11 @@
                 "label": "波段",
                 "description": "从每个表面栅格读取的波段，从 1 开始编号（默认 1）。"
               }
-            },
-            "description": "在两个表面之间按输入多边形构建封闭 3D 体。"
+            }
           },
           "feature_outline_masks": {
             "name": "要素轮廓掩膜",
+            "description": "围绕要素轮廓生成制图遮蔽面。",
             "params": {
               "input": {
                 "label": "输入",
@@ -22977,11 +22978,11 @@
                 "label": "ID字段",
                 "description": "可选源字段，其值会作为 'source_id' 复制到每个遮罩。默认为源要素索引。"
               }
-            },
-            "description": "围绕要素轮廓生成制图遮蔽面。"
+            }
           },
           "feature_to_line": {
             "name": "要素转线",
+            "description": "把线和面边界节点化为互切线段。",
             "params": {
               "input": {
                 "label": "输入",
@@ -22999,11 +23000,11 @@
                 "label": "属性",
                 "description": "为 true（默认）时，每个输出段都会标记 'src_fid'，即源要素 id。"
               }
-            },
-            "description": "把线和面边界节点化为互切线段。"
+            }
           },
           "feature_vertices_to_points": {
             "name": "要素顶点转点",
+            "description": "按起点、终点、中点或悬挂点提取要素顶点。",
             "params": {
               "input": {
                 "label": "输入",
@@ -23017,11 +23018,11 @@
                 "label": "点位置",
                 "description": "要提取的顶点：ALL | START | END | BOTH_ENDS | MID | DANGLE。默认 ALL。"
               }
-            },
-            "description": "按起点、终点、中点或悬挂点提取要素顶点。"
+            }
           },
           "features_to_gpx": {
             "name": "要素转 GPX",
+            "description": "把点导出为 GPX 航点、线导出为 GPX 轨迹。",
             "params": {
               "input": {
                 "label": "输入",
@@ -23047,11 +23048,11 @@
                 "label": "日期字段",
                 "description": "映射到 GPX <time> 时间戳的属性字段，为 ISO-8601 字符串（可选）。"
               }
-            },
-            "description": "把点导出为 GPX 航点、线导出为 GPX 轨迹。"
+            }
           },
           "features_to_gtfs": {
             "name": "要素转 GTFS",
+            "description": "把点导出为 GTFS 站点、线导出为 GTFS 形状。",
             "params": {
               "stops_input": {
                 "label": "站点输入",
@@ -23065,11 +23066,11 @@
                 "label": "输出目录",
                 "description": "GTFS 文本文件（stops.txt / shapes.txt）的写入目录。不存在时创建。"
               }
-            },
-            "description": "把点导出为 GTFS 站点、线导出为 GTFS 形状。"
+            }
           },
           "features_to_kml": {
             "name": "要素转 KML",
+            "description": "把矢量图层写出为 KML 或 KMZ 文档。",
             "params": {
               "input": {
                 "label": "输入",
@@ -23107,11 +23108,11 @@
                 "label": "填充颜色",
                 "description": "多边形填充颜色，格式为 KML aabbggrr 十六进制。省略表示无填充。"
               }
-            },
-            "description": "把矢量图层写出为 KML 或 KMZ 文档。"
+            }
           },
           "fence_diagram": {
             "name": "栅栏剖面图",
+            "description": "沿剖面线在多表面之间生成 3D 栅栏剖面。",
             "params": {
               "input": {
                 "label": "输入",
@@ -23141,11 +23142,11 @@
                 "label": "波段",
                 "description": "从每个表面栅格读取的波段，从 1 开始编号（默认 1）。"
               }
-            },
-            "description": "沿剖面线在多表面之间生成 3D 栅栏剖面。"
+            }
           },
           "fill_missing_values": {
             "name": "填充缺失值",
+            "description": "用时空邻域估计并标记填补缺失属性值。",
             "params": {
               "input": {
                 "label": "输入",
@@ -23187,11 +23188,11 @@
                 "label": "标记字段",
                 "description": "标记插补行的布尔字段名称（默认 'imputed'）。"
               }
-            },
-            "description": "用时空邻域估计并标记填补缺失属性值。"
+            }
           },
           "fill_spill_merge": {
             "name": "填充-溢出-合并",
+            "description": "模拟有限水量在 DEM 上的填充、溢出和合并。",
             "params": {
               "dem": {
                 "label": "DEM",
@@ -23225,11 +23226,11 @@
                 "label": "淹没范围",
                 "description": "洪水范围掩膜的可选输出路径（有滞水处为 1，否则为 0）。"
               }
-            },
-            "description": "模拟有限水量在 DEM 上的填充、溢出和合并。"
+            }
           },
           "find_argument_statistics": {
             "name": "求幅角统计",
+            "description": "在栅格堆叠中查找极值、持续时间或排名所在切片。",
             "params": {
               "inputs": {
                 "label": "多个输入",
@@ -23259,11 +23260,11 @@
                 "label": "最小有效",
                 "description": "每个像元的最少非 NoData 观测数（默认 1）。"
               }
-            },
-            "description": "在栅格堆叠中查找极值、持续时间或排名所在切片。"
+            }
           },
           "find_dwell_locations": {
             "name": "查找停留位置",
+            "description": "检测轨迹在时空容差内的停留位置。",
             "params": {
               "input": {
                 "label": "输入",
@@ -23293,11 +23294,11 @@
                 "label": "输出类型",
                 "description": "dwell_features（默认）| mean_centers | convex_hulls | all_features。"
               }
-            },
-            "description": "检测轨迹在时空容差内的停留位置。"
+            }
           },
           "find_identical": {
             "name": "查找相同要素",
+            "description": "按几何和字段识别重复要素并分组或删除。",
             "params": {
               "input": {
                 "label": "输入",
@@ -23323,11 +23324,11 @@
                 "label": "模式",
                 "description": "'report'（默认；添加 dup_group/dup_seq）或 'delete'（保留每组第一个）。"
               }
-            },
-            "description": "按几何和字段识别重复要素并分组或删除。"
+            }
           },
           "find_meeting_locations": {
             "name": "查找会面位置",
+            "description": "检测多条轨迹同时同地聚集的位置。",
             "params": {
               "input": {
                 "label": "输入",
@@ -23369,11 +23370,11 @@
                 "label": "输出面积",
                 "description": "可选输出区域图层（每次会合一个凸包面）。省略时存储在内存中。"
               }
-            },
-            "description": "检测多条轨迹同时同地聚集的位置。"
+            }
           },
           "find_space_time_matches": {
             "name": "查找时空匹配",
+            "description": "匹配同时满足空间距离和时间窗口的点对。",
             "params": {
               "primary": {
                 "label": "主",
@@ -23411,11 +23412,11 @@
                 "label": "次要ID字段",
                 "description": "在输出中命名每个辅助要素的字段（默认要素索引）。"
               }
-            },
-            "description": "匹配同时满足空间距离和时间窗口的点对。"
+            }
           },
           "fit_variogram": {
             "name": "拟合半变异函数模型",
+            "description": "拟合球状、指数或高斯理论变异函数模型。",
             "params": {
               "lags_json": {
                 "label": "滞后JSON",
@@ -23425,11 +23426,11 @@
                 "label": "模型分布族",
                 "description": "模型：spherical、exponential 或 gaussian。"
               }
-            },
-            "description": "拟合球状、指数或高斯理论变异函数模型。"
+            }
           },
           "flatten_interferogram": {
             "name": "干涉图平化",
+            "description": "用 DEM 和干涉基线去除地形相位分量。",
             "params": {
               "input": {
                 "label": "输入",
@@ -23471,11 +23472,11 @@
                 "label": "波段",
                 "description": "保存相位的 1 起始波段。单波段相位栅格或双波段 I/Q 干涉图可省略（后者自动检测）；提供时可从多波段堆栈的指定波段读取真实相位。超过两个波段的栅格必须提供该参数，因为三个及以上波段不是 I/Q 对，猜测会得到看似合理但错误的相位。"
               }
-            },
-            "description": "用 DEM 和干涉基线去除地形相位分量。"
+            }
           },
           "flip_line": {
             "name": "翻转线",
+            "description": "反转折线顶点顺序以改变数字化方向。",
             "params": {
               "input": {
                 "label": "输入",
@@ -23485,11 +23486,11 @@
                 "label": "输出",
                 "description": "可选输出矢量路径（按扩展名选择驱动）。省略时存储在内存中。"
               }
-            },
-            "description": "反转折线顶点顺序以改变数字化方向。"
+            }
           },
           "focal_flow": {
             "name": "焦点流",
+            "description": "用 8 位掩码记录流入中心像元的邻域方向。",
             "params": {
               "input": {
                 "label": "输入",
@@ -23507,11 +23508,11 @@
                 "label": "波段",
                 "description": "要读取的波段编号（从 1 开始，默认 1）。"
               }
-            },
-            "description": "用 8 位掩码记录流入中心像元的邻域方向。"
+            }
           },
           "focal_statistics": {
             "name": "焦点统计",
+            "description": "在移动窗口中计算数值或分类邻域统计。",
             "params": {
               "input": {
                 "label": "输入",
@@ -23565,11 +23566,11 @@
                 "label": "波段",
                 "description": "要处理的 1 起始波段（默认 1）。"
               }
-            },
-            "description": "在移动窗口中计算数值或分类邻域统计。"
+            }
           },
           "forest_based_forecast": {
             "name": "基于森林的预测",
+            "description": "用滞后窗口随机森林预测每个位置的未来值。",
             "params": {
               "input": {
                 "label": "输入",
@@ -23619,11 +23620,11 @@
                 "label": "种子",
                 "description": "驱动自助采样和特征子集选择的确定性 RNG 种子（默认 42）。"
               }
-            },
-            "description": "用滞后窗口随机森林预测每个位置的未来值。"
+            }
           },
           "frequency_comparison": {
             "name": "频率比较",
+            "description": "统计栅格堆叠相对参考栅格的比较频率。",
             "params": {
               "value_raster": {
                 "label": "值栅格",
@@ -23653,11 +23654,11 @@
                 "label": "处理作为多波段",
                 "description": "'single_band'（默认）：每个输入的每个波段都是单个堆栈的一层。'multi_band'：每个输入的第 i 个波段各自形成堆栈，得到多波段结果。"
               }
-            },
-            "description": "统计栅格堆叠相对参考栅格的比较频率。"
+            }
           },
           "fuzzy_overlay": {
             "name": "模糊叠加",
+            "description": "生成模糊隶属度面并用模糊算子组合多个面。",
             "params": {
               "input": {
                 "label": "输入",
@@ -23688,11 +23689,11 @@
                 "description": "gaussian/small/large：展布（默认 gaussian 0.1，small/large 5）；ms_small/ms_large：标准差乘数（默认 1）。"
               },
               "min": {
-                "label": "最小",
+                "label": "最小值",
                 "description": "linear：隶属度映射为 0 的值（默认波段最小值）。若 min>max，坡度递减。"
               },
               "max": {
-                "label": "最大",
+                "label": "最大值",
                 "description": "linear：隶属度映射为 1 的值（默认波段最大值）。"
               },
               "gamma": {
@@ -23703,11 +23704,11 @@
                 "label": "波段",
                 "description": "隶属度模式下要变换的 1 起始波段（默认 1）。"
               }
-            },
-            "description": "生成模糊隶属度面并用模糊算子组合多个面。"
+            }
           },
           "gaussian_geostatistical_simulations": {
             "name": "高斯地质统计模拟",
+            "description": "生成保留样本条件的高斯地统计实现。",
             "params": {
               "input": {
                 "label": "输入",
@@ -23761,11 +23762,11 @@
                 "label": "输出标准差",
                 "description": "集合标准差的可选栅格路径。"
               }
-            },
-            "description": "生成保留样本条件的高斯地统计实现。"
+            }
           },
           "generalized_linear_regression": {
             "name": "广义线性回归",
+            "description": "用 IRLS 拟合高斯、泊松或逻辑回归并输出诊断。",
             "params": {
               "input": {
                 "label": "输入",
@@ -23791,11 +23792,11 @@
                 "label": "报告",
                 "description": "系数与模型诊断报告的可选 CSV 路径。"
               }
-            },
-            "description": "用 IRLS 拟合高斯、泊松或逻辑回归并输出诊断。"
+            }
           },
           "generate_breach_lines": {
             "name": "生成断裂线",
+            "description": "为每个洼地生成最优打通线和开挖体积。",
             "params": {
               "input": {
                 "label": "输入",
@@ -23821,11 +23822,11 @@
                 "label": "最大长度",
                 "description": "丢弃超过该长度的突破（地图单位）；这些洼地保持未突破。"
               }
-            },
-            "description": "为每个洼地生成最优打通线和开挖体积。"
+            }
           },
           "generate_near_table": {
             "name": "生成近邻表",
+            "description": "生成 K 近邻或搜索半径内的邻近要素表。",
             "params": {
               "input": {
                 "label": "输入",
@@ -23855,11 +23856,11 @@
                 "label": "位置",
                 "description": "为邻近位置添加 NEAR_X / NEAR_Y 列。默认 false。"
               }
-            },
-            "description": "生成 K 近邻或搜索半径内的邻近要素表。"
+            }
           },
           "generate_network_swm": {
             "name": "生成网络空间权重矩阵",
+            "description": "沿线网络旅行距离构建空间权重矩阵。",
             "params": {
               "input": {
                 "label": "输入",
@@ -23909,11 +23910,11 @@
                 "label": "搜索容差",
                 "description": "点到网络的最大捕捉距离。更远的点会报告为未捕捉，而不是静默连接到远处节点。"
               }
-            },
-            "description": "沿线网络旅行距离构建空间权重矩阵。"
+            }
           },
           "generate_od_links": {
             "name": "生成 OD 链接",
+            "description": "在起点与终点之间生成 OD 连线。",
             "params": {
               "origins": {
                 "label": "起点集",
@@ -23947,11 +23948,11 @@
                 "label": "目标ID字段",
                 "description": "目标点中写为 'dest_id' 的字段（默认要素索引）。"
               }
-            },
-            "description": "在起点与终点之间生成 OD 连线。"
+            }
           },
           "generate_points_along_3d_lines": {
             "name": "沿三维线生成点",
+            "description": "按真实 3D 距离沿线生成带 Z 值点。",
             "params": {
               "input": {
                 "label": "输入",
@@ -23985,11 +23986,11 @@
                 "label": "添加桩号",
                 "description": "写入 CHAINAGE 字段，保存自线起点累计的 3D 距离（默认 false）。"
               }
-            },
-            "description": "按真实 3D 距离沿线生成带 Z 值点。"
+            }
           },
           "generate_spatial_weights_matrix": {
             "name": "生成空间权重矩阵",
+            "description": "生成 KNN、距离、邻接或 Delaunay 空间权重表。",
             "params": {
               "input": {
                 "label": "输入",
@@ -24027,11 +24028,11 @@
                 "label": "捕捉容差",
                 "description": "邻接边界匹配前将顶点量化到该尺寸网格（CRS 单位）。默认 0（精确坐标）。"
               }
-            },
-            "description": "生成 KNN、距离、邻接或 Delaunay 空间权重表。"
+            }
           },
           "generate_subset_polygons": {
             "name": "生成子集多边形",
+            "description": "生成点数受限、紧凑互不重叠的子集多边形。",
             "params": {
               "input": {
                 "label": "输入",
@@ -24061,11 +24062,11 @@
                 "label": "裁剪至凸包",
                 "description": "将子集多边形裁剪到点的凸包，使结果贴合数据而非外接框（默认 true）。"
               }
-            },
-            "description": "生成点数受限、紧凑互不重叠的子集多边形。"
+            }
           },
           "generate_transects_along_lines": {
             "name": "沿线生成横断面",
+            "description": "按固定间隔生成垂直于线的样带。",
             "params": {
               "input": {
                 "label": "输入",
@@ -24091,11 +24092,11 @@
                 "label": "包含端点",
                 "description": "也在每条线的起点和终点各放置一条样带。默认 false。"
               }
-            },
-            "description": "按固定间隔生成垂直于线的样带。"
+            }
           },
           "generate_trend_raster": {
             "name": "生成趋势栅格",
+            "description": "逐像元拟合时序 OLS 或 Mann-Kendall 趋势。",
             "params": {
               "inputs": {
                 "label": "多个输入",
@@ -24129,11 +24130,11 @@
                 "label": "波段",
                 "description": "从每个输入读取的 1 起始波段（默认 1）。"
               }
-            },
-            "description": "逐像元拟合时序 OLS 或 Mann-Kendall 趋势。"
+            }
           },
           "geodetic_densify": {
             "name": "大地线加密",
+            "description": "沿大地测地线或恒向线加密地理要素顶点。",
             "params": {
               "input": {
                 "label": "输入",
@@ -24155,11 +24156,11 @@
                 "label": "输出",
                 "description": "可选输出路径；省略时存储在内存中。"
               }
-            },
-            "description": "沿大地测地线或恒向线加密地理要素顶点。"
+            }
           },
           "geotagged_photos_to_points": {
             "name": "地理标记照片转点",
+            "description": "读取照片 EXIF 并生成带位置和属性的点层。",
             "params": {
               "input": {
                 "label": "输入",
@@ -24177,11 +24178,11 @@
                 "label": "仅地理标记",
                 "description": "跳过没有 GPS 位置的照片（默认 true）。为 false 时，未地理标记照片以空几何输出。"
               }
-            },
-            "description": "读取照片 EXIF 并生成带位置和属性的点层。"
+            }
           },
           "getis_ord_general_g": {
             "name": "高/低聚类 (Getis-Ord General G)",
+            "description": "计算 Getis-Ord General G 全局高低聚类统计。",
             "params": {
               "input": {
                 "label": "输入",
@@ -24211,11 +24212,11 @@
                 "label": "输出",
                 "description": "单行报告的可选 CSV 路径。始终包含在结果中返回。"
               }
-            },
-            "description": "计算 Getis-Ord General G 全局高低聚类统计。"
+            }
           },
           "goldstein_phase_filter": {
             "name": "Goldstein 相位滤波",
+            "description": "用 Goldstein 频域滤波降低干涉相位噪声。",
             "params": {
               "input": {
                 "label": "输入",
@@ -24245,11 +24246,11 @@
                 "label": "光谱平滑",
                 "description": "应用于图块频谱并在指数化前使用的移动平均宽度（bin；默认 3，必须为奇数）。"
               }
-            },
-            "description": "用 Goldstein 频域滤波降低干涉相位噪声。"
+            }
           },
           "gpx_to_features": {
             "name": "GPX 转要素",
+            "description": "解析 GPX 航点、轨迹和路线为矢量要素。",
             "params": {
               "input": {
                 "label": "输入",
@@ -24263,11 +24264,11 @@
                 "label": "线输出",
                 "description": "轨迹和路线的可选输出线矢量路径（驱动由扩展名决定）。"
               }
-            },
-            "description": "解析 GPX 航点、轨迹和路线为矢量要素。"
+            }
           },
           "graphic_buffer": {
             "name": "图形缓冲区",
+            "description": "用可选端头、连接和斜接限制生成图形缓冲区。",
             "params": {
               "input": {
                 "label": "输入",
@@ -24297,11 +24298,11 @@
                 "label": "融合",
                 "description": "为 true 时，将所有缓冲区联合成一个溶解的（多）面要素。默认 false（每个输入要素一个缓冲区，保留属性）。"
               }
-            },
-            "description": "用可选端头、连接和斜接限制生成图形缓冲区。"
+            }
           },
           "greater_than_or_equal_to": {
             "name": "大于等于",
+            "description": "逐像元判断第一个栅格是否大于等于第二个。",
             "params": {
               "input1": {
                 "label": "输入 1",
@@ -24315,11 +24316,11 @@
                 "label": "输出",
                 "description": "可选输出栅格文件路径。省略时输出保留在内存中，并返回 memory:// 栅格句柄。"
               }
-            },
-            "description": "逐像元判断第一个栅格是否大于等于第二个。"
+            }
           },
           "grid_index_features": {
             "name": "网格索引要素",
+            "description": "为要素生成规则网格索引面。",
             "params": {
               "input": {
                 "label": "输入",
@@ -24393,11 +24394,11 @@
                 "label": "EPSG",
                 "description": "显式给范围且没有可继承 CRS 的输入图层时的输出 EPSG 代码。"
               }
-            },
-            "description": "为要素生成规则网格索引面。"
+            }
           },
           "group_by_proximity": {
             "name": "按邻近分组",
+            "description": "把彼此邻近的要素分组并保留组标识。",
             "params": {
               "input": {
                 "label": "输入",
@@ -24423,11 +24424,11 @@
                 "label": "分组字段",
                 "description": "输出组 ID 字段名（默认 'GROUP_ID'）。"
               }
-            },
-            "description": "把彼此邻近的要素分组并保留组标识。"
+            }
           },
           "gtfs_to_features": {
             "name": "GTFS 转要素",
+            "description": "读取 GTFS 站点和形状为点线图层。",
             "params": {
               "input": {
                 "label": "输入",
@@ -24453,11 +24454,11 @@
                 "label": "结束时间",
                 "description": "频率窗口的可选 HH:MM:SS 上限。"
               }
-            },
-            "description": "读取 GTFS 站点和形状为点线图层。"
+            }
           },
           "h3_polyfill": {
             "name": "H3 多边形填充",
+            "description": "把多边形填充为 H3 单元格集合。",
             "params": {
               "input": {
                 "label": "输入",
@@ -24471,11 +24472,11 @@
                 "label": "分辨率",
                 "description": "H3 分辨率从 0（最粗）到 15（最细）；默认 8（约 0.7 km² 像元）。"
               }
-            },
-            "description": "把多边形填充为 H3 单元格集合。"
+            }
           },
           "h3_to_vector": {
             "name": "H3 单元格转多边形",
+            "description": "把 H3 单元格边界转换为多边形。",
             "params": {
               "input": {
                 "label": "输入",
@@ -24489,11 +24490,11 @@
                 "label": "字段",
                 "description": "保存 H3 单元 ID 的文本字段名；默认 'h3'。"
               }
-            },
-            "description": "把 H3 单元格边界转换为多边形。"
+            }
           },
           "hdbscan": {
             "name": "HDBSCAN 聚类",
+            "description": "用 HDBSCAN 识别变密度点聚类和噪声。",
             "params": {
               "input": {
                 "label": "输入",
@@ -24511,11 +24512,11 @@
                 "label": "最小样本",
                 "description": "核心距离密度估计的邻域尺寸（越高表示更多点被视为噪声）。默认 min_cluster_size。"
               }
-            },
-            "description": "用 HDBSCAN 识别变密度点聚类和噪声。"
+            }
           },
           "hot_spot_analysis_comparison": {
             "name": "热点分析对比",
+            "description": "比较两期热点结果并检验转变类型。",
             "params": {
               "input1": {
                 "label": "输入 1",
@@ -24553,11 +24554,11 @@
                 "label": "输出",
                 "description": "输出矢量路径（按扩展名选择驱动）。省略时存储在内存中。"
               }
-            },
-            "description": "比较两期热点结果并检验转变类型。"
+            }
           },
           "identify_narrow_polygons": {
             "name": "识别窄多边形",
+            "description": "标记窄于阈值的碎屑多边形并估算最小宽度。",
             "params": {
               "input": {
                 "label": "输入",
@@ -24579,11 +24580,11 @@
                 "label": "仅狭窄",
                 "description": "为 true 时丢弃非窄要素，仅输出被标记的窄多边形。默认 false（标注并保留全部要素）。"
               }
-            },
-            "description": "标记窄于阈值的碎屑多边形并估算最小宽度。"
+            }
           },
           "idw_3d": {
             "name": "三维 IDW",
+            "description": "把 3D 点观测反距离插值为多个高程层栅格。",
             "params": {
               "input": {
                 "label": "输入",
@@ -24645,11 +24646,11 @@
                 "label": "EPSG",
                 "description": "标注到输出栅格的 EPSG 代码（默认输入图层的 CRS）。"
               }
-            },
-            "description": "把 3D 点观测反距离插值为多个高程层栅格。"
+            }
           },
           "incremental_spatial_autocorrelation": {
             "name": "增量空间自相关",
+            "description": "扫描距离带 Moran's I 以推荐聚类尺度。",
             "params": {
               "input": {
                 "label": "输入",
@@ -24668,18 +24669,18 @@
                 "description": "首个波段距离（CRS 单位）。默认最大最近邻距离（每个要素至少有 1 个邻域）。"
               },
               "increment": {
-                "label": "增量",
+                "label": "加一",
                 "description": "每个波段递增的距离（CRS 单位）。默认起始距离。"
               },
               "num_bands": {
                 "label": "波段数量",
                 "description": "要评估的距离带数量（默认 10）。"
               }
-            },
-            "description": "扫描距离带 Moran's I 以推荐聚类尺度。"
+            }
           },
           "inside_3d": {
             "name": "三维内部",
+            "description": "判断 3D 点、线或体是否位于封闭容器内。",
             "params": {
               "target": {
                 "label": "目标",
@@ -24701,11 +24702,11 @@
                 "label": "输出要素",
                 "description": "线目标裁剪后内部部分的可选路径（complex 模式）。省略时存储在内存中（仍会返回）。"
               }
-            },
-            "description": "判断 3D 点、线或体是否位于封闭容器内。"
+            }
           },
           "integrate": {
             "name": "积分",
+            "description": "在聚类容差内捕捉顶点使共享边界精确重合。",
             "params": {
               "input": {
                 "label": "输入",
@@ -24723,11 +24724,11 @@
                 "label": "捕捉到边缘",
                 "description": "当一个要素的顶点落在另一要素分段的容差内时，也在该处插入顶点（T 交点）。默认 true。"
               }
-            },
-            "description": "在聚类容差内捕捉顶点使共享边界精确重合。"
+            }
           },
           "interpolate_from_spatiotemporal_points": {
             "name": "时空点插值",
+            "description": "把时间切片点观测插值为同网格多维栅格。",
             "params": {
               "input": {
                 "label": "输入",
@@ -24769,11 +24770,11 @@
                 "label": "最小点数",
                 "description": "切片可被插值所需的最少观测数；过稀疏切片会输出全 NoData，而不是具有误导性的表面（默认 3）。"
               }
-            },
-            "description": "把时间切片点观测插值为同网格多维栅格。"
+            }
           },
           "interpolate_shape": {
             "name": "插值形状",
+            "description": "把点线面贴合到表面并写出 3D 几何和统计。",
             "params": {
               "input": {
                 "label": "输入",
@@ -24803,11 +24804,11 @@
                 "label": "波段",
                 "description": "要采样的基于 1 的表面波段（默认 1）。"
               }
-            },
-            "description": "把点线面贴合到表面并写出 3D 几何和统计。"
+            }
           },
           "interpolate_with_barriers": {
             "name": "带障碍插值",
+            "description": "在绝对障碍周围按成本距离执行点插值。",
             "params": {
               "input": {
                 "label": "输入",
@@ -24845,11 +24846,11 @@
                 "label": "像元大小",
                 "description": "输出像元大小，单位为 CRS 单位（地理 CRS 为度）。默认使较长轴约覆盖 256 个像元。"
               }
-            },
-            "description": "在绝对障碍周围按成本距离执行点插值。"
+            }
           },
           "intersect_3d": {
             "name": "三维求交",
+            "description": "计算重叠封闭 3D 体的共享体积。",
             "params": {
               "input": {
                 "label": "输入",
@@ -24871,11 +24872,11 @@
                 "label": "分辨率",
                 "description": "每对要素共享包围盒最长轴上的体素像元数（默认 64）。值越高越精确但越慢。"
               }
-            },
-            "description": "计算重叠封闭 3D 体的共享体积。"
+            }
           },
           "intersect_3d_line_with_surface": {
             "name": "三维线与面求交",
+            "description": "在 3D 线与表面交叉处分割并输出交点。",
             "params": {
               "input": {
                 "label": "输入",
@@ -24913,11 +24914,11 @@
                 "label": "波段",
                 "description": "表面栅格的 1 起始波段（默认 1）。"
               }
-            },
-            "description": "在 3D 线与表面交叉处分割并输出交点。"
+            }
           },
           "intersecting_layers_masks": {
             "name": "相交图层掩膜",
+            "description": "只在两图层相交处生成要素遮蔽面。",
             "params": {
               "masked_layer": {
                 "label": "掩膜图层",
@@ -24943,11 +24944,11 @@
                 "label": "ID字段",
                 "description": "被遮蔽图层上的可选字段，其值会复制到每个掩膜的 'source_id'。默认为源要素索引。"
               }
-            },
-            "description": "只在两图层相交处生成要素遮蔽面。"
+            }
           },
           "intervisibility": {
             "name": "通视性",
+            "description": "对 3D 矢量障碍物检验视线是否可见。",
             "params": {
               "input": {
                 "label": "输入",
@@ -24977,11 +24978,11 @@
                 "label": "仅可见",
                 "description": "仅输出无遮挡视线（默认 false）。"
               }
-            },
-            "description": "对 3D 矢量障碍物检验视线是否可见。"
+            }
           },
           "is_closed_3d": {
             "name": "三维闭合检查",
+            "description": "诊断 3D 网格是否为封闭水密实体。",
             "params": {
               "input": {
                 "label": "输入",
@@ -24995,11 +24996,11 @@
                 "label": "仅闭合",
                 "description": "仅输出为封闭实体的要素（默认 false：每个要素均输出并附判定结果）。"
               }
-            },
-            "description": "诊断 3D 网格是否为封闭水密实体。"
+            }
           },
           "kernel_density_ratio": {
             "name": "核密度比率",
+            "description": "用共享带宽计算两个核密度面的相对风险比。",
             "params": {
               "input": {
                 "label": "输入",
@@ -25041,11 +25042,11 @@
                 "label": "EPSG",
                 "description": "用于标记输出的 EPSG（默认来自分子图层）。"
               }
-            },
-            "description": "用共享带宽计算两个核密度面的相对风险比。"
+            }
           },
           "kernel_interpolation_with_barriers": {
             "name": "带障碍核插值",
+            "description": "用绕障核加权局部多项式进行插值。",
             "params": {
               "input": {
                 "label": "输入",
@@ -25091,11 +25092,11 @@
                 "label": "最大邻居数",
                 "description": "每个局部拟合可纳入观测数的上限（默认 32）。"
               }
-            },
-            "description": "用绕障核加权局部多项式进行插值。"
+            }
           },
           "kml_to_features": {
             "name": "KML 转要素",
+            "description": "读取 KML/KMZ 地标为点线面图层。",
             "params": {
               "input": {
                 "label": "输入",
@@ -25113,11 +25114,11 @@
                 "label": "多边形输出",
                 "description": "可选输出多边形向量路径（驱动由扩展名确定）。仅当 KML 有多边形地标时写入。"
               }
-            },
-            "description": "读取 KML/KMZ 地标为点线面图层。"
+            }
           },
           "landtrendr": {
             "name": "LandTrendr",
+            "description": "对年度影像序列执行 LandTrendr 时间分割。",
             "params": {
               "inputs": {
                 "label": "多个输入",
@@ -25159,11 +25160,11 @@
                 "label": "波段",
                 "description": "从每个输入读取的 1 起始波段（默认 1）。"
               }
-            },
-            "description": "对年度影像序列执行 LandTrendr 时间分割。"
+            }
           },
           "las_height_metrics": {
             "name": "LAS 高程指标",
+            "description": "把 LiDAR 高度统计和百分位栅格化为多波段。",
             "params": {
               "input": {
                 "label": "输入",
@@ -25193,11 +25194,11 @@
                 "label": "像元大小",
                 "description": "输出像元大小，单位为 CRS 单位。默认 10。"
               }
-            },
-            "description": "把 LiDAR 高度统计和百分位栅格化为多波段。"
+            }
           },
           "less_than_or_equal_to": {
             "name": "小于等于",
+            "description": "逐像元判断第一个栅格是否小于等于第二个。",
             "params": {
               "input1": {
                 "label": "输入 1",
@@ -25211,11 +25212,11 @@
                 "label": "输出",
                 "description": "可选输出栅格文件路径。省略时输出保留在内存中，并返回 memory:// 栅格句柄。"
               }
-            },
-            "description": "逐像元判断第一个栅格是否小于等于第二个。"
+            }
           },
           "line_density": {
             "name": "线密度",
+            "description": "在圆形邻域中计算线要素长度密度。",
             "params": {
               "input": {
                 "label": "输入",
@@ -25241,11 +25242,11 @@
                 "label": "面积单位",
                 "description": "密度值面积单位：'square_map_units'（默认）、'square_meters'、'square_kilometers'、'square_miles' 或 'square_feet'。"
               }
-            },
-            "description": "在圆形邻域中计算线要素长度密度。"
+            }
           },
           "line_of_sight": {
             "name": "视线",
+            "description": "在 DEM 上分割可见与遮挡视线并标记目标。",
             "params": {
               "dem": {
                 "label": "DEM",
@@ -25279,11 +25280,11 @@
                 "label": "波段",
                 "description": "要采样的 DEM 波段（默认 1）。"
               }
-            },
-            "description": "在 DEM 上分割可见与遮挡视线并标记目标。"
+            }
           },
           "line_statistics": {
             "name": "线统计",
+            "description": "把线属性按搜索半径栅格化为邻域统计面。",
             "params": {
               "input": {
                 "label": "输入",
@@ -25309,11 +25310,11 @@
                 "label": "像元大小",
                 "description": "输出像元大小，单位为 CRS 单位。默认 search_radius/10。"
               }
-            },
-            "description": "把线属性按搜索半径栅格化为邻域统计面。"
+            }
           },
           "local_bivariate_relationships": {
             "name": "局部双变量关系",
+            "description": "按局部拟合和置换检验分类两个变量的关系。",
             "params": {
               "input": {
                 "label": "输入",
@@ -25347,11 +25348,11 @@
                 "label": "种子",
                 "description": "置换随机数生成器种子（默认 1），用于可复现结果。"
               }
-            },
-            "description": "按局部拟合和置换检验分类两个变量的关系。"
+            }
           },
           "local_outlier_analysis": {
             "name": "局部异常值分析",
+            "description": "在时空立方体中识别局部聚类和异常值。",
             "params": {
               "input": {
                 "label": "输入",
@@ -25393,11 +25394,11 @@
                 "label": "种子",
                 "description": "置换 RNG 的种子（默认 1）。"
               }
-            },
-            "description": "在时空立方体中识别局部聚类和异常值。"
+            }
           },
           "local_polynomial_interpolation": {
             "name": "局部多项式插值",
+            "description": "用核加权局部多项式生成预测和误差面。",
             "params": {
               "input": {
                 "label": "输入",
@@ -25447,11 +25448,11 @@
                 "label": "EPSG",
                 "description": "标注到输出栅格的 EPSG 代码（默认输入图层的 CRS）。"
               }
-            },
-            "description": "用核加权局部多项式生成预测和误差面。"
+            }
           },
           "locate_lines_along_routes": {
             "name": "沿线定位线",
+            "description": "把线面要素定位为路径上的起止测量事件。",
             "params": {
               "input_features": {
                 "label": "输入要素",
@@ -25473,11 +25474,11 @@
                 "label": "输出",
                 "description": "输出线事件向量路径（驱动由扩展名确定）。省略时结果存储在内存中。"
               }
-            },
-            "description": "把线面要素定位为路径上的起止测量事件。"
+            }
           },
           "locate_regions": {
             "name": "定位区域",
+            "description": "从适宜性栅格中生成形状和间距约束的连通区域。",
             "params": {
               "input": {
                 "label": "输入",
@@ -25507,11 +25508,11 @@
                 "label": "波段",
                 "description": "要读取的波段编号（从 1 开始，默认 1）。"
               }
-            },
-            "description": "从适宜性栅格中生成形状和间距约束的连通区域。"
+            }
           },
           "matched_filter_target_detection": {
             "name": "匹配滤波目标检测 (CEM/ACE)",
+            "description": "用 CEM 或 ACE 光谱检测抑制背景并评分目标。",
             "params": {
               "input": {
                 "label": "输入",
@@ -25537,11 +25538,11 @@
                 "label": "掩膜输出",
                 "description": "二值检测掩膜输出路径（需要 'threshold'）。若设置阈值但省略路径，则存储在内存中。"
               }
-            },
-            "description": "用 CEM 或 ACE 光谱检测抑制背景并评分目标。"
+            }
           },
           "maximum_likelihood_classification": {
             "name": "最大似然分类",
+            "description": "用最大似然法进行监督影像分类。",
             "params": {
               "input": {
                 "label": "输入",
@@ -25567,11 +25568,11 @@
                 "label": "拒绝比例",
                 "description": "[0,1) 中置信度最低的已分类像元保留为未分类（NoData）的比例。默认 0。"
               }
-            },
-            "description": "用最大似然法进行监督影像分类。"
+            }
           },
           "median_center": {
             "name": "中位中心",
+            "description": "计算可选分组的几何中位数中心。",
             "params": {
               "input": {
                 "label": "输入",
@@ -25593,11 +25594,11 @@
                 "label": "属性字段",
                 "description": "可选逗号分隔数值字段；每项的组中位数会以 '<field>_med' 附加。"
               }
-            },
-            "description": "计算可选分组的几何中位数中心。"
+            }
           },
           "merge_divided_roads": {
             "name": "合并分离道路",
+            "description": "把平行的分隔车道合并为中心线并保持路口连通。",
             "params": {
               "input": {
                 "label": "输入",
@@ -25627,11 +25628,11 @@
                 "label": "输出表格",
                 "description": "将输出要素映射回源要素的可选谱系表。"
               }
-            },
-            "description": "把平行的分隔车道合并为中心线并保持路口连通。"
+            }
           },
           "merge_lines_by_pseudo_node": {
             "name": "按伪节点合并线",
+            "description": "合并由二度伪节点连接的线段。",
             "params": {
               "input": {
                 "label": "输入",
@@ -25649,11 +25650,11 @@
                 "label": "捕捉容差",
                 "description": "该距离（CRS 单位）内的端点视为同一节点。默认 1e-6。"
               }
-            },
-            "description": "合并由二度伪节点连接的线段。"
+            }
           },
           "merge_multidimensional_rasters": {
             "name": "合并多维栅格",
+            "description": "按维度坐标合并多个配准的多维栅格。",
             "params": {
               "inputs": {
                 "label": "多个输入",
@@ -25679,11 +25680,11 @@
                 "label": "输出",
                 "description": "输出立方体栅格，每个合并切片一个波段并按维度排序。省略时存储在内存中。"
               }
-            },
-            "description": "按维度坐标合并多个配准的多维栅格。"
+            }
           },
           "mgwr": {
             "name": "多尺度地理加权回归",
+            "description": "为每个解释项选择带宽的多尺度地理加权回归。",
             "params": {
               "input": {
                 "label": "输入",
@@ -25717,11 +25718,11 @@
                 "label": "最大迭代次数",
                 "description": "遍历所有项的最大回拟轮数（默认 30）。"
               }
-            },
-            "description": "为每个解释项选择带宽的多尺度地理加权回归。"
+            }
           },
           "minimum_bounding_volume": {
             "name": "最小包围体积",
+            "description": "计算 3D 要素的凸包、球体或包围盒体积。",
             "params": {
               "input": {
                 "label": "输入",
@@ -25751,11 +25752,11 @@
                 "label": "最小外包体字段",
                 "description": "附加 MBV_VOLUME 和 MBV_AREA 字段（默认 false）。"
               }
-            },
-            "description": "计算 3D 要素的凸包、球体或包围盒体积。"
+            }
           },
           "multicriteria_overlay": {
             "name": "多准则叠加",
+            "description": "用加权和、几何平均、OWA 或 TOPSIS 合成适宜性。",
             "params": {
               "inputs": {
                 "label": "多个输入",
@@ -25785,11 +25786,11 @@
                 "label": "到比例",
                 "description": "输出评价尺度的高界（默认 1）。"
               }
-            },
-            "description": "用加权和、几何平均、OWA 或 TOPSIS 合成适宜性。"
+            }
           },
           "multidimensional_anomaly": {
             "name": "生成多维异常",
+            "description": "按时间基线生成多维栅格异常切片。",
             "params": {
               "input": {
                 "label": "输入",
@@ -25811,11 +25812,11 @@
                 "label": "最小有效",
                 "description": "参考范围内每个像元的最少非 NoData 观测数（默认 1）；低于该值像元为 NoData。"
               }
-            },
-            "description": "按时间基线生成多维栅格异常切片。"
+            }
           },
           "multidimensional_principal_components": {
             "name": "多维主成分分析",
+            "description": "分解多维栅格的时间主成分和载荷。",
             "params": {
               "input": {
                 "label": "输入",
@@ -25853,11 +25854,11 @@
                 "label": "相关性",
                 "description": "分解相关矩阵而非协方差矩阵（默认 false）。当切片量纲不同时使用。"
               }
-            },
-            "description": "分解多维栅格的时间主成分和载荷。"
+            }
           },
           "multidimensional_raster_correlation": {
             "name": "多维栅格相关",
+            "description": "沿时间维度逐像元计算相关性和最优滞后。",
             "params": {
               "input1": {
                 "label": "输入 1",
@@ -25903,11 +25904,11 @@
                 "label": "最小有效",
                 "description": "写入系数前所需的最少成对样本数（默认 3）。"
               }
-            },
-            "description": "沿时间维度逐像元计算相关性和最优滞后。"
+            }
           },
           "multilook": {
             "name": "多视处理",
+            "description": "通过距离和方位多视平均降低 SAR 斑点。",
             "params": {
               "input": {
                 "label": "输入",
@@ -25945,11 +25946,11 @@
                 "label": "统计量",
                 "description": "mean（默认）或 median；当强散射体主导视窗时，median 更稳健。"
               }
-            },
-            "description": "通过距离和方位多视平均降低 SAR 斑点。"
+            }
           },
           "multipatch_footprint": {
             "name": "多面体底面",
+            "description": "把 3D 多面体投影并融合为 2D 足迹面。",
             "params": {
               "input": {
                 "label": "输入",
@@ -25967,11 +25968,11 @@
                 "label": "简化容差",
                 "description": "应用于融合足印的可选 Douglas-Peucker 容差（CRS 单位）。默认省略，以便为 regularize_building_footprints 保留原始轮廓。"
               }
-            },
-            "description": "把 3D 多面体投影并融合为 2D 足迹面。"
+            }
           },
           "multipatch_to_mesh": {
             "name": "多面体转网格",
+            "description": "把 3D 几何导出为 OBJ 或 glTF/GLB 网格。",
             "params": {
               "input": {
                 "label": "输入",
@@ -25997,11 +25998,11 @@
                 "label": "名称字段",
                 "description": "在输出中命名每个要素网格的属性。"
               }
-            },
-            "description": "把 3D 几何导出为 OBJ 或 glTF/GLB 网格。"
+            }
           },
           "multiple_ring_buffer": {
             "name": "多环缓冲区",
+            "description": "按距离列表生成嵌套或互不重叠的环带。",
             "params": {
               "input": {
                 "label": "输入",
@@ -26027,11 +26028,11 @@
                 "label": "距离字段",
                 "description": "保存每个带距离的输出属性名。默认 'distance'。"
               }
-            },
-            "description": "按距离列表生成嵌套或互不重叠的环带。"
+            }
           },
           "multitemporal_coherence": {
             "name": "多时相相干性",
+            "description": "计算多期 SAR 干涉相干性及其时间变化。",
             "params": {
               "inputs": {
                 "label": "多个输入",
@@ -26069,11 +26070,11 @@
                 "label": "输出配对",
                 "description": "可选栅格，接收逐对相干性立方体，每对一个波段。"
               }
-            },
-            "description": "计算多期 SAR 干涉相干性及其时间变化。"
+            }
           },
           "multivariate_clustering": {
             "name": "多变量聚类",
+            "description": "按标准化属性相似度聚类矢量要素。",
             "params": {
               "input": {
                 "label": "输入",
@@ -26099,11 +26100,11 @@
                 "label": "种子",
                 "description": "用于确定性 k-means++ / 中心点初始化的随机种子（默认 1）。"
               }
-            },
-            "description": "按标准化属性相似度聚类矢量要素。"
+            }
           },
           "near_3d": {
             "name": "三维近邻",
+            "description": "查找真实 3D 距离最近的要素并输出角度和分量。",
             "params": {
               "input": {
                 "label": "输入",
@@ -26133,11 +26134,11 @@
                 "label": "增量",
                 "description": "附加逐轴偏移 near_dx / near_dy / near_dz（默认 false）。"
               }
-            },
-            "description": "查找真实 3D 距离最近的要素并输出角度和分量。"
+            }
           },
           "neighborhood_summary_statistics": {
             "name": "邻域汇总统计",
+            "description": "对每个要素的邻域汇总数值字段，生成 <field>_nbr_mean/median/std/min/max/sum 与邻居数量。",
             "params": {
               "input": {
                 "label": "输入",
@@ -26167,11 +26168,11 @@
                 "label": "权重",
                 "description": "'uniform'（默认）或 'inverse_distance'（对 mean 和 std 加权）。"
               }
-            },
-            "description": "对每个要素的邻域汇总数值字段，生成 <field>_nbr_mean/median/std/min/max/sum 与邻居数量。"
+            }
           },
           "non_maximum_suppression": {
             "name": "非极大值抑制",
+            "description": "按置信度和 IoU 抑制重叠检测结果。",
             "params": {
               "input": {
                 "label": "输入",
@@ -26193,11 +26194,11 @@
                 "label": "类别值字段",
                 "description": "可选字段；仅相同类别的检测结果会相互抑制。"
               }
-            },
-            "description": "按置信度和 IoU 抑制重叠检测结果。"
+            }
           },
           "observer_points": {
             "name": "观测点",
+            "description": "输出每个像元可见的观察者掩码和所需高度。",
             "params": {
               "input": {
                 "label": "输入",
@@ -26251,11 +26252,11 @@
                 "label": "波段",
                 "description": "高程栅格的 1 起始波段（默认 1）。"
               }
-            },
-            "description": "输出每个像元可见的观察者掩码和所需高度。"
+            }
           },
           "optics_clustering": {
             "name": "OPTICS 聚类",
+            "description": "用 OPTICS 提取不同密度的点聚类。",
             "params": {
               "input": {
                 "label": "输入",
@@ -26277,11 +26278,11 @@
                 "label": "聚类灵敏度",
                 "description": "0-100；值越高检测到越多/越紧的聚类。映射为 xi = 1 - sensitivity/100。默认 95（xi = 0.05）。"
               }
-            },
-            "description": "用 OPTICS 提取不同密度的点聚类。"
+            }
           },
           "optimal_corridor_connections": {
             "name": "最优廊道连接",
+            "description": "生成连接所有区域的最优定宽廊道面。",
             "params": {
               "input": {
                 "label": "输入",
@@ -26315,11 +26316,11 @@
                 "label": "像元大小",
                 "description": "未提供成本栅格时的分析像元大小（默认区域范围/200）。"
               }
-            },
-            "description": "生成连接所有区域的最优定宽廊道面。"
+            }
           },
           "optimal_interpolation": {
             "name": "最优插值",
+            "description": "用背景场和点观测融合生成分析场和误差。",
             "params": {
               "background": {
                 "label": "背景",
@@ -26365,11 +26366,11 @@
                 "label": "分析误差",
                 "description": "分析误差方差 σ_a²（<= σ_b²）的可选输出栅格。"
               }
-            },
-            "description": "用背景场和点观测融合生成分析场和误差。"
+            }
           },
           "optimal_path_as_line": {
             "name": "最优路径转线",
+            "description": "由成本回溯栅格追踪最小成本路径线。",
             "params": {
               "destination": {
                 "label": "目标点",
@@ -26395,11 +26396,11 @@
                 "label": "输出",
                 "description": "输出折线图层。省略时存储在内存中。"
               }
-            },
-            "description": "由成本回溯栅格追踪最小成本路径线。"
+            }
           },
           "optimized_hot_spot_analysis": {
             "name": "优化热点分析",
+            "description": "自动聚合点、选择距离带并执行热点分析。",
             "params": {
               "input": {
                 "label": "输入",
@@ -26425,11 +26426,11 @@
                 "label": "距离带宽",
                 "description": "分析距离带宽，单位为 CRS 单位。默认按聚类强度峰值自动选择。"
               }
-            },
-            "description": "自动聚合点、选择距离带并执行热点分析。"
+            }
           },
           "optimized_outlier_analysis": {
             "name": "优化异常值分析",
+            "description": "自动聚合并运行局部 Moran 离群分析。",
             "params": {
               "input": {
                 "label": "输入",
@@ -26459,11 +26460,11 @@
                 "label": "FdrAlpha",
                 "description": "COType 显著性的 False Discovery Rate 水平（默认 0.05）。"
               }
-            },
-            "description": "自动聚合并运行局部 Moran 离群分析。"
+            }
           },
           "ordinary_cokriging": {
             "name": "普通协同克里金插值",
+            "description": "用协同克里金和辅助变量改进主变量插值。",
             "params": {
               "primary_points": {
                 "label": "主点",
@@ -26497,11 +26498,11 @@
                 "label": "邻域大小",
                 "description": "局部协同克里金使用的最近邻数量（默认：全部）"
               }
-            },
-            "description": "用协同克里金和辅助变量改进主变量插值。"
+            }
           },
           "pairwise_comparison_weights": {
             "name": "成对比较权重",
+            "description": "由 AHP 成对比较矩阵推导权重并检验一致性。",
             "params": {
               "matrix": {
                 "label": "矩阵",
@@ -26519,11 +26520,11 @@
                 "label": "输出",
                 "description": "输出表路径 — 可为 CSV（扩展名 .csv）或无几何矢量表（criterion, weight, rank）。省略时存储在内存中。"
               }
-            },
-            "description": "由 AHP 成对比较矩阵推导权重并检验一致性。"
+            }
           },
           "path_distance": {
             "name": "路径距离",
+            "description": "结合表面距离、坡度因子和摩擦计算成本距离。",
             "params": {
               "source": {
                 "label": "数据源",
@@ -26561,11 +26562,11 @@
                 "label": "波段",
                 "description": "所有栅格使用的从 1 开始的波段编号（默认 1）。"
               }
-            },
-            "description": "结合表面距离、坡度因子和摩擦计算成本距离。"
+            }
           },
           "percentile_contours": {
             "name": "百分位等值线",
+            "description": "按值或累计质量百分位生成嵌套等值面。",
             "params": {
               "input": {
                 "label": "输入",
@@ -26595,11 +26596,11 @@
                 "label": "波段",
                 "description": "要读取的波段编号（从 1 开始，默认 1）。"
               }
-            },
-            "description": "按值或累计质量百分位生成嵌套等值面。"
+            }
           },
           "pivot_table": {
             "name": "数据透视表",
+            "description": "把长表重塑为按身份字段和透视字段组织的宽表。",
             "params": {
               "input": {
                 "label": "输入",
@@ -26625,11 +26626,11 @@
                 "label": "聚合",
                 "description": "当一个行/列单元格有多个源记录时应用：'first'（默认）、'sum'、'mean'、'min'、'max'、'count'。"
               }
-            },
-            "description": "把长表重塑为按身份字段和透视字段组织的宽表。"
+            }
           },
           "pmtiles_extract": {
             "name": "PMTiles 提取",
+            "description": "从 PMTiles 存档提取范围和缩放级子集。",
             "params": {
               "input": {
                 "label": "输入",
@@ -26663,11 +26664,11 @@
                 "label": "边界框CRS",
                 "description": "bbox 坐标的 EPSG 代码。默认 4326（WGS84 经纬度）；其他 CRS 会重投影到 4326。"
               }
-            },
-            "description": "从 PMTiles 存档提取范围和缩放级子集。"
+            }
           },
           "point_statistics": {
             "name": "点统计",
+            "description": "把点属性在移动邻域中聚合为栅格统计。",
             "params": {
               "input": {
                 "label": "输入",
@@ -26701,11 +26702,11 @@
                 "label": "EPSG",
                 "description": "覆盖输入 CRS 的 EPSG 代码（例如图层未标注 CRS 时）。4326 会触发米制投影。"
               }
-            },
-            "description": "把点属性在移动邻域中聚合为栅格统计。"
+            }
           },
           "points_to_line": {
             "name": "点转线",
+            "description": "按分组和排序字段由点构建折线。",
             "params": {
               "input": {
                 "label": "输入",
@@ -26727,11 +26728,11 @@
                 "label": "闭合线",
                 "description": "将首个顶点追加到每条线末端，使其闭合为环。默认 false。"
               }
-            },
-            "description": "按分组和排序字段由点构建折线。"
+            }
           },
           "points_to_path": {
             "name": "点转路径",
+            "description": "按字段顺序连接点为路径并可选自然排序和闭合。",
             "params": {
               "input": {
                 "label": "输入",
@@ -26757,11 +26758,11 @@
                 "label": "闭合路径",
                 "description": "将首个顶点追加到每条路径末端，使其闭合为环。默认 false。"
               }
-            },
-            "description": "按字段顺序连接点为路径并可选自然排序和闭合。"
+            }
           },
           "polygon_neighbors": {
             "name": "多边形邻域",
+            "description": "构建多边形邻接表及共享边界长度。",
             "params": {
               "input": {
                 "label": "输入",
@@ -26783,11 +26784,11 @@
                 "label": "捕捉容差",
                 "description": "匹配边界前将顶点量化到该尺寸网格（CRS 单位）。默认 0（精确坐标）。"
               }
-            },
-            "description": "构建多边形邻接表及共享边界长度。"
+            }
           },
           "polygon_volume": {
             "name": "多边形体积",
+            "description": "计算每个多边形上方或下方表面体积和面积。",
             "params": {
               "surface": {
                 "label": "表面",
@@ -26813,11 +26814,11 @@
                 "label": "输出",
                 "description": "输出多边形矢量路径（按扩展名选择驱动）。省略时存储在内存中。"
               }
-            },
-            "description": "计算每个多边形上方或下方表面体积和面积。"
+            }
           },
           "porous_puff": {
             "name": "多孔烟羽扩散",
+            "description": "沿地下水流场解析模拟瞬时污染团扩散。",
             "params": {
               "magnitude": {
                 "label": "幅值",
@@ -26883,11 +26884,11 @@
                 "label": "最大步数",
                 "description": "每个请求时间的最大推进步数（默认 1000）。"
               }
-            },
-            "description": "沿地下水流场解析模拟瞬时污染团扩散。"
+            }
           },
           "predict_using_trend_raster": {
             "name": "基于趋势栅格预测",
+            "description": "用拟合趋势栅格预测一个或多个时刻的表面。",
             "params": {
               "input": {
                 "label": "输入",
@@ -26921,11 +26922,11 @@
                 "label": "波段",
                 "description": "从每个系数栅格读取的从 1 开始的波段编号（默认 1）。"
               }
-            },
-            "description": "用拟合趋势栅格预测一个或多个时刻的表面。"
+            }
           },
           "presence_only_prediction": {
             "name": "仅存在数据预测",
+            "description": "用 MaxEnt 风格模型预测物种或生境适宜性。",
             "params": {
               "input": {
                 "label": "输入",
@@ -26963,11 +26964,11 @@
                 "label": "种子",
                 "description": "用于确定性背景样本的随机种子（默认 1）。"
               }
-            },
-            "description": "用 MaxEnt 风格模型预测物种或生境适宜性。"
+            }
           },
           "propagate_displacement": {
             "name": "传播位移",
+            "description": "把位移链接传播到附近建筑和线要素。",
             "params": {
               "input": {
                 "label": "输入",
@@ -26989,11 +26990,11 @@
                 "label": "搜索距离",
                 "description": "链接可影响采样点的最大距离（CRS 单位）；更远的链接会被忽略。默认：无限制（每个链接处处有贡献）。"
               }
-            },
-            "description": "把位移链接传播到附近建筑和线要素。"
+            }
           },
           "pycnophylactic_interpolation": {
             "name": "保体积插值",
+            "description": "生成保持分区总量平滑面密度的插值。",
             "params": {
               "input": {
                 "label": "输入",
@@ -27023,11 +27024,11 @@
                 "label": "非负值",
                 "description": "将负值截断为 0 并重分配以保持总量（默认 true）。"
               }
-            },
-            "description": "生成保持分区总量平滑面密度的插值。"
+            }
           },
           "radiometric_terrain_flattening": {
             "name": "辐射地形校正",
+            "description": "用局部照明面积去除 SAR 后向散射地形信号。",
             "params": {
               "input": {
                 "label": "输入",
@@ -27081,11 +27082,11 @@
                 "label": "波段",
                 "description": "要平坦化的输入栅格 1 起始波段（默认 1）。"
               }
-            },
-            "description": "用局部照明面积去除 SAR 后向散射地形信号。"
+            }
           },
           "raster_domain": {
             "name": "栅格范围",
+            "description": "追踪栅格有效数据边界并保留内部孔洞。",
             "params": {
               "input": {
                 "label": "输入",
@@ -27127,11 +27128,11 @@
                 "label": "波段",
                 "description": "要测试的 1 起始波段（默认 1）。设置 'all_bands' 时忽略。"
               }
-            },
-            "description": "追踪栅格有效数据边界并保留内部孔洞。"
+            }
           },
           "raster_normalize": {
             "name": "栅格归一化",
+            "description": "把栅格波段 min-max 归一化到 0 到 1。",
             "params": {
               "input": {
                 "label": "输入",
@@ -27145,11 +27146,11 @@
                 "label": "波段",
                 "description": "要归一化的 1 起始波段（默认 1）。"
               }
-            },
-            "description": "把栅格波段 min-max 归一化到 0 到 1。"
+            }
           },
           "raster_to_h3": {
             "name": "栅格转 H3 单元格",
+            "description": "把栅格值聚合到 H3 离散全球网格单元。",
             "params": {
               "input": {
                 "label": "输入",
@@ -27171,11 +27172,11 @@
                 "label": "聚合",
                 "description": "逐像元合并像元值的方式：mean、sum、min、max、count 或 median（默认 mean）。"
               }
-            },
-            "description": "把栅格值聚合到 H3 离散全球网格单元。"
+            }
           },
           "raster_to_tiles": {
             "name": "栅格转 XYZ 切片",
+            "description": "把栅格切成 Web Mercator XYZ PNG 金字塔。",
             "params": {
               "input": {
                 "label": "输入",
@@ -27206,18 +27207,18 @@
                 "description": "用于重投影和采样的重采样方法：bilinear（默认）、nearest、cubic。"
               },
               "min": {
-                "label": "最小",
+                "label": "最小值",
                 "description": "映射到颜色映射低端的值（默认：波段最小值）。"
               },
               "max": {
-                "label": "最大",
+                "label": "最大值",
                 "description": "映射到颜色映射高端的值（默认：波段最大值）。"
               }
-            },
-            "description": "把栅格切成 Web Mercator XYZ PNG 金字塔。"
+            }
           },
           "raster_to_weighted_points": {
             "name": "栅格转加权点",
+            "description": "按像元值权重在栅格上分布固定数量点。",
             "params": {
               "input": {
                 "label": "输入",
@@ -27251,11 +27252,11 @@
                 "label": "波段",
                 "description": "提供权重的 1 起始波段（默认 1）。"
               }
-            },
-            "description": "按像元值权重在栅格上分布固定数量点。"
+            }
           },
           "read_geoparquet": {
             "name": "读取 GeoParquet",
+            "description": "读取 GeoParquet 并转换为其他矢量格式。",
             "params": {
               "input": {
                 "label": "输入",
@@ -27265,11 +27266,11 @@
                 "label": "输出",
                 "description": "可选输出矢量路径；格式由扩展名决定（.geojson、.fgb、.shp、.gpkg、...）。若省略，图层存储在内存中。"
               }
-            },
-            "description": "读取 GeoParquet 并转换为其他矢量格式。"
+            }
           },
           "reclassify_field": {
             "name": "字段重分类",
+            "description": "把数值属性重分类为分级字段和断点。",
             "params": {
               "input": {
                 "label": "输入",
@@ -27307,11 +27308,11 @@
                 "label": "断点字段",
                 "description": "若提供，还添加一个浮点字段，记录每个要素所属类别的上限。"
               }
-            },
-            "description": "把数值属性重分类为分级字段和断点。"
+            }
           },
           "reconstruct_tracks": {
             "name": "轨迹重建",
+            "description": "由时间戳点重建轨迹并统计停留位置。",
             "params": {
               "input": {
                 "label": "输入",
@@ -27349,11 +27350,11 @@
                 "label": "停留最小时长",
                 "description": "移动对象计为驻留所需保持在 dwell_distance 内的最短时间（秒）。默认 300。"
               }
-            },
-            "description": "由时间戳点重建轨迹并统计停留位置。"
+            }
           },
           "reduce_point_density": {
             "name": "降低点密度",
+            "description": "按最小间距或网格抽稀矢量点。",
             "params": {
               "input": {
                 "label": "输入",
@@ -27391,11 +27392,11 @@
                 "label": "输出已移除",
                 "description": "用于审查的可选图层，接收被丢弃的点。"
               }
-            },
-            "description": "按最小间距或网格抽稀矢量点。"
+            }
           },
           "regression_kriging": {
             "name": "回归克里金",
+            "description": "用回归漂移、残差克里金和协变量栅格插值。",
             "params": {
               "input": {
                 "label": "输入",
@@ -27433,11 +27434,11 @@
                 "label": "输出误差",
                 "description": "预测标准误栅格（残差场的克里金标准误）。始终生成。"
               }
-            },
-            "description": "用回归漂移、残差克里金和协变量栅格插值。"
+            }
           },
           "regularize_adjacent_building_footprint": {
             "name": "规则化相邻建筑轮廓",
+            "description": "把相邻建筑足迹规整到共享朝向。",
             "params": {
               "input": {
                 "label": "输入",
@@ -27467,11 +27468,11 @@
                 "label": "邻接距离",
                 "description": "未提供 'group' 字段时，顶点距离在该范围内的覆盖面归为同一组（CRS 单位）。默认：2 x tolerance。"
               }
-            },
-            "description": "把相邻建筑足迹规整到共享朝向。"
+            }
           },
           "regularize_building_footprints": {
             "name": "规则化建筑轮廓",
+            "description": "把建筑足迹规整为直角、斜边、任意角或圆形。",
             "params": {
               "input": {
                 "label": "输入",
@@ -27501,11 +27502,11 @@
                 "label": "最大半径",
                 "description": "用于 'circle'：允许的最大拟合半径；更大的拟合结果保留原覆盖面。省略时不限制。"
               }
-            },
-            "description": "把建筑足迹规整为直角、斜边、任意角或圆形。"
+            }
           },
           "remove_overlap_multiple": {
             "name": "移除重叠 (多个)",
+            "description": "把多个重叠重新分配为无缝无重叠分区。",
             "params": {
               "input": {
                 "label": "输入",
@@ -27523,11 +27524,11 @@
                 "label": "网格分辨率",
                 "description": "分割每个重叠区域时长边上的像元数（默认 40；值越高分割线越平滑，但速度越慢）。"
               }
-            },
-            "description": "把多个重叠重新分配为无缝无重叠分区。"
+            }
           },
           "remove_thermal_noise": {
             "name": "去除热噪声",
+            "description": "扣除 SAR 接收机热噪声以去除暗面条带。",
             "params": {
               "input": {
                 "label": "输入",
@@ -27573,11 +27574,11 @@
                 "label": "波段",
                 "description": "要降噪的 1 起始波段（默认 1）。"
               }
-            },
-            "description": "扣除 SAR 接收机热噪声以去除暗面条带。"
+            }
           },
           "render_raster_png": {
             "name": "栅格渲染为 PNG",
+            "description": "通过颜色表把单波段栅格渲染为 PNG。",
             "params": {
               "input": {
                 "label": "输入",
@@ -27596,18 +27597,18 @@
                 "description": "颜色映射：viridis（默认）、magma、turbo、terrain 或 grayscale。"
               },
               "min": {
-                "label": "最小",
+                "label": "最小值",
                 "description": "映射到颜色映射低端的值（默认：波段最小值）。"
               },
               "max": {
-                "label": "最大",
+                "label": "最大值",
                 "description": "映射到颜色映射高端的值（默认：波段最大值）。"
               }
-            },
-            "description": "通过颜色表把单波段栅格渲染为 PNG。"
+            }
           },
           "render_vector_png": {
             "name": "矢量渲染为 PNG",
+            "description": "把点线面矢量绘制为 PNG 地图图像。",
             "params": {
               "input": {
                 "label": "输入",
@@ -27641,11 +27642,11 @@
                 "label": "背景",
                 "description": "背景色，格式为 #rrggbb[aa] 或 'transparent'（默认 transparent）。"
               }
-            },
-            "description": "把点线面矢量绘制为 PNG 地图图像。"
+            }
           },
           "repair_geometry": {
             "name": "修复几何",
+            "description": "检测并修复自相交、环向、重复顶点和空几何。",
             "params": {
               "input": {
                 "label": "输入",
@@ -27659,11 +27660,11 @@
                 "label": "仅检查",
                 "description": "为 true 时不修改几何：输出带有 'problem_code'/'problem_desc' 列的输入（类似 ArcGIS Check Geometry）。默认 false。"
               }
-            },
-            "description": "检测并修复自相交、环向、重复顶点和空几何。"
+            }
           },
           "rescale_by_function": {
             "name": "函数重缩放",
+            "description": "用线性、指数、对数等传递函数重缩放栅格。",
             "params": {
               "input": {
                 "label": "输入",
@@ -27713,11 +27714,11 @@
                 "label": "波段",
                 "description": "要重新缩放的基于 1 的波段（默认 1）。"
               }
-            },
-            "description": "用线性、指数、对数等传递函数重缩放栅格。"
+            }
           },
           "resolve_building_conflicts": {
             "name": "解决建筑冲突",
+            "description": "为小比例地图移位、缩小或隐藏冲突建筑。",
             "params": {
               "buildings": {
                 "label": "建筑",
@@ -27747,11 +27748,11 @@
                 "label": "隐藏",
                 "description": "是否从输出中丢弃隐藏建筑物（默认 false：保留并以 status='hidden' 标记）。"
               }
-            },
-            "description": "为小比例地图移位、缩小或隐藏冲突建筑。"
+            }
           },
           "resolve_road_conflicts": {
             "name": "解决道路冲突",
+            "description": "按道路等级和符号宽度移位解决道路冲突。",
             "params": {
               "input": {
                 "label": "输入",
@@ -27793,11 +27794,11 @@
                 "label": "链接",
                 "description": "位移链接（from→to 线）的可选输出路径，可由 rubbersheet_features 使用。"
               }
-            },
-            "description": "按道路等级和符号宽度移位解决道路冲突。"
+            }
           },
           "ripleys_k": {
             "name": "Ripley's K",
+            "description": "用多距离 K 函数和蒙特卡洛包络分析点格局。",
             "params": {
               "input": {
                 "label": "输入",
@@ -27827,11 +27828,11 @@
                 "label": "种子",
                 "description": "CSR 随机数生成器的种子（默认 1），用于生成可复现包络。"
               }
-            },
-            "description": "用多距离 K 函数和蒙特卡洛包络分析点格局。"
+            }
           },
           "rubbersheet_features": {
             "name": "橡皮筋变换要素",
+            "description": "用位移链接和 TIN/IDW 变换对齐矢量图层。",
             "params": {
               "input": {
                 "label": "输入",
@@ -27861,11 +27862,11 @@
                 "label": "幂",
                 "description": "TIN 外侧 falloff 或 method=idw 使用的 IDW 幂值。默认 2。"
               }
-            },
-            "description": "用位移链接和 TIN/IDW 变换对齐矢量图层。"
+            }
           },
           "sar_coherence": {
             "name": "SAR 相干性",
+            "description": "计算两期配准 SAR 影像的干涉相干性和相位。",
             "params": {
               "reference": {
                 "label": "参考",
@@ -27891,11 +27892,11 @@
                 "label": "偏置校正",
                 "description": "校正小窗口下相干性估计器的向上偏差（默认 true）。"
               }
-            },
-            "description": "计算两期配准 SAR 影像的干涉相干性和相位。"
+            }
           },
           "semivariogram_sensitivity": {
             "name": "半变异函数敏感性",
+            "description": "扰动变异函数参数并评估克里金稳定性。",
             "params": {
               "input": {
                 "label": "输入",
@@ -27945,11 +27946,11 @@
                 "label": "滞后数量",
                 "description": "用于基线拟合的经验变异函数滞后分箱数（默认 12）。"
               }
-            },
-            "description": "扰动变异函数参数并评估克里金稳定性。"
+            }
           },
           "similarity_search": {
             "name": "相似性搜索",
+            "description": "按标准化属性距离或余弦相似度排序候选要素。",
             "params": {
               "reference": {
                 "label": "参考",
@@ -27979,11 +27980,11 @@
                 "label": "结果数量",
                 "description": "每端保留的结果数（0 = 全部候选）。默认 10。"
               }
-            },
-            "description": "按标准化属性距离或余弦相似度排序候选要素。"
+            }
           },
           "simplify_3d_line": {
             "name": "三维线简化",
+            "description": "用 3D Douglas-Peucker 简化折线并保留剖面。",
             "params": {
               "input": {
                 "label": "输入",
@@ -28001,11 +28002,11 @@
                 "label": "Z 系数",
                 "description": "距离测试前应用于 Z 的乘数，适用于 Z 单位与 XY 不同的数据（默认 1）。"
               }
-            },
-            "description": "用 3D Douglas-Peucker 简化折线并保留剖面。"
+            }
           },
           "simplify_building": {
             "name": "建筑简化",
+            "description": "在保护直角和面积阈值下简化建筑足迹。",
             "params": {
               "input": {
                 "label": "输入",
@@ -28031,11 +28032,11 @@
                 "label": "角点容差",
                 "description": "内角在此度数范围内即计为受保护直角（默认 20）。"
               }
-            },
-            "description": "在保护直角和面积阈值下简化建筑足迹。"
+            }
           },
           "simplify_by_circular_arcs": {
             "name": "圆弧简化",
+            "description": "用直线和真圆弧组合简化工程曲线。",
             "params": {
               "input": {
                 "label": "输入",
@@ -28069,11 +28070,11 @@
                 "label": "输出圆弧",
                 "description": "拟合圆弧表的可选路径（要素 id、端点、中心、半径、带符号扫过角度）。若省略，则存储在内存中（仍会返回）。"
               }
-            },
-            "description": "用直线和真圆弧组合简化工程曲线。"
+            }
           },
           "simplify_by_tangent_segments": {
             "name": "切线段简化",
+            "description": "用保持相切的线段链替换密集曲线。",
             "params": {
               "input": {
                 "label": "输入",
@@ -28103,11 +28104,11 @@
                 "label": "保留端点",
                 "description": "精确保留每个部分的首顶点和末顶点（默认 true）。"
               }
-            },
-            "description": "用保持相切的线段链替换密集曲线。"
+            }
           },
           "simplify_shared_edges": {
             "name": "共享边简化",
+            "description": "简化多边形覆盖并保持共享边一致。",
             "params": {
               "input": {
                 "label": "输入",
@@ -28129,11 +28130,11 @@
                 "label": "捕捉容差",
                 "description": "构建拓扑前将顶点量化到此尺寸的网格（CRS 单位），使近乎重合的共享顶点被视为同一顶点。默认 0（精确使用坐标）。"
               }
-            },
-            "description": "简化多边形覆盖并保持共享边一致。"
+            }
           },
           "slice_raster": {
             "name": "栅格切片",
+            "description": "把连续栅格分为等距、分位或自然断点等级。",
             "params": {
               "input": {
                 "label": "输入",
@@ -28163,11 +28164,11 @@
                 "label": "类别间隔大小",
                 "description": "标准差区间大小，以 σ 为单位（默认 1.0）。仅由 std_dev 使用。"
               }
-            },
-            "description": "把连续栅格分为等距、分位或自然断点等级。"
+            }
           },
           "smooth_natural_features": {
             "name": "平滑自然要素",
+            "description": "用 Chaikin 切角平滑栅格化要素并保留面积。",
             "params": {
               "input": {
                 "label": "输入",
@@ -28189,11 +28190,11 @@
                 "label": "保留面积",
                 "description": "平滑后恢复每个多边形的原始面积（切角会收缩凸形）。默认 true。"
               }
-            },
-            "description": "用 Chaikin 切角平滑栅格化要素并保留面积。"
+            }
           },
           "smooth_shared_edges": {
             "name": "平滑共享边",
+            "description": "平滑多边形覆盖并保持共享边一致。",
             "params": {
               "input": {
                 "label": "输入",
@@ -28219,11 +28220,11 @@
                 "label": "捕捉容差",
                 "description": "构建拓扑前将顶点量化到此尺寸的网格（CRS 单位），使近乎重合的共享顶点被视为同一顶点。默认 0（精确使用坐标）。"
               }
-            },
-            "description": "平滑多边形覆盖并保持共享边一致。"
+            }
           },
           "snap_tracks": {
             "name": "吸附轨迹",
+            "description": "用 Viterbi 地图匹配把轨迹吸附到道路网络。",
             "params": {
               "input": {
                 "label": "输入",
@@ -28253,11 +28254,11 @@
                 "label": "最大候选数",
                 "description": "每个定位点保留的最大候选边数（默认 5）。"
               }
-            },
-            "description": "用 Viterbi 地图匹配把轨迹吸附到道路网络。"
+            }
           },
           "solar_radiation": {
             "name": "太阳辐射",
+            "description": "计算 DEM 上考虑坡向、遮蔽和太阳位置的太阳辐射。",
             "params": {
               "dem": {
                 "label": "DEM",
@@ -28311,11 +28312,11 @@
                 "label": "波段",
                 "description": "从 1 开始的 DEM 波段号（默认 1）。"
               }
-            },
-            "description": "计算 DEM 上考虑坡向、遮蔽和太阳位置的太阳辐射。"
+            }
           },
           "sort_features": {
             "name": "要素排序",
+            "description": "按属性或 Hilbert 空间曲线排序要素。",
             "params": {
               "input": {
                 "label": "输入",
@@ -28337,11 +28338,11 @@
                 "label": "指数字段",
                 "description": "可选字段名，用于存储每个要素的 Hilbert 曲线距离。"
               }
-            },
-            "description": "按属性或 Hilbert 空间曲线排序要素。"
+            }
           },
           "space_time_kernel_density": {
             "name": "时空核密度",
+            "description": "按时间切片生成时空核密度多波段栅格。",
             "params": {
               "input": {
                 "label": "输入",
@@ -28387,11 +28388,11 @@
                 "label": "EPSG",
                 "description": "为输出栅格标记的 EPSG（默认：来自输入图层）。"
               }
-            },
-            "description": "按时间切片生成时空核密度多波段栅格。"
+            }
           },
           "spatial_association_between_zones": {
             "name": "区域间空间关联",
+            "description": "用 V-measure 评估两个分类分区图的一致性。",
             "params": {
               "zones1": {
                 "label": "分区 1",
@@ -28413,11 +28414,11 @@
                 "label": "波段 2",
                 "description": "从 1 开始的 zones2 读取波段号（默认 1）。"
               }
-            },
-            "description": "用 V-measure 评估两个分类分区图的一致性。"
+            }
           },
           "spatial_eigenvector_filtering": {
             "name": "空间特征向量滤波 (MESF)",
+            "description": "生成 Moran 特征向量并加入回归解释字段。",
             "params": {
               "input": {
                 "label": "输入",
@@ -28443,11 +28444,11 @@
                 "label": "最大分量数",
                 "description": "要输出的最大特征向量数，按 Moran's I 降序选取。默认 15。"
               }
-            },
-            "description": "生成 Moran 特征向量并加入回归解释字段。"
+            }
           },
           "spatial_outlier_detection": {
             "name": "空间异常值检测",
+            "description": "用局部离群因子识别空间异常点。",
             "params": {
               "input": {
                 "label": "输入",
@@ -28469,11 +28470,11 @@
                 "label": "阈值",
                 "description": "显式 LOF 截断值：LOF 高于此值的点为异常值（覆盖 percent_outlier）。"
               }
-            },
-            "description": "用局部离群因子识别空间异常点。"
+            }
           },
           "spatially_constrained_multivariate_clustering": {
             "name": "空间约束多变量聚类",
+            "description": "用 SKATER 生成空间连通且属性相近的聚类。",
             "params": {
               "input": {
                 "label": "输入",
@@ -28523,11 +28524,11 @@
                 "label": "输出表格",
                 "description": "可选的逐聚类摘要路径（均值、每个变量的 R 平方、伪 F）。"
               }
-            },
-            "description": "用 SKATER 生成空间连通且属性相近的聚类。"
+            }
           },
           "spectral_index": {
             "name": "光谱指数",
+            "description": "由多波段栅格计算 NDVI、NDWI、NDBI 等指数。",
             "params": {
               "input": {
                 "label": "输入",
@@ -28565,11 +28566,11 @@
                 "label": "输出",
                 "description": "可选输出栅格路径。省略时结果存储在内存中。"
               }
-            },
-            "description": "由多波段栅格计算 NDVI、NDWI、NDBI 等指数。"
+            }
           },
           "split_by_attributes": {
             "name": "按属性分割",
+            "description": "按字段唯一值或组合拆分为多个输出文件。",
             "params": {
               "input": {
                 "label": "输入",
@@ -28587,11 +28588,11 @@
                 "label": "格式",
                 "description": "输出格式扩展名：geojson（默认）、fgb、parquet、shp。"
               }
-            },
-            "description": "按字段唯一值或组合拆分为多个输出文件。"
+            }
           },
           "split_by_features": {
             "name": "按要素分割",
+            "description": "按分割字段值把输入裁剪为多个输出。",
             "params": {
               "input": {
                 "label": "输入",
@@ -28613,11 +28614,11 @@
                 "label": "输出格式",
                 "description": "输出文件扩展名/驱动：'geojson'（默认）、'shp'、'gpkg'、'parquet'、'csv'。"
               }
-            },
-            "description": "按分割字段值把输入裁剪为多个输出。"
+            }
           },
           "split_line_at_point": {
             "name": "在点处分割线",
+            "description": "在搜索半径内的点处分割折线。",
             "params": {
               "input_lines": {
                 "label": "输入线",
@@ -28635,11 +28636,11 @@
                 "label": "输出",
                 "description": "输出线矢量路径（按扩展名选择驱动）。省略时存储在内存中。"
               }
-            },
-            "description": "在搜索半径内的点处分割折线。"
+            }
           },
           "split_raster": {
             "name": "分割栅格",
+            "description": "按数量、尺寸或多边形把栅格切成保留地理参考的瓦片。",
             "params": {
               "input": {
                 "label": "输入",
@@ -28685,11 +28686,11 @@
                 "label": "格式",
                 "description": "输出文件扩展名/驱动：'tif'（默认）或 'png'。"
               }
-            },
-            "description": "按数量、尺寸或多边形把栅格切成保留地理参考的瓦片。"
+            }
           },
           "stack_profile": {
             "name": "堆叠剖面",
+            "description": "沿同一条线采样多个表面并输出统一距离剖面表。",
             "params": {
               "input": {
                 "label": "输入",
@@ -28715,11 +28716,11 @@
                 "label": "方法",
                 "description": "表面采样方式：'bilinear'（默认）或 'nearest'。"
               }
-            },
-            "description": "沿同一条线采样多个表面并输出统一距离剖面表。"
+            }
           },
           "storage_capacity": {
             "name": "蓄水容量",
+            "description": "扫描水位并输出面积-库容曲线。",
             "params": {
               "dem": {
                 "label": "DEM",
@@ -28742,7 +28743,7 @@
                 "description": "每个区域最小值与最大值之间的高程步数（默认 20）。若给出 'increment' 则忽略。"
               },
               "increment": {
-                "label": "增量",
+                "label": "加一",
                 "description": "各水位之间的固定高程步长（地图单位）。覆盖 'num_levels'。"
               },
               "min_elevation": {
@@ -28757,11 +28758,11 @@
                 "label": "波段",
                 "description": "从 1 开始的 DEM 波段号（默认 1）。"
               }
-            },
-            "description": "扫描水位并输出面积-库容曲线。"
+            }
           },
           "strip_map_index_features": {
             "name": "带状地图索引要素",
+            "description": "沿路径生成旋转重叠的带状地图图幅。",
             "params": {
               "input": {
                 "label": "输入",
@@ -28791,11 +28792,11 @@
                 "label": "开始页面",
                 "description": "分配的首页编号。默认 1。"
               }
-            },
-            "description": "沿路径生成旋转重叠的带状地图图幅。"
+            }
           },
           "subdivide_polygon": {
             "name": "细分多边形",
+            "description": "用平行切割把多边形分为等面积块。",
             "params": {
               "input": {
                 "label": "输入",
@@ -28821,11 +28822,11 @@
                 "label": "角度",
                 "description": "切割方向（度；0 = 竖直切割 / 水平条带）。默认 0。"
               }
-            },
-            "description": "用平行切割把多边形分为等面积块。"
+            }
           },
           "subset_features": {
             "name": "要素子集",
+            "description": "按比例或数量随机划分训练和测试子集。",
             "params": {
               "input": {
                 "label": "输入",
@@ -28855,11 +28856,11 @@
                 "label": "分组字段",
                 "description": "可选分层字段：每个组按自身比例贡献训练子集样本。"
               }
-            },
-            "description": "按比例或数量随机划分训练和测试子集。"
+            }
           },
           "subset_multidimensional_raster": {
             "name": "多维栅格子集",
+            "description": "按范围、索引或步长选择多维栅格切片。",
             "params": {
               "input": {
                 "label": "输入",
@@ -28889,11 +28890,11 @@
                 "label": "输出",
                 "description": "输出立方体栅格，每个保留切片一个波段。如省略，则存储在内存中。"
               }
-            },
-            "description": "按范围、索引或步长选择多维栅格切片。"
+            }
           },
           "summarize_categorical_raster": {
             "name": "分类栅格汇总",
+            "description": "按类别统计栅格像元数、面积和占比。",
             "params": {
               "input": {
                 "label": "输入",
@@ -28923,11 +28924,11 @@
                 "label": "波段",
                 "description": "以逗号分隔的 1 起始波段列表（默认为所有波段）。"
               }
-            },
-            "description": "按类别统计栅格像元数、面积和占比。"
+            }
           },
           "summarize_nearby": {
             "name": "邻近汇总",
+            "description": "在多个缓冲距离内汇总邻近图层的计数和度量。",
             "params": {
               "input": {
                 "label": "输入",
@@ -28953,11 +28954,11 @@
                 "label": "ID字段",
                 "description": "输入图层中标识每个源要素的可选字段。默认为输入要素索引。"
               }
-            },
-            "description": "在多个缓冲距离内汇总邻近图层的计数和度量。"
+            }
           },
           "summarize_percent_change": {
             "name": "百分比变化汇总",
+            "description": "按区域统计两期事件数量变化和百分比。",
             "params": {
               "input": {
                 "label": "输入",
@@ -28979,11 +28980,11 @@
                 "label": "搜索半径",
                 "description": "可选距离（地图单位）；区域该距离内的 incident 也计入，而不只计入区域内部。注意正半径会使覆盖区重叠，因此一个 incident 可能被多个区域计数（报告的 corpus 总数仍会去重）。"
               }
-            },
-            "description": "按区域统计两期事件数量变化和百分比。"
+            }
           },
           "summarize_within": {
             "name": "区域内汇总",
+            "description": "在现有多边形内按相交面积或长度汇总图层。",
             "params": {
               "polygons": {
                 "label": "多边形",
@@ -29013,11 +29014,11 @@
                 "label": "分组字段",
                 "description": "被汇总图层上的可选字段；为每个不同值生成一条分组汇总行。"
               }
-            },
-            "description": "在现有多边形内按相交面积或长度汇总图层。"
+            }
           },
           "summary_statistics": {
             "name": "汇总统计",
+            "description": "按分组字段执行 SQL 风格汇总统计。",
             "params": {
               "input": {
                 "label": "输入",
@@ -29035,11 +29036,11 @@
                 "label": "输出",
                 "description": "可选输出表路径（驱动由扩展名决定；GeoParquet 或 CSV）。如省略，则表存储在内存中。列：分组字段、记录 'count'，以及每个请求对的一个 '<field>_<statistic>' 列。"
               }
-            },
-            "description": "按分组字段执行 SQL 风格汇总统计。"
+            }
           },
           "sun_shadow_volume": {
             "name": "太阳阴影体积",
+            "description": "沿太阳向量拉伸 3D 体生成封闭阴影体。",
             "params": {
               "input": {
                 "label": "输入",
@@ -29073,11 +29074,11 @@
                 "label": "最大长度",
                 "description": "扫描距离上限（CRS 单位），避免低太阳角生成数公里长的棱柱。默认无限制。"
               }
-            },
-            "description": "沿太阳向量拉伸 3D 体生成封闭阴影体。"
+            }
           },
           "surface_difference": {
             "name": "表面差异",
+            "description": "把两个表面的高差分为上方、下方和持平多边形。",
             "params": {
               "input": {
                 "label": "输入",
@@ -29115,11 +29116,11 @@
                 "label": "参考波段",
                 "description": "参考表面的 1 起始波段（默认 1）。"
               }
-            },
-            "description": "把两个表面的高差分为上方、下方和持平多边形。"
+            }
           },
           "surface_parameters": {
             "name": "地表参数",
+            "description": "用局部拟合计算多尺度坡度、坡向和曲率。",
             "params": {
               "input": {
                 "label": "输入",
@@ -29149,11 +29150,11 @@
                 "label": "波段",
                 "description": "要读取的波段编号（从 1 开始，默认 1）。"
               }
-            },
-            "description": "用局部拟合计算多尺度坡度、坡向和曲率。"
+            }
           },
           "surface_volume": {
             "name": "地表体积",
+            "description": "对基准面上方或下方表面积分并输出面积体积。",
             "params": {
               "input": {
                 "label": "输入",
@@ -29175,11 +29176,11 @@
                 "label": "输出",
                 "description": "结果表的可选输出 CSV 路径。如省略，结果仅返回在运行结果中。"
               }
-            },
-            "description": "对基准面上方或下方表面积分并输出面积体积。"
+            }
           },
           "table_to_geometry": {
             "name": "表格转几何",
+            "description": "由表格坐标、方位距离或椭圆参数构建几何。",
             "params": {
               "input": {
                 "label": "输入",
@@ -29249,11 +29250,11 @@
                 "label": "方位角",
                 "description": "mode=ellipse：保存长轴方向的字段，以度为单位，自北顺时针。"
               }
-            },
-            "description": "由表格坐标、方位距离或椭圆参数构建几何。"
+            }
           },
           "tabulate_intersection": {
             "name": "交集统计表",
+            "description": "按面积、长度或计数交叉汇总类图层和分区。",
             "params": {
               "input": {
                 "label": "输入",
@@ -29279,11 +29280,11 @@
                 "label": "分区字段",
                 "description": "输出中标识每个区域的可选字段。默认为区域要素索引。"
               }
-            },
-            "description": "按面积、长度或计数交叉汇总类图层和分区。"
+            }
           },
           "thin_road_network": {
             "name": "精简道路网络",
+            "description": "保留连通性地隐藏低等级短路段。",
             "params": {
               "input": {
                 "label": "输入",
@@ -29313,11 +29314,11 @@
                 "label": "捕捉容差",
                 "description": "道路端点在该距离内即视为同一交叉口。默认 1e-6。"
               }
-            },
-            "description": "保留连通性地隐藏低等级短路段。"
+            }
           },
           "tile_grid_polygons": {
             "name": "切片网格多边形",
+            "description": "为缩放级和范围生成 XYZ 瓦片边界和 quadkey。",
             "params": {
               "zoom": {
                 "label": "缩放级别",
@@ -29351,11 +29352,11 @@
                 "label": "输出",
                 "description": "输出面图层。如省略，则存储在内存中。"
               }
-            },
-            "description": "为缩放级和范围生成 XYZ 瓦片边界和 quadkey。"
+            }
           },
           "time_series_clustering": {
             "name": "时间序列聚类",
+            "description": "按时间曲线相似度聚类时空立方体像元。",
             "params": {
               "input": {
                 "label": "输入",
@@ -29393,11 +29394,11 @@
                 "label": "种子",
                 "description": "用于可复现中心点初始化的随机种子（默认 1）。"
               }
-            },
-            "description": "按时间曲线相似度聚类时空立方体像元。"
+            }
           },
           "time_series_cross_correlation": {
             "name": "时间序列互相关",
+            "description": "逐像元计算两个时序栅格的滞后相关。",
             "params": {
               "input": {
                 "label": "输入",
@@ -29451,11 +29452,11 @@
                 "label": "波段",
                 "description": "堆栈以逗号分隔单波段列表给出时要读取的 1 起始波段（默认 1）。多波段堆栈忽略。"
               }
-            },
-            "description": "逐像元计算两个时序栅格的滞后相关。"
+            }
           },
           "time_series_forecast": {
             "name": "时间序列预测",
+            "description": "用指数平滑或多项式拟合预测每个位置未来值。",
             "params": {
               "input": {
                 "label": "输入",
@@ -29493,11 +29494,11 @@
                 "label": "分辨率",
                 "description": "H3 分辨率 0..15（默认 7）。"
               }
-            },
-            "description": "用指数平滑或多项式拟合预测每个位置未来值。"
+            }
           },
           "time_series_smoothing": {
             "name": "时间序列平滑",
+            "description": "按分组时序执行移动平均或 LOESS 平滑。",
             "params": {
               "input": {
                 "label": "输入",
@@ -29539,11 +29540,11 @@
                 "label": "输出",
                 "description": "输出图层路径。如省略，则存储在内存中。"
               }
-            },
-            "description": "按分组时序执行移动平均或 LOESS 平滑。"
+            }
           },
           "topo_to_raster": {
             "name": "拓扑转栅格",
+            "description": "由等高线、高程点和河流插值水文正确 DEM。",
             "params": {
               "contours": {
                 "label": "等值线",
@@ -29589,11 +29590,11 @@
                 "label": "河流嵌入",
                 "description": "洼地移除前降低河流像元的深度（高程单位），用于沿河流路由水流。默认 0（提供河流时 auto = 地形起伏的 1%）。"
               }
-            },
-            "description": "由等高线、高程点和河流插值水文正确 DEM。"
+            }
           },
           "trace_proximity_events": {
             "name": "追踪邻近事件",
+            "description": "检测轨迹接近事件并可选追踪传导接触。",
             "params": {
               "input": {
                 "label": "输入",
@@ -29627,11 +29628,11 @@
                 "label": "深度",
                 "description": "从种子开始的最大追踪代数（默认无限制）。"
               }
-            },
-            "description": "检测轨迹接近事件并可选追踪传导接触。"
+            }
           },
           "transform_features": {
             "name": "变换要素",
+            "description": "对图层几何执行平移、旋转、缩放和镜像。",
             "params": {
               "input": {
                 "label": "输入",
@@ -29677,11 +29678,11 @@
                 "label": "锚点Y",
                 "description": "锚点 Y 坐标；anchor=XY 时必填。"
               }
-            },
-            "description": "对图层几何执行平移、旋转、缩放和镜像。"
+            }
           },
           "transform_fields": {
             "name": "变换字段",
+            "description": "对属性字段标准化、变换、分箱或独热编码。",
             "params": {
               "input": {
                 "label": "输入",
@@ -29719,11 +29720,11 @@
                 "label": "丢弃输入",
                 "description": "若为 true，变换后从输出中移除原始字段（默认 false）。"
               }
-            },
-            "description": "对属性字段标准化、变换、分箱或独热编码。"
+            }
           },
           "transform_route_events": {
             "name": "变换路径事件",
+            "description": "把路径事件重参考到目标路径系统。",
             "params": {
               "source_events": {
                 "label": "数据源事件",
@@ -29757,11 +29758,11 @@
                 "label": "聚类容差",
                 "description": "恢复的事件位置到目标路线的最大 XY 距离（CRS 单位），满足该值事件才能转移。0 或省略表示无限制（始终吸附到最近目标路线）。"
               }
-            },
-            "description": "把路径事件重参考到目标路径系统。"
+            }
           },
           "transpose_fields": {
             "name": "转置字段",
+            "description": "把宽表多值列转置为带来源列名的长表。",
             "params": {
               "input": {
                 "label": "输入",
@@ -29795,11 +29796,11 @@
                 "label": "输出",
                 "description": "输出图层。省略时存储在内存中。"
               }
-            },
-            "description": "把宽表多值列转置为带来源列名的长表。"
+            }
           },
           "trim_line": {
             "name": "修剪线",
+            "description": "删除短于阈值的悬挂线、过冲和支线。",
             "params": {
               "input": {
                 "label": "输入",
@@ -29821,11 +29822,11 @@
                 "label": "捕捉容差",
                 "description": "该距离（CRS 单位）内的端点视为同一节点。默认 1e-6。"
               }
-            },
-            "description": "删除短于阈值的悬挂线、过冲和支线。"
+            }
           },
           "union_3d": {
             "name": "三维并集",
+            "description": "计算重叠封闭 3D 体的合并体积和重叠量。",
             "params": {
               "input": {
                 "label": "输入",
@@ -29847,11 +29848,11 @@
                 "label": "分辨率",
                 "description": "用于估算并集体积的每轴体素采样数，范围为 4 到 512（默认 96）。值越高越准确，但速度越慢。"
               }
-            },
-            "description": "计算重叠封闭 3D 体的合并体积和重叠量。"
+            }
           },
           "unwrap_phase": {
             "name": "相位解缠",
+            "description": "把缠绕干涉相位解算为连续绝对相位场。",
             "params": {
               "input": {
                 "label": "输入",
@@ -29893,11 +29894,11 @@
                 "label": "波段",
                 "description": "保存相位的 1 起始波段。单波段相位栅格或双波段 I/Q 干涉图可省略（后者自动检测）；提供时可从多波段堆栈的指定波段读取真实相位。超过两个波段的栅格必须提供该参数，因为三个及以上波段不是 I/Q 对，猜测会得到看似合理但错误的相位。"
               }
-            },
-            "description": "把缠绕干涉相位解算为连续绝对相位场。"
+            }
           },
           "validate_flow_direction": {
             "name": "验证流向",
+            "description": "检查 D8 流向代码、出口、循环和无效像元。",
             "params": {
               "input": {
                 "label": "输入",
@@ -29923,11 +29924,11 @@
                 "label": "波段",
                 "description": "保存方向的 1 基波段（默认 1）。"
               }
-            },
-            "description": "检查 D8 流向代码、出口、循环和无效像元。"
+            }
           },
           "vector_convert": {
             "name": "矢量转换",
+            "description": "按输出扩展名把矢量数据转换为其他格式。",
             "params": {
               "input": {
                 "label": "输入",
@@ -29937,11 +29938,11 @@
                 "label": "输出",
                 "description": "输出矢量路径；驱动程序由扩展名确定（.geojson、.fgb、.shp、.gpkg、.parquet 等）。若省略，则图层存储在内存中。"
               }
-            },
-            "description": "按输出扩展名把矢量数据转换为其他格式。"
+            }
           },
           "vector_to_h3": {
             "name": "矢量转 H3 单元格",
+            "description": "把矢量要素分箱到 H3 单元格并计数。",
             "params": {
               "input": {
                 "label": "输入",
@@ -29955,11 +29956,11 @@
                 "label": "分辨率",
                 "description": "H3 分辨率从 0（最粗）到 15（最细）；默认 8（约 0.7 km² 像元）。"
               }
-            },
-            "description": "把矢量要素分箱到 H3 单元格并计数。"
+            }
           },
           "vector_to_pmtiles": {
             "name": "矢量转 PMTiles",
+            "description": "把矢量图层打包为 PMTiles 矢量切片金字塔。",
             "params": {
               "input": {
                 "label": "输入",
@@ -29989,11 +29990,11 @@
                 "label": "丢弃速率",
                 "description": "低缩放级别下丢弃要素的速率，类似于 tippecanoe（默认不丢弃）。"
               }
-            },
-            "description": "把矢量图层打包为 PMTiles 矢量切片金字塔。"
+            }
           },
           "voxel_isosurface": {
             "name": "体素等值面",
+            "description": "用 marching tetrahedra 从体数据提取等值面。",
             "params": {
               "input": {
                 "label": "输入",
@@ -30023,11 +30024,11 @@
                 "label": "平滑",
                 "description": "应用于提取网格的拉普拉斯平滑迭代次数（默认 0）。"
               }
-            },
-            "description": "用 marching tetrahedra 从体数据提取等值面。"
+            }
           },
           "warp_raster": {
             "name": "栅格变形",
+            "description": "由地面控制点拟合多项式并重采样地理配准栅格。",
             "params": {
               "input": {
                 "label": "输入",
@@ -30061,11 +30062,11 @@
                 "label": "波段",
                 "description": "要校正的 1 基波段（默认 1）。"
               }
-            },
-            "description": "由地面控制点拟合多项式并重采样地理配准栅格。"
+            }
           },
           "weighted_voronoi": {
             "name": "加权 Voronoi",
+            "description": "用乘性、加性或幂加权距离分配 Voronoi 像元。",
             "params": {
               "input": {
                 "label": "输入",
@@ -30095,11 +30096,11 @@
                 "label": "EPSG",
                 "description": "标记输出的 EPSG（默认来自输入图层）。"
               }
-            },
-            "description": "用乘性、加性或幂加权距离分配 Voronoi 像元。"
+            }
           },
           "write_geoparquet": {
             "name": "写入 GeoParquet",
+            "description": "把矢量数据写出为 Hilbert 排序并 ZSTD 压缩的 GeoParquet。",
             "params": {
               "input": {
                 "label": "输入",
@@ -30117,11 +30118,11 @@
                 "label": "Hilbert排序",
                 "description": "沿 Hilbert 曲线排序要素以获得空间局部性（默认 true）。"
               }
-            },
-            "description": "把矢量数据写出为 Hilbert 排序并 ZSTD 压缩的 GeoParquet。"
+            }
           },
           "write_pmtiles": {
             "name": "栅格转 PMTiles",
+            "description": "把栅格渲染为 Web Mercator PNG PMTiles 存档。",
             "params": {
               "input": {
                 "label": "输入",
@@ -30152,18 +30153,18 @@
                 "description": "重采样方法：bilinear（默认）、nearest、cubic。"
               },
               "min": {
-                "label": "最小",
+                "label": "最小值",
                 "description": "映射到颜色映射低端的值（默认：波段最小值）。"
               },
               "max": {
-                "label": "最大",
+                "label": "最大值",
                 "description": "映射到颜色映射高端的值（默认：波段最大值）。"
               }
-            },
-            "description": "把栅格渲染为 Web Mercator PNG PMTiles 存档。"
+            }
           },
           "zonal_characterization": {
             "name": "分区特征描述",
+            "description": "一次计算多个值栅格在分区上的统计。",
             "params": {
               "zones": {
                 "label": "分区",
@@ -30189,11 +30190,11 @@
                 "label": "忽略无数据",
                 "description": "在值栅格中跳过 NoData 像元（默认 true）。为 false 时，分区内任何 NoData 都会使该分区统计值为 null。"
               }
-            },
-            "description": "一次计算多个值栅格在分区上的统计。"
+            }
           },
           "zonal_fill": {
             "name": "分区填充",
+            "description": "用边界权重最小值填充分类栅格每个分区。",
             "params": {
               "zones": {
                 "label": "分区",
@@ -30207,11 +30208,11 @@
                 "label": "输出",
                 "description": "输出栅格。若省略，则存储在内存中。"
               }
-            },
-            "description": "用边界权重最小值填充分类栅格每个分区。"
+            }
           },
           "zonal_geometry": {
             "name": "分区几何",
+            "description": "计算每个分区的面积、周长、厚度和质心。",
             "params": {
               "zones": {
                 "label": "分区",
@@ -30229,11 +30230,11 @@
                 "label": "输出为表格",
                 "description": "为 true 时，每个分区输出一行并包含所有度量，而不是逐像元栅格（默认 false）。"
               }
-            },
-            "description": "计算每个分区的面积、周长、厚度和质心。"
+            }
           },
           "zonal_histogram": {
             "name": "分区直方图",
+            "description": "交叉统计每个分区内值栅格类别或分箱频数。",
             "params": {
               "zones": {
                 "label": "分区",
@@ -30271,11 +30272,11 @@
                 "label": "纵向输出",
                 "description": "长格式（zone,class,count,percent）变体的可选 CSV 路径。"
               }
-            },
-            "description": "交叉统计每个分区内值栅格类别或分箱频数。"
+            }
           },
           "extract_cog_subset": {
             "name": "提取 COG 子集",
+            "description": "从本地或 HTTP COG 提取范围子集。",
             "params": {
               "input": {
                 "label": "输入",
@@ -30313,11 +30314,11 @@
                 "label": "无数据值",
                 "description": "可选输出 nodata 值。用作重投影填充值，并写入输出 nodata 元数据。"
               }
-            },
-            "description": "从本地或 HTTP COG 提取范围子集。"
+            }
           },
           "extract_wms_subset": {
             "name": "提取 WMS 子集",
+            "description": "从 WMS GetMap 服务获取范围子集并写出 COG。",
             "params": {
               "url": {
                 "label": "URL",
@@ -30371,11 +30372,11 @@
                 "label": "无数据值",
                 "description": "可选输出 nodata 值。"
               }
-            },
-            "description": "从 WMS GetMap 服务获取范围子集并写出 COG。"
+            }
           },
           "extract_xyz_tile_subset": {
             "name": "提取 XYZ 切片子集",
+            "description": "获取并镶嵌 XYZ 栅格瓦片，输出 Deflate RGB COG。",
             "params": {
               "url": {
                 "label": "URL",
@@ -30425,8 +30426,7 @@
                 "label": "无数据值",
                 "description": "用于缺失/透明像元的可选输出 nodata 值。"
               }
-            },
-            "description": "获取并镶嵌 XYZ 栅格瓦片，输出 Deflate RGB COG。"
+            }
           }
         }
       },
@@ -30446,8 +30446,8 @@
           "hydrologyWatershedsBasins": "水文 - 流域与盆地",
           "lidarAnalysisMetrics": "LiDAR - 分析指标",
           "lidarFilteringClassification": "LiDAR - 滤波与分类",
-          "lidarInterpolationGridding": "LiDAR - 插值与网格化",
           "lidarIOManagement": "LiDAR - 输入/输出与管理",
+          "lidarInterpolationGridding": "LiDAR - 插值与网格化",
           "projectionAndGeoreferencing": "投影与地理配准",
           "raster": "栅格",
           "rasterDistanceCost": "栅格 - 距离与成本",
@@ -30738,7 +30738,7 @@
           "cell_position_statistics": "像元位置统计",
           "cell_statistics": "像元统计",
           "classification_accuracy_assessment": "分类精度评估",
-          "combine": "合并",
+          "combine": "组合",
           "composite_bands": "波段合成",
           "compute_sar_indices": "计算 SAR 指数",
           "contour_with_barriers": "带障碍等高线",
