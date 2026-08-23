@@ -21,11 +21,21 @@ translation mistakes fail in CI.
 
 ## Add or update a translation
 
-1. Copy `v1/whitebox/en.json` to the target locale code.
-2. Keep identifiers, interpolation placeholders, enum values, and technical
-   units unchanged; translate display strings only.
-3. Set `locale`, `name`, and `updatedAt` in the pack header.
-4. Add the pack to `v1/index.json` and run `npm test`.
+Packs are generated, not hand-edited. Each locale has a translation memory in
+`translations/<locale>.json` keyed by the English string, and `scripts/build.mjs`
+re-expands it over the English pack's shape:
+
+```sh
+node scripts/extract.mjs es      # chunk up whatever is still untranslated
+node scripts/import.mjs es       # merge the finished chunks back in
+node scripts/build.mjs es        # write v1/whitebox/es.json
+node scripts/reindex.mjs         # refresh v1/index.json + index.html
+npm test
+```
+
+See [TRANSLATING.md](TRANSLATING.md) for the conventions, the per-locale
+progress, and the pitfalls. Keep identifiers, interpolation placeholders, enum
+values, and technical units unchanged; translate display strings only.
 
 The only accepted translation roots are:
 
