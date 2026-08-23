@@ -1,0 +1,54 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://languages.geolibre.app/schema/v1.json",
+  "title": "GeoLibre Whitebox language pack",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["format", "formatVersion", "scope", "locale", "translations"],
+  "properties": {
+    "format": { "const": "geolibre-language-pack" },
+    "formatVersion": { "const": 1 },
+    "scope": { "const": "whitebox" },
+    "locale": { "type": "string", "pattern": "^[a-z]{2,3}(-[A-Za-z0-9]{2,8})*$" },
+    "name": { "type": "string", "minLength": 1 },
+    "updatedAt": { "type": "string", "format": "date-time" },
+    "translations": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["processing"],
+      "properties": {
+        "processing": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "toolMeta": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": { "whitebox": { "$ref": "#/$defs/stringTree" } }
+            },
+            "whitebox": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "categories": { "$ref": "#/$defs/stringTree" },
+                "menuTool": { "$ref": "#/$defs/stringTree" },
+                "menuSubcategory": { "$ref": "#/$defs/stringTree" }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "$defs": {
+    "stringTree": {
+      "type": "object",
+      "propertyNames": {
+        "not": { "enum": ["__proto__", "prototype", "constructor"] }
+      },
+      "additionalProperties": {
+        "anyOf": [{ "type": "string" }, { "$ref": "#/$defs/stringTree" }]
+      }
+    }
+  }
+}

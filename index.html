@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Optional Whitebox processing translations for GeoLibre." />
+    <title>GeoLibre language packs</title>
+    <style>
+      :root { color-scheme: light dark; font-family: ui-sans-serif, system-ui, sans-serif; }
+      body { margin: 0; min-height: 100vh; background: #eef6f3; color: #17352f; }
+      main { width: min(760px, calc(100% - 40px)); margin: 0 auto; padding: 12vh 0 64px; }
+      .mark { width: 48px; height: 48px; border-radius: 50%; display: grid; place-items: center;
+        background: #157a6e; color: white; font-size: 24px; box-shadow: 0 10px 30px #157a6e33; }
+      h1 { font-size: clamp(2rem, 7vw, 4.5rem); line-height: .95; letter-spacing: -.055em;
+        max-width: 700px; margin: 28px 0 20px; }
+      p { max-width: 620px; font-size: 1.08rem; line-height: 1.7; color: #496761; }
+      .packs { margin-top: 44px; border-top: 1px solid #b8cec8; }
+      a { color: #08675c; font-weight: 650; text-underline-offset: 3px; }
+      .pack { display: flex; justify-content: space-between; align-items: baseline; gap: 20px;
+        padding: 20px 0; border-bottom: 1px solid #b8cec8; }
+      .code { font-family: ui-monospace, monospace; color: #67817b; }
+      @media (prefers-color-scheme: dark) {
+        body { background: #10231f; color: #e2f1ed; }
+        p, .code { color: #9eb8b2; }
+        .packs, .pack { border-color: #36534c; }
+        a { color: #73d5c8; }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="mark" aria-hidden="true">◎</div>
+      <h1>Maps speak your language.</h1>
+      <p>
+        Optional Whitebox processing translations for GeoLibre. Download packs in GeoLibre’s
+        Language settings, or use the JSON files below for offline installation and translation work.
+      </p>
+      <section class="packs" aria-label="Available language packs">
+        <div class="pack"><a href="/v1/whitebox/zh.json">简体中文</a><span class="code">zh</span></div>
+        <div class="pack"><a href="/v1/whitebox/en.json">English translator template</a><span class="code">en</span></div>
+      </section>
+      <p><a href="https://github.com/opengeos/geolibre-language-packs">Contribute on GitHub →</a></p>
+    </main>
+  </body>
+</html>
