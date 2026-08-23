@@ -126,8 +126,8 @@
       "name": "Paquete de idioma español para Whitebox",
       "scope": "whitebox",
       "url": "https://languages.geolibre.app/v1/whitebox/es.json",
-      "bytes": 1592612,
-      "updatedAt": "2026-08-23T12:07:44.738Z"
+      "bytes": 1592678,
+      "updatedAt": "2026-08-23T12:56:35.013Z"
     },
     {
       "locale": "th",

@@ -30,14 +30,16 @@ let current = [];
 let chars = 0;
 let role = null;
 for (const entry of todo) {
-  if (entry.role !== role || chars + entry.text.length > CHUNK_CHARS) {
+  // A line is `<source>\t<source>\n`, so it costs twice the string plus two.
+  const lineChars = 2 * entry.text.length + 2;
+  if (entry.role !== role || chars + lineChars > CHUNK_CHARS) {
     if (current.length) chunks.push(current);
     current = [];
     chars = 0;
     role = entry.role;
   }
   current.push(entry);
-  chars += entry.text.length;
+  chars += lineChars;
 }
 if (current.length) chunks.push(current);
 

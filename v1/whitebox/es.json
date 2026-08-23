@@ -4,7 +4,7 @@
   "scope": "whitebox",
   "locale": "es",
   "name": "Paquete de idioma español para Whitebox",
-  "updatedAt": "2026-08-23T12:07:44.738Z",
+  "updatedAt": "2026-08-23T12:56:35.013Z",
   "translations": {
     "processing": {
       "toolMeta": {
@@ -14604,7 +14604,7 @@
             }
           },
           "ceil": {
-            "name": "Techo",
+            "name": "Redondear hacia arriba",
             "params": {
               "input": {
                 "label": "Entrada",
@@ -14932,7 +14932,7 @@
             }
           },
           "floor": {
-            "name": "Suelo",
+            "name": "Redondear hacia abajo",
             "params": {
               "input": {
                 "label": "Entrada",
@@ -30838,7 +30838,7 @@
           "block_maximum": "Máximo por bloque",
           "block_minimum": "Mínimo por bloque",
           "boundary_shape_complexity": "Complejidad de la forma del límite",
-          "ceil": "Techo",
+          "ceil": "Redondear hacia arriba",
           "centroid_raster": "Centroide ráster",
           "clip_raster_to_polygon": "Recortar ráster con polígono",
           "clump": "Agrupar",
@@ -30858,7 +30858,7 @@
           "fft_random_field": "Campo aleatorio FFT",
           "filter_raster_features_by_area": "Filtrar entidades ráster por área",
           "find_patch_edge_cells": "Encontrar celdas de borde de parche",
-          "floor": "Suelo",
+          "floor": "Redondear hacia abajo",
           "greater_than": "Mayor que",
           "greater_than_or_equal_to": "MayorOIgualQue",
           "heat_map": "Mapa de calor",

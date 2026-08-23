@@ -45,8 +45,17 @@ resumable — stop after any chunk, import what you have, and pick it up later.
 
 Chunk files are `<source>\t<translation>`, pre-filled with the source on both
 sides, ~20,000 characters each, and grouped so a chunk holds one **role** at a
-time. The role matters: a bare `Dem` needs a different rendering as a parameter
-label than as prose.
+time. Role decides register, not vocabulary: a chunk of bare parameter labels
+wants terse noun phrases, a chunk of descriptions wants sentences, and mixing
+the two in one file makes both read worse.
+
+Role is a property of the *chunk*, not of the memory. The memory is keyed by the
+English string alone, so a string that appears in two roles gets one translation
+covering both. 52 strings do — all of them short label-like fragments such as
+`Output`, `Threshold` and `Dem`, where a parameter's description is a stub that
+just restates its label. None is prose. One rendering is the right answer there,
+and it is the same property that stops `Input raster file.` drifting into three
+variants.
 
 | Role | Strings | What it is |
 | --- | --- | --- |
