@@ -1,9 +1,10 @@
 # Translating a Whitebox pack
 
-GeoLibre ships catalogs for 19 languages, but only `en` and `zh` have a Whitebox
-pack. This document is the workflow for the other seventeen — `ar`, `de`, `es`,
-`fa`, `fr`, `hi`, `id`, `it`, `ja`, `ka`, `ko`, `nl`, `pt`, `ru`, `th`, `tr`,
-`vi` — and the record of how far each one has got.
+GeoLibre ships catalogs for 19 languages, and **all 19 now have a complete
+Whitebox pack**. This document is the workflow that produced the seventeen —
+`ar`, `de`, `es`, `fa`, `fr`, `hi`, `id`, `it`, `ja`, `ka`, `ko`, `nl`, `pt`,
+`ru`, `th`, `tr`, `vi` — and the reference for re-running it when `en.json`
+changes.
 
 ## Why there is a pipeline
 
@@ -87,22 +88,29 @@ there pins it; leaving it out stamps the build date.
 
 ## Where each locale stands
 
-| Locale | Translated | Covers |
+All 19 locales are complete: 7,181 / 7,181 distinct source strings each, expanding
+to 14,938 message leaves per pack. `v1/whitebox/` holds 19 packs and
+`scripts/build.mjs <locale>` reports "complete" for every one without `--partial`.
+
+| Locale | Translated | Notes |
 | --- | --- | --- |
-| `zh` | 7,181 / 7,181 | complete (harvested from the published pack) |
-| `de` `es` `fr` `it` `pt` | 1,161 / 7,181 | categories, subcategories, all 1,066 tool names |
-| `ar` `fa` `hi` `id` `ja` `ka` `ko` `nl` `ru` `th` `tr` `vi` | 95 / 7,181 | categories and subcategories |
+| `en` | — | the source pack; never edited |
+| `zh` | 7,181 / 7,181 | harvested from the published pack, then normalised |
+| `ar` `de` `es` `fa` `fr` `hi` `id` `it` `ja` `ka` `ko` `nl` `pt` `ru` `th` `tr` `vi` | 7,181 / 7,181 | translated through the loop above |
 
-No pack has been built for the seventeen yet — `v1/` still holds only `en` and
-`zh`. Building one before its labels and descriptions are done needs
-`--partial`, which produces a pack that renders half in English (i18next falls
-back to `en` per key). That is shippable, but visibly mixed.
+A handful of strings are deliberately identical to their English source in every
+locale — bare acronyms (`OBIA`, `SAR`), math function names (`Cos`, `Ln`,
+`Atan2`), Greek letters and single-letter parameter symbols (`K`, `N`, `X`,
+`Dx`), and algorithm or product names (`LandTrendr`, `Fill-Spill-Merge`,
+`GeoLibre (WASM)`). They were imported with `--keep-identical`. Locales that
+share vocabulary with English legitimately have more of them — Dutch 119, French
+104, Indonesian 100 — while Persian has 15 and Arabic 20.
 
-Remaining per locale: 1,792 labels, 333 tool descriptions, 3,903 parameter
-descriptions — about 300,000 characters, of which the parameter descriptions are
-roughly 80%.
+`--partial` is therefore only needed while new work is in flight: it omits
+untranslated leaves so i18next falls back to `en` per key, which is shippable but
+visibly mixed. The final build of every pack must be run without it.
 
-## Two things that are easy to get wrong
+## Three things that are easy to get wrong
 
 **333 tools carry a tool-level `description`** alongside `name` and `params`, and
 only those 333 do. An extractor written against the shape "name + params" walks
@@ -115,6 +123,14 @@ strings two different ways — `Zero Background` was both `零背景` and `背�
 one source string to one translation, so `harvest.mjs` keeps the first rendering
 and reports the rest. The committed `zh` pack is the normalised rebuild; it is
 otherwise leaf-for-leaf identical to what was published.
+
+**`extract.mjs` renumbers chunks, so never run it while a chunk is checked out.**
+It emits whatever is still missing, numbered from `chunk-01`. Run it while a
+worker is partway through `chunk-13` and that worker's strings come back under a
+new name — the same work, emitted twice. When several people or agents translate
+one locale in parallel, extract once at the start, then use `ls work/<locale>/`
+to see what is left; the chunk files themselves are the work queue, and
+`import.mjs` is what retires an entry from it.
 
 ## Recovering a memory
 
