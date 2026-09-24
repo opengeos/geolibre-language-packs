@@ -17,6 +17,12 @@ const packs = readdirSync(dir)
   .map((name) => {
     const bytes = readFileSync(new URL(name, dir));
     const pack = JSON.parse(bytes.toString("utf8"));
+    // The locale is interpolated into URLs and HTML attributes below, and
+    // validate.mjs only runs afterwards, so hold it to the pack format's own
+    // pattern here rather than escaping it in three places.
+    if (typeof pack.locale !== "string" || !/^[a-z]{2,3}(?:-[A-Za-z0-9]{2,8})*$/.test(pack.locale)) {
+      throw new Error(`v1/whitebox/${name}: invalid locale ${JSON.stringify(pack.locale)}`);
+    }
     return {
       locale: pack.locale,
       name: pack.name,
