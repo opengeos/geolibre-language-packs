@@ -47,11 +47,20 @@ const label = (entry) =>
   entry.locale === "en"
     ? "English translator template"
     : (locales[entry.locale]?.nativeName ?? entry.locale);
+// Each native name is tagged with its own language so screen readers switch
+// voice and browsers pick the right shaping; the right-to-left ones also get
+// `dir="rtl"` so trailing punctuation or Latin fragments cannot reorder them
+// inside the page's left-to-right layout.
+const RTL = new Set(["ar", "fa", "he", "ur"]);
+const nameAttrs = (entry) =>
+  entry.locale === "en"
+    ? ""
+    : ` lang="${entry.locale}"` + (RTL.has(entry.locale.split("-")[0]) ? ' dir="rtl"' : "");
 const rows = pageOrder
   .map(
     (entry) =>
-      `        <div class="pack"><a href="/v1/whitebox/${entry.locale}.json">${label(entry)}</a>` +
-      `<span class="code">${entry.locale}</span></div>`,
+      `        <div class="pack"><a href="/v1/whitebox/${entry.locale}.json"${nameAttrs(entry)}>` +
+      `${label(entry)}</a><span class="code">${entry.locale}</span></div>`,
   )
   .join("\n");
 

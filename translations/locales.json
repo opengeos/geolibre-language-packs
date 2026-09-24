@@ -30,6 +30,11 @@
     "nativeName": "Français",
     "name": "Pack de langue française pour Whitebox"
   },
+  "he": {
+    "englishName": "Hebrew",
+    "nativeName": "עברית",
+    "name": "חבילת השפה העברית של Whitebox"
+  },
   "hi": {
     "englishName": "Hindi",
     "nativeName": "हिन्दी",
