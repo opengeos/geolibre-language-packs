@@ -58,6 +58,14 @@
       "updatedAt": "2026-08-23T12:07:44.648Z"
     },
     {
+      "locale": "he",
+      "name": "חבילת השפה העברית של Whitebox",
+      "scope": "whitebox",
+      "url": "https://languages.geolibre.app/v1/whitebox/he.json",
+      "bytes": 1728231,
+      "updatedAt": "2026-09-24T22:16:22.934Z"
+    },
+    {
       "locale": "hi",
       "name": "Whitebox हिन्दी भाषा पैक",
       "scope": "whitebox",

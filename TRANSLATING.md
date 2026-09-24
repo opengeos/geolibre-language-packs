@@ -1,10 +1,10 @@
 # Translating a Whitebox pack
 
-GeoLibre ships catalogs for 19 languages, and **all 19 now have a complete
-Whitebox pack**. This document is the workflow that produced the seventeen —
-`ar`, `de`, `es`, `fa`, `fr`, `hi`, `id`, `it`, `ja`, `ka`, `ko`, `nl`, `pt`,
-`ru`, `th`, `tr`, `vi` — and the reference for re-running it when `en.json`
-changes.
+GeoLibre ships catalogs for 20 languages, and **all 20 have a complete
+Whitebox pack**. This document is the workflow that produced the eighteen —
+`ar`, `de`, `es`, `fa`, `fr`, `he`, `hi`, `id`, `it`, `ja`, `ka`, `ko`, `nl`,
+`pt`, `ru`, `th`, `tr`, `vi` — and the reference for re-running it when
+`en.json` changes, or when GeoLibre adds a language.
 
 ## Why there is a pipeline
 
@@ -97,15 +97,16 @@ there pins it; leaving it out stamps the build date.
 
 ## Where each locale stands
 
-All 19 locales are complete: 7,181 / 7,181 distinct source strings each, expanding
-to 14,938 message leaves per pack. `v1/whitebox/` holds 19 packs and
+All 19 translated locales are complete: 7,181 / 7,181 distinct source strings
+each, expanding to 14,938 message leaves per pack. `v1/whitebox/` holds 20 packs
+(the 19 plus the English template) and
 `scripts/build.mjs <locale>` reports "complete" for every one without `--partial`.
 
 | Locale | Translated | Notes |
 | --- | --- | --- |
 | `en` | — | the source pack; never edited |
 | `zh` | 7,181 / 7,181 | harvested from the published pack, then normalised |
-| `ar` `de` `es` `fa` `fr` `hi` `id` `it` `ja` `ka` `ko` `nl` `pt` `ru` `th` `tr` `vi` | 7,181 / 7,181 | translated through the loop above |
+| `ar` `de` `es` `fa` `fr` `he` `hi` `id` `it` `ja` `ka` `ko` `nl` `pt` `ru` `th` `tr` `vi` | 7,181 / 7,181 | translated through the loop above |
 
 A handful of strings are deliberately identical to their English source in every
 locale — bare acronyms (`OBIA`, `SAR`), math function names (`Cos`, `Ln`,
@@ -113,7 +114,8 @@ locale — bare acronyms (`OBIA`, `SAR`), math function names (`Cos`, `Ln`,
 `Dx`), and algorithm or product names (`LandTrendr`, `Fill-Spill-Merge`,
 `GeoLibre (WASM)`). They were imported with `--keep-identical`. Locales that
 share vocabulary with English legitimately have more of them — Dutch 119, French
-104, Indonesian 100 — while Persian has 15 and Arabic 20.
+104, Indonesian 100 — while Persian has 15, Arabic 20 and Hebrew 44 (mostly the
+math function names, which Hebrew UIs keep in Latin script).
 
 `--partial` is therefore only needed while new work is in flight: it omits
 untranslated leaves so i18next falls back to `en` per key, which is shippable but

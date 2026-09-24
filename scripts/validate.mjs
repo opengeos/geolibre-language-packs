@@ -56,6 +56,35 @@ assert.deepEqual(
 );
 
 const indexed = new Map(index.packs.map((entry) => [`${entry.locale}.json`, entry]));
+const locales = JSON.parse(
+  await readFile(new URL("../translations/locales.json", import.meta.url), "utf8"),
+);
+const english = JSON.parse(await readFile(new URL("en.json", packDirectory), "utf8")).translations
+  .processing;
+
+/**
+ * Every leaf a translated pack carries must sit at a path that is a string in
+ * the English pack. The app would accept an extra key without complaint and
+ * simply never read it, so a pack built against an older `en.json` (a renamed
+ * tool, a dropped parameter) ships dead strings instead of failing here.
+ * Returns how many English leaves the pack leaves untranslated.
+ */
+function checkAgainstEnglish(value, source, path) {
+  if (typeof value === "string") {
+    assert.equal(typeof source, "string", `${path} is not a message in en.json`);
+    return 0;
+  }
+  assert(source && typeof source === "object", `${path} is not a branch in en.json`);
+  let missing = 0;
+  for (const key of Object.keys(value)) {
+    assert(Object.hasOwn(source, key), `${path}.${key} is not in en.json`);
+    missing += checkAgainstEnglish(value[key], source[key], `${path}.${key}`);
+  }
+  for (const key of Object.keys(source)) {
+    if (!Object.hasOwn(value, key)) missing += stringLeaves(source[key], `${path}.${key}`);
+  }
+  return missing;
+}
 
 for (const filename of files) {
   const bytes = await readFile(new URL(filename, packDirectory));
@@ -69,5 +98,14 @@ for (const filename of files) {
   assert.equal(entry.bytes, bytes.byteLength, `${filename}: v1/index.json is stale, run scripts/reindex.mjs`);
   assert.equal(entry.name, pack.name, `${filename}: v1/index.json name is stale`);
   assert.equal(entry.updatedAt, pack.updatedAt, `${filename}: v1/index.json updatedAt is stale`);
-  console.log(`${filename}: ${leaves.toLocaleString("en")} messages, ${bytes.byteLength} bytes`);
+  assert(locales[pack.locale], `${filename}: translations/locales.json has no "${pack.locale}" entry`);
+  assert.equal(entry.locale, pack.locale, `${filename}: v1/index.json locale is stale`);
+  // A partial pack is shippable (i18next falls back to English per key), so it
+  // is reported rather than rejected; see TRANSLATING.md.
+  const missing =
+    pack.locale === "en" ? 0 : checkAgainstEnglish(pack.translations.processing, english, pack.locale);
+  console.log(
+    `${filename}: ${leaves.toLocaleString("en")} messages, ${bytes.byteLength} bytes` +
+      (missing ? `, ${missing.toLocaleString("en")} left in English` : ""),
+  );
 }

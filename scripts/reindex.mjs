@@ -17,6 +17,12 @@ const packs = readdirSync(dir)
   .map((name) => {
     const bytes = readFileSync(new URL(name, dir));
     const pack = JSON.parse(bytes.toString("utf8"));
+    // The locale is interpolated into URLs and HTML attributes below, and
+    // validate.mjs only runs afterwards, so hold it to the pack format's own
+    // pattern here rather than escaping it in three places.
+    if (typeof pack.locale !== "string" || !/^[a-z]{2,3}(?:-[A-Za-z0-9]{2,8})*$/.test(pack.locale)) {
+      throw new Error(`v1/whitebox/${name}: invalid locale ${JSON.stringify(pack.locale)}`);
+    }
     return {
       locale: pack.locale,
       name: pack.name,
@@ -47,11 +53,20 @@ const label = (entry) =>
   entry.locale === "en"
     ? "English translator template"
     : (locales[entry.locale]?.nativeName ?? entry.locale);
+// Each native name is tagged with its own language so screen readers switch
+// voice and browsers pick the right shaping; the right-to-left ones also get
+// `dir="rtl"` so trailing punctuation or Latin fragments cannot reorder them
+// inside the page's left-to-right layout.
+const RTL = new Set(["ar", "fa", "he", "ur"]);
+const nameAttrs = (entry) =>
+  entry.locale === "en"
+    ? ""
+    : ` lang="${entry.locale}"` + (RTL.has(entry.locale.split("-")[0]) ? ' dir="rtl"' : "");
 const rows = pageOrder
   .map(
     (entry) =>
-      `        <div class="pack"><a href="/v1/whitebox/${entry.locale}.json">${label(entry)}</a>` +
-      `<span class="code">${entry.locale}</span></div>`,
+      `        <div class="pack"><a href="/v1/whitebox/${entry.locale}.json"${nameAttrs(entry)}>` +
+      `${label(entry)}</a><span class="code">${entry.locale}</span></div>`,
   )
   .join("\n");
 
