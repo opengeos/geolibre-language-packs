@@ -46,12 +46,11 @@ function walkEnglish() {
   const out = [];
   (function walk(value, path) {
     if (typeof value === "string") {
-      // The work-chunk format is one tab-separated pair per line. Newlines are
-      // escaped as a literal `\n` there (see `encodeCell`), so a source string
-      // may contain one; a tab, a carriage return, or a literal backslash-n
-      // would make the round trip ambiguous and silently corrupt a chunk.
-      if (/[\t\r]|\\n/.test(value)) {
-        throw new Error(`en.json: ${path.join(".")} contains a tab, carriage return or literal \\n`);
+      // The work-chunk format is one tab-separated pair per line. Newlines and
+      // backslashes are escaped there (see `encodeCell`), so a source string may
+      // contain either; a tab or a carriage return would silently corrupt a chunk.
+      if (/[\t\r]/.test(value)) {
+        throw new Error(`en.json: ${path.join(".")} contains a tab or carriage return`);
       }
       out.push({ role: roleFor(path), text: value });
       return;
@@ -67,12 +66,15 @@ function walkEnglish() {
 /**
  * A string as it appears in a work chunk. Ten Whitebox summaries run to several
  * paragraphs, and a raw newline would split their line in two, so newlines are
- * written as a literal `\n` and restored by `decodeCell` on import.
+ * written as a literal `\n` and restored by `decodeCell` on import. Backslashes
+ * are doubled first, so a string that really contains a backslash followed by
+ * `n` survives the round trip instead of turning into a newline.
  */
-export const encodeCell = (text) => text.replaceAll("\n", "\\n");
+export const encodeCell = (text) => text.replaceAll("\\", "\\\\").replaceAll("\n", "\\n");
 
 /** Inverse of `encodeCell`. */
-export const decodeCell = (cell) => cell.replaceAll("\\n", "\n");
+export const decodeCell = (cell) =>
+  cell.replace(/\\([\\n])/g, (_, escape) => (escape === "n" ? "\n" : "\\"));
 
 /**
  * The distinct translatable strings, grouped by role. Grouping matters for

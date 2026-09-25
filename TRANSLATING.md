@@ -143,8 +143,8 @@ to the desktop catalog snapshot for sidecar-only tools, and then the new text is
 the only work `extract.mjs` emits. `reproject_lidar` has no summary in either
 source, so it has no `description`. Ten summaries (`mean_filter`,
 `median_filter` and the other moving-window filters) span several paragraphs;
-chunks write their newlines as a literal `\n` and `import.mjs` restores them, so
-keep each `\n` in place when translating.
+chunks write their newlines as a literal `\n` (and any real backslash as `\\`)
+and `import.mjs` restores them, so keep each `\n` in place when translating.
 
 **Rebuilding `zh` normalises 31 leaves.** The published pack rendered 13 English
 strings two different ways — `Zero Background` was both `零背景` and `背景为零`,

@@ -7,7 +7,8 @@
  * so re-running after a partial pass emits just the remaining work. Each line is
  * `<source>\t<source>`: fill in the second column and feed the file back through
  * `scripts/import.mjs`. `lib.mjs` asserts that no pack string contains a tab,
- * and newlines are written as a literal `\n`, so the format stays unambiguous.
+ * and newlines and backslashes are escaped as `\n` and `\\` (see `encodeCell`),
+ * so the format stays unambiguous.
  */
 import { writeFileSync, mkdirSync } from "node:fs";
 import { root, sourceStrings, translationMemory, encodeCell } from "./lib.mjs";
