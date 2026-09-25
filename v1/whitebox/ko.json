@@ -4,7 +4,7 @@
   "scope": "whitebox",
   "locale": "ko",
   "name": "Whitebox 한국어 언어 팩",
-  "updatedAt": "2026-09-25T15:50:20.061Z",
+  "updatedAt": "2026-09-25T16:12:40.872Z",
   "translations": {
     "processing": {
       "toolMeta": {
@@ -13696,7 +13696,7 @@
           },
           "getis_ord_gi_star_raster": {
             "name": "Getis-Ord Gi* 래스터",
-            "description": "포인트로부터 Gi* 핫스팟/콜드스팟 분류를 계산하고 래스터(-1=콜드, 0=NS, 1=핫)를 출력합니다. 핫스팟 기반 분석에 사용됩니다.\\",
+            "description": "포인트로부터 Gi* 핫스팟/콜드스팟 분류를 계산하고 래스터(-1=콜드, 0=NS, 1=핫)를 출력합니다. 핫스팟 기반 분석에 사용됩니다.",
             "params": {
               "input": {
                 "label": "입력",

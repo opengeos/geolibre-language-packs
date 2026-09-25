@@ -4,7 +4,7 @@
   "scope": "whitebox",
   "locale": "hi",
   "name": "Whitebox हिन्दी भाषा पैक",
-  "updatedAt": "2026-09-25T15:56:00.999Z",
+  "updatedAt": "2026-09-25T16:12:40.519Z",
   "translations": {
     "processing": {
       "toolMeta": {
@@ -13696,7 +13696,7 @@
           },
           "getis_ord_gi_star_raster": {
             "name": "Getis-Ord Gi* रास्टर",
-            "description": "बिंदुओं से Gi* हॉटस्पॉट/कोल्डस्पॉट वर्गीकरण परिकलित करता है और रास्टर (-1=cold, 0=NS, 1=hot) आउटपुट करता है। हॉटस्पॉट-आधारित विश्लेषण के लिए।\\",
+            "description": "बिंदुओं से Gi* हॉटस्पॉट/कोल्डस्पॉट वर्गीकरण परिकलित करता है और रास्टर (-1=cold, 0=NS, 1=hot) आउटपुट करता है। हॉटस्पॉट-आधारित विश्लेषण के लिए।",
             "params": {
               "input": {
                 "label": "इनपुट",

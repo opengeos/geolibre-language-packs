@@ -4,7 +4,7 @@
   "scope": "whitebox",
   "locale": "de",
   "name": "Deutsches Whitebox-Sprachpaket",
-  "updatedAt": "2026-09-25T15:50:23.110Z",
+  "updatedAt": "2026-09-25T16:12:40.276Z",
   "translations": {
     "processing": {
       "toolMeta": {
@@ -13696,7 +13696,7 @@
           },
           "getis_ord_gi_star_raster": {
             "name": "Getis-Ord Gi*, Raster",
-            "description": "Berechnet Gi*-Klassifikationen von Hotspots/Coldspots aus Punkten und gibt ein Raster aus (-1=kalt, 0=NS, 1=heiß). Für hotspotbasierte Analysen.\\",
+            "description": "Berechnet Gi*-Klassifikationen von Hotspots/Coldspots aus Punkten und gibt ein Raster aus (-1=kalt, 0=NS, 1=heiß). Für hotspotbasierte Analysen.",
             "params": {
               "input": {
                 "label": "Eingabe",

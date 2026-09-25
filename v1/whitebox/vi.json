@@ -4,7 +4,7 @@
   "scope": "whitebox",
   "locale": "vi",
   "name": "Gói ngôn ngữ tiếng Việt cho Whitebox",
-  "updatedAt": "2026-09-25T16:06:53.574Z",
+  "updatedAt": "2026-09-25T16:12:41.577Z",
   "translations": {
     "processing": {
       "toolMeta": {
@@ -13696,7 +13696,7 @@
           },
           "getis_ord_gi_star_raster": {
             "name": "Getis-Ord Gi* raster",
-            "description": "Tính phân loại điểm nóng/điểm lạnh Gi* từ các điểm và xuất ra raster (-1=lạnh, 0=NS, 1=nóng). Dành cho phân tích dựa trên điểm nóng.\\",
+            "description": "Tính phân loại điểm nóng/điểm lạnh Gi* từ các điểm và xuất ra raster (-1=lạnh, 0=NS, 1=nóng). Dành cho phân tích dựa trên điểm nóng.",
             "params": {
               "input": {
                 "label": "Đầu vào",

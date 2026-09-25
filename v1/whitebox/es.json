@@ -4,7 +4,7 @@
   "scope": "whitebox",
   "locale": "es",
   "name": "Paquete de idioma español para Whitebox",
-  "updatedAt": "2026-09-25T15:47:54.365Z",
+  "updatedAt": "2026-09-25T16:12:40.399Z",
   "translations": {
     "processing": {
       "toolMeta": {
@@ -13696,7 +13696,7 @@
           },
           "getis_ord_gi_star_raster": {
             "name": "Gi* de Getis-Ord ráster",
-            "description": "Calcula clasificaciones de puntos calientes/fríos Gi* a partir de puntos y genera un ráster (-1=frío, 0=NS, 1=caliente). Para el análisis basado en puntos calientes.\\",
+            "description": "Calcula clasificaciones de puntos calientes/fríos Gi* a partir de puntos y genera un ráster (-1=frío, 0=NS, 1=caliente). Para el análisis basado en puntos calientes.",
             "params": {
               "input": {
                 "label": "Entrada",

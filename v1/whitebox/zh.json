@@ -13696,7 +13696,7 @@
           },
           "getis_ord_gi_star_raster": {
             "name": "Getis-Ord Gi* (栅格)",
-            "description": "根据点计算 Gi* 热点/冷点分类，并输出栅格（-1=冷点，0=NS，1=热点）。用于基于热点的分析。\\",
+            "description": "根据点计算 Gi* 热点/冷点分类，并输出栅格（-1=冷点，0=NS，1=热点）。用于基于热点的分析。",
             "params": {
               "input": {
                 "label": "输入",
