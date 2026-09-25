@@ -6,11 +6,11 @@
  * Chunks contain only the strings still missing from `translations/<locale>.json`,
  * so re-running after a partial pass emits just the remaining work. Each line is
  * `<source>\t<source>`: fill in the second column and feed the file back through
- * `scripts/import.mjs`. `lib.mjs` asserts that no pack string contains a tab or
- * a newline, so the format stays unambiguous.
+ * `scripts/import.mjs`. `lib.mjs` asserts that no pack string contains a tab,
+ * and newlines are written as a literal `\n`, so the format stays unambiguous.
  */
 import { writeFileSync, mkdirSync } from "node:fs";
-import { root, sourceStrings, translationMemory } from "./lib.mjs";
+import { root, sourceStrings, translationMemory, encodeCell } from "./lib.mjs";
 
 const CHUNK_CHARS = 20_000;
 const [locale, outDir = "work"] = process.argv.slice(2);
@@ -31,7 +31,7 @@ let chars = 0;
 let role = null;
 for (const entry of todo) {
   // A line is `<source>\t<source>\n`, so it costs twice the string plus two.
-  const lineChars = 2 * entry.text.length + 2;
+  const lineChars = 2 * encodeCell(entry.text).length + 2;
   if (entry.role !== role || chars + lineChars > CHUNK_CHARS) {
     if (current.length) chunks.push(current);
     current = [];
@@ -47,7 +47,7 @@ const target = new URL(`${outDir}/${locale}/`, root);
 mkdirSync(target, { recursive: true });
 chunks.forEach((chunk, index) => {
   const name = `chunk-${String(index + 1).padStart(2, "0")}-${chunk[0].role}.tsv`;
-  writeFileSync(new URL(name, target), chunk.map((e) => `${e.text}\t${e.text}`).join("\n") + "\n");
+  writeFileSync(new URL(name, target), chunk.map((e) => `${encodeCell(e.text)}\t${encodeCell(e.text)}`).join("\n") + "\n");
 });
 console.log(
   `${locale}: ${todo.length} strings left (${chunks.length} chunks) in ${outDir}/${locale}/`,

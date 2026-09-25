@@ -12,7 +12,7 @@
  * locale.
  */
 import { readFileSync, writeFileSync, readdirSync, existsSync } from "node:fs";
-import { root, sourceStrings, translationMemory, orderMemory } from "./lib.mjs";
+import { root, sourceStrings, translationMemory, orderMemory, decodeCell } from "./lib.mjs";
 
 const args = process.argv.slice(2);
 const flags = new Set(args.filter((a) => a.startsWith("--")));
@@ -33,8 +33,8 @@ for (const file of readdirSync(dir).filter((name) => name.endsWith(".tsv")).sort
     if (!line) return;
     const tab = line.indexOf("\t");
     if (tab < 1) throw new Error(`${file}:${index + 1}: expected "<source>\\t<translation>"`);
-    const source = line.slice(0, tab);
-    const translation = line.slice(tab + 1).trim();
+    const source = decodeCell(line.slice(0, tab));
+    const translation = decodeCell(line.slice(tab + 1).trim());
     if (!sources.has(source)) throw new Error(`${file}:${index + 1}: not a string in en.json: ${JSON.stringify(source)}`);
     if (!translation) throw new Error(`${file}:${index + 1}: empty translation`);
     if (translation === source && !flags.has("--keep-identical")) {

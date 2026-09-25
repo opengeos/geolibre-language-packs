@@ -4,16 +4,16 @@
  * `v1/whitebox/en.json` repeats the same English string many times: 1,066 tools
  * share ~1,800 distinct parameter labels, and `whitebox.menuTool` is a verbatim
  * copy of every `toolMeta.whitebox.<tool>.name`. Translating the file as-is
- * would mean translating 14,938 leaves; translating the distinct strings means
- * 7,181. A translation memory is therefore keyed by the English string itself,
+ * would mean translating 15,670 leaves; translating the distinct strings means
+ * 7,913. A translation memory is therefore keyed by the English string itself,
  * and `buildPack` re-expands it, so one English string always renders the same
  * way everywhere it appears.
  *
  * Both the walk and the rebuild are generic over the English tree rather than
- * hard-coded to its current shape. That is not hypothetical tidiness: 333 tools
- * carry a tool-level `description` alongside `name` and `params`, and an
- * extractor written against the shape "name + params" silently skips all of
- * them.
+ * hard-coded to its current shape. That is not hypothetical tidiness: 1,065
+ * tools carry a tool-level `description` (their summary) alongside `name` and
+ * `params`, and an extractor written against the shape "name + params" silently
+ * skips all of them.
  */
 import { readFileSync, existsSync } from "node:fs";
 
@@ -46,9 +46,13 @@ function walkEnglish() {
   const out = [];
   (function walk(value, path) {
     if (typeof value === "string") {
-      // The work-chunk format is one tab-separated pair per line; a source
-      // string containing either character would silently corrupt a chunk.
-      if (/[\t\n\r]/.test(value)) throw new Error(`en.json: ${path.join(".")} contains a tab or newline`);
+      // The work-chunk format is one tab-separated pair per line. Newlines are
+      // escaped as a literal `\n` there (see `encodeCell`), so a source string
+      // may contain one; a tab, a carriage return, or a literal backslash-n
+      // would make the round trip ambiguous and silently corrupt a chunk.
+      if (/[\t\r]|\\n/.test(value)) {
+        throw new Error(`en.json: ${path.join(".")} contains a tab, carriage return or literal \\n`);
+      }
       out.push({ role: roleFor(path), text: value });
       return;
     }
@@ -59,6 +63,16 @@ function walkEnglish() {
   })(en, []);
   return out;
 }
+
+/**
+ * A string as it appears in a work chunk. Ten Whitebox summaries run to several
+ * paragraphs, and a raw newline would split their line in two, so newlines are
+ * written as a literal `\n` and restored by `decodeCell` on import.
+ */
+export const encodeCell = (text) => text.replaceAll("\n", "\\n");
+
+/** Inverse of `encodeCell`. */
+export const decodeCell = (cell) => cell.replaceAll("\\n", "\n");
 
 /**
  * The distinct translatable strings, grouped by role. Grouping matters for

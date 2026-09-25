@@ -8,7 +8,7 @@ Whitebox pack**. This document is the workflow that produced the eighteen —
 
 ## Why there is a pipeline
 
-`v1/whitebox/en.json` holds **14,938 message leaves**, but only **7,181 distinct
+`v1/whitebox/en.json` holds **15,670 message leaves**, but only **7,913 distinct
 strings**. 1,066 tools share ~1,800 parameter labels between them, and
 `whitebox.menuTool` is a verbatim copy of every `toolMeta.whitebox.<tool>.name`.
 Translating the file directly means doing twice the work and getting a pack that
@@ -63,7 +63,7 @@ variants.
 | `subcategory` | 45 | Menu subcategories |
 | `toolname` | 1,060 | Tool display names (also used for the menu entries) |
 | `label` | 1,792 | Parameter labels |
-| `tooldesc` | 333 | Tool-level descriptions — one or two sentences |
+| `tooldesc` | 1,065 | Tool summaries — one sentence to several paragraphs |
 | `description` | 3,903 | Parameter descriptions — the bulk of the work |
 
 Roles are emitted in that order, so the strings that dominate the UI get
@@ -97,16 +97,16 @@ there pins it; leaving it out stamps the build date.
 
 ## Where each locale stands
 
-All 19 translated locales are complete: 7,181 / 7,181 distinct source strings
-each, expanding to 14,938 message leaves per pack. `v1/whitebox/` holds 20 packs
+All 19 translated locales are complete: 7,913 / 7,913 distinct source strings
+each, expanding to 15,670 message leaves per pack. `v1/whitebox/` holds 20 packs
 (the 19 plus the English template) and
 `scripts/build.mjs <locale>` reports "complete" for every one without `--partial`.
 
 | Locale | Translated | Notes |
 | --- | --- | --- |
 | `en` | — | the source pack; never edited |
-| `zh` | 7,181 / 7,181 | harvested from the published pack, then normalised |
-| `ar` `de` `es` `fa` `fr` `he` `hi` `id` `it` `ja` `ka` `ko` `nl` `pt` `ru` `th` `tr` `vi` | 7,181 / 7,181 | translated through the loop above |
+| `zh` | 7,913 / 7,913 | harvested from the published pack, then normalised |
+| `ar` `de` `es` `fa` `fr` `he` `hi` `id` `it` `ja` `ka` `ko` `nl` `pt` `ru` `th` `tr` `vi` | 7,913 / 7,913 | translated through the loop above |
 
 A handful of strings are deliberately identical to their English source in every
 locale — bare acronyms (`OBIA`, `SAR`), math function names (`Cos`, `Ln`,
@@ -123,10 +123,28 @@ visibly mixed. The final build of every pack must be run without it.
 
 ## Three things that are easy to get wrong
 
-**333 tools carry a tool-level `description`** alongside `name` and `params`, and
-only those 333 do. An extractor written against the shape "name + params" walks
-right past them and loses 333 strings without erroring. `lib.mjs` therefore walks
-the English tree generically rather than assuming its shape; keep it that way.
+**A tool's `description` is its summary, and only `sync-summaries.mjs` writes
+it.** GeoLibre renders the summary above a tool's parameters through
+`processing.toolMeta.whitebox.<tool>.description`, falling back to the English
+text, so a tool with no `description` in `en.json` stays English in every
+locale. The pack originally carried one for only the 333 GeoLibre-authored
+tools, and an extractor written against the shape "name + params" walked past
+even those without erroring. `lib.mjs` therefore walks the English tree
+generically rather than assuming its shape; keep it that way. When the Whitebox
+catalog changes, refresh the summaries from a GeoLibre checkout that has run
+`npm install`:
+
+```sh
+node scripts/sync-summaries.mjs ../GeoLibre   # reads node_modules/geolibre-wasm
+```
+
+It takes the WASM manifest `summary` (what the browser build shows), falls back
+to the desktop catalog snapshot for sidecar-only tools, and then the new text is
+the only work `extract.mjs` emits. `reproject_lidar` has no summary in either
+source, so it has no `description`. Ten summaries (`mean_filter`,
+`median_filter` and the other moving-window filters) span several paragraphs;
+chunks write their newlines as a literal `\n` and `import.mjs` restores them, so
+keep each `\n` in place when translating.
 
 **Rebuilding `zh` normalises 31 leaves.** The published pack rendered 13 English
 strings two different ways — `Zero Background` was both `零背景` and `背景为零`,
