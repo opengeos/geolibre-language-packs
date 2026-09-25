@@ -6,7 +6,7 @@
       "name": "English Whitebox translator template",
       "scope": "whitebox",
       "url": "https://languages.geolibre.app/v1/whitebox/en.json",
-      "bytes": 1662907,
+      "bytes": 1662904,
       "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
@@ -14,15 +14,15 @@
       "name": "حزمة اللغة العربية لـ Whitebox",
       "scope": "whitebox",
       "url": "https://languages.geolibre.app/v1/whitebox/ar.json",
-      "bytes": 2204342,
-      "updatedAt": "2026-09-25T15:52:02.736Z"
+      "bytes": 2204343,
+      "updatedAt": "2026-09-25T16:57:54.945Z"
     },
     {
       "locale": "zh",
       "name": "简体中文 Whitebox 语言包",
       "scope": "whitebox",
       "url": "https://languages.geolibre.app/v1/whitebox/zh.json",
-      "bytes": 1535664,
+      "bytes": 1535722,
       "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
@@ -30,136 +30,136 @@
       "name": "Nederlands Whitebox-taalpakket",
       "scope": "whitebox",
       "url": "https://languages.geolibre.app/v1/whitebox/nl.json",
-      "bytes": 1806523,
-      "updatedAt": "2026-09-25T16:12:40.989Z"
+      "bytes": 1806535,
+      "updatedAt": "2026-09-25T16:57:57.026Z"
     },
     {
       "locale": "fr",
       "name": "Pack de langue française pour Whitebox",
       "scope": "whitebox",
       "url": "https://languages.geolibre.app/v1/whitebox/fr.json",
-      "bytes": 1889342,
-      "updatedAt": "2026-09-25T15:48:13.545Z"
+      "bytes": 1889352,
+      "updatedAt": "2026-09-25T16:57:55.641Z"
     },
     {
       "locale": "ka",
       "name": "Whitebox-ის ქართული ენის პაკეტი",
       "scope": "whitebox",
       "url": "https://languages.geolibre.app/v1/whitebox/ka.json",
-      "bytes": 3371577,
-      "updatedAt": "2026-09-25T16:12:40.747Z"
+      "bytes": 3371604,
+      "updatedAt": "2026-09-25T16:57:56.674Z"
     },
     {
       "locale": "de",
       "name": "Deutsches Whitebox-Sprachpaket",
       "scope": "whitebox",
       "url": "https://languages.geolibre.app/v1/whitebox/de.json",
-      "bytes": 1812318,
-      "updatedAt": "2026-09-25T16:12:40.276Z"
+      "bytes": 1812326,
+      "updatedAt": "2026-09-25T16:57:55.121Z"
     },
     {
       "locale": "he",
       "name": "חבילת השפה העברית של Whitebox",
       "scope": "whitebox",
       "url": "https://languages.geolibre.app/v1/whitebox/he.json",
-      "bytes": 2045678,
-      "updatedAt": "2026-09-25T15:53:18.211Z"
+      "bytes": 2045680,
+      "updatedAt": "2026-09-25T16:57:55.817Z"
     },
     {
       "locale": "hi",
       "name": "Whitebox हिन्दी भाषा पैक",
       "scope": "whitebox",
       "url": "https://languages.geolibre.app/v1/whitebox/hi.json",
-      "bytes": 2858729,
-      "updatedAt": "2026-09-25T16:12:40.519Z"
+      "bytes": 2858765,
+      "updatedAt": "2026-09-25T16:57:55.990Z"
     },
     {
       "locale": "id",
       "name": "Paket bahasa Indonesia untuk Whitebox",
       "scope": "whitebox",
       "url": "https://languages.geolibre.app/v1/whitebox/id.json",
-      "bytes": 1737086,
-      "updatedAt": "2026-09-25T15:39:01.657Z"
+      "bytes": 1737091,
+      "updatedAt": "2026-09-25T16:57:56.168Z"
     },
     {
       "locale": "it",
       "name": "Pacchetto lingua italiana per Whitebox",
       "scope": "whitebox",
       "url": "https://languages.geolibre.app/v1/whitebox/it.json",
-      "bytes": 1859055,
-      "updatedAt": "2026-09-25T16:12:40.628Z"
+      "bytes": 1859058,
+      "updatedAt": "2026-09-25T16:57:56.330Z"
     },
     {
       "locale": "ja",
       "name": "Whitebox 日本語言語パック",
       "scope": "whitebox",
       "url": "https://languages.geolibre.app/v1/whitebox/ja.json",
-      "bytes": 1926172,
-      "updatedAt": "2026-09-25T15:48:23.506Z"
+      "bytes": 1926281,
+      "updatedAt": "2026-09-25T16:57:56.501Z"
     },
     {
       "locale": "ko",
       "name": "Whitebox 한국어 언어 팩",
       "scope": "whitebox",
       "url": "https://languages.geolibre.app/v1/whitebox/ko.json",
-      "bytes": 1776307,
-      "updatedAt": "2026-09-25T16:12:40.872Z"
+      "bytes": 1776398,
+      "updatedAt": "2026-09-25T16:57:56.857Z"
     },
     {
       "locale": "fa",
       "name": "بستهٔ زبان فارسی Whitebox",
       "scope": "whitebox",
       "url": "https://languages.geolibre.app/v1/whitebox/fa.json",
-      "bytes": 2234732,
-      "updatedAt": "2026-09-25T15:39:24.706Z"
+      "bytes": 2234801,
+      "updatedAt": "2026-09-25T16:57:55.470Z"
     },
     {
       "locale": "pt",
       "name": "Pacote de idioma português para Whitebox",
       "scope": "whitebox",
       "url": "https://languages.geolibre.app/v1/whitebox/pt.json",
-      "bytes": 1845437,
-      "updatedAt": "2026-09-25T16:12:41.103Z"
+      "bytes": 1845445,
+      "updatedAt": "2026-09-25T16:57:57.200Z"
     },
     {
       "locale": "ru",
       "name": "Русский языковой пакет Whitebox",
       "scope": "whitebox",
       "url": "https://languages.geolibre.app/v1/whitebox/ru.json",
-      "bytes": 2516674,
-      "updatedAt": "2026-09-25T16:12:41.221Z"
+      "bytes": 2516684,
+      "updatedAt": "2026-09-25T16:57:57.372Z"
     },
     {
       "locale": "es",
       "name": "Paquete de idioma español para Whitebox",
       "scope": "whitebox",
       "url": "https://languages.geolibre.app/v1/whitebox/es.json",
-      "bytes": 1877817,
-      "updatedAt": "2026-09-25T16:12:40.399Z"
+      "bytes": 1877818,
+      "updatedAt": "2026-09-25T16:57:55.303Z"
     },
     {
       "locale": "th",
       "name": "ชุดภาษาไทยสำหรับ Whitebox",
       "scope": "whitebox",
       "url": "https://languages.geolibre.app/v1/whitebox/th.json",
-      "bytes": 3060546,
-      "updatedAt": "2026-09-25T16:12:41.337Z"
+      "bytes": 3060577,
+      "updatedAt": "2026-09-25T16:57:57.552Z"
     },
     {
       "locale": "tr",
       "name": "Whitebox Türkçe dil paketi",
       "scope": "whitebox",
       "url": "https://languages.geolibre.app/v1/whitebox/tr.json",
-      "bytes": 1842406,
-      "updatedAt": "2026-09-25T16:12:41.454Z"
+      "bytes": 1842511,
+      "updatedAt": "2026-09-25T16:57:57.719Z"
     },
     {
       "locale": "vi",
       "name": "Gói ngôn ngữ tiếng Việt cho Whitebox",
       "scope": "whitebox",
       "url": "https://languages.geolibre.app/v1/whitebox/vi.json",
-      "bytes": 2000649,
-      "updatedAt": "2026-09-25T16:12:41.577Z"
+      "bytes": 2000656,
+      "updatedAt": "2026-09-25T16:57:57.898Z"
     }
   ]
 }
