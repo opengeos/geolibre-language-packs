@@ -1,8 +1,8 @@
 # Translating a Whitebox pack
 
-GeoLibre ships catalogs for 20 languages, and **all 20 have a complete
-Whitebox pack**. This document is the workflow that produced the eighteen —
-`ar`, `de`, `es`, `fa`, `fr`, `he`, `hi`, `id`, `it`, `ja`, `ka`, `ko`, `nl`,
+GeoLibre ships catalogs for 21 languages, and **all 21 have a complete
+Whitebox pack**. This document is the workflow that produced the nineteen —
+`ar`, `az`, `de`, `es`, `fa`, `fr`, `he`, `hi`, `id`, `it`, `ja`, `ka`, `ko`, `nl`,
 `pt`, `ru`, `th`, `tr`, `vi` — and the reference for re-running it when
 `en.json` changes, or when GeoLibre adds a language.
 
@@ -97,16 +97,16 @@ there pins it; leaving it out stamps the build date.
 
 ## Where each locale stands
 
-All 19 translated locales are complete: 7,913 / 7,913 distinct source strings
-each, expanding to 15,670 message leaves per pack. `v1/whitebox/` holds 20 packs
-(the 19 plus the English template) and
+All 20 translated locales are complete: 7,913 / 7,913 distinct source strings
+each, expanding to 15,670 message leaves per pack. `v1/whitebox/` holds 21 packs
+(the 20 plus the English template) and
 `scripts/build.mjs <locale>` reports "complete" for every one without `--partial`.
 
 | Locale | Translated | Notes |
 | --- | --- | --- |
 | `en` | — | the source pack; never edited |
 | `zh` | 7,913 / 7,913 | harvested from the published pack, then normalised |
-| `ar` `de` `es` `fa` `fr` `he` `hi` `id` `it` `ja` `ka` `ko` `nl` `pt` `ru` `th` `tr` `vi` | 7,913 / 7,913 | translated through the loop above |
+| `ar` `az` `de` `es` `fa` `fr` `he` `hi` `id` `it` `ja` `ka` `ko` `nl` `pt` `ru` `th` `tr` `vi` | 7,913 / 7,913 | translated through the loop above |
 
 A handful of strings are deliberately identical to their English source in every
 locale — bare acronyms (`OBIA`, `SAR`), math function names (`Cos`, `Ln`,

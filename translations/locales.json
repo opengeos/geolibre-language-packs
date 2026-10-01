@@ -10,6 +10,11 @@
     "nativeName": "العربية",
     "name": "حزمة اللغة العربية لـ Whitebox"
   },
+  "az": {
+    "englishName": "Azerbaijani",
+    "nativeName": "Azərbaycanca",
+    "name": "Whitebox üçün Azərbaycan dili paketi"
+  },
   "de": {
     "englishName": "German",
     "nativeName": "Deutsch",
