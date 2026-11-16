@@ -182,7 +182,8 @@ npm test
 - **Taiwan** uses OpenCC's `s2twp` config (Taiwan characters and phrasing, such
   as 軟體 and 檔案), then a list of Taiwan GIS and software term fixes in the
   script (資料, 偵測, 信賴度, 圖磚, 本機, ...).
-- **Hong Kong** uses `s2hk`: Hong Kong characters with Hong Kong vocabulary.
+- **Hong Kong** uses `s2hk`: Hong Kong characters with Hong Kong vocabulary,
+  except that the official form 户 is written 戶, as Hong Kong software does.
 - **Macau** follows Hong Kong conventions and OpenCC has no Macau config, so its
   memory starts as a copy of `zh-HK`.
 

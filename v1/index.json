@@ -39,7 +39,7 @@
       "scope": "whitebox",
       "url": "https://languages.geolibre.app/v1/whitebox/zh-HK.json",
       "bytes": 1535736,
-      "updatedAt": "2026-11-16T13:43:59.827Z"
+      "updatedAt": "2026-11-16T13:55:17.898Z"
     },
     {
       "locale": "zh-MO",
@@ -47,7 +47,7 @@
       "scope": "whitebox",
       "url": "https://languages.geolibre.app/v1/whitebox/zh-MO.json",
       "bytes": 1535736,
-      "updatedAt": "2026-11-16T13:43:59.976Z"
+      "updatedAt": "2026-11-16T13:55:18.064Z"
     },
     {
       "locale": "zh-TW",
@@ -55,7 +55,7 @@
       "scope": "whitebox",
       "url": "https://languages.geolibre.app/v1/whitebox/zh-TW.json",
       "bytes": 1539450,
-      "updatedAt": "2026-11-16T13:43:59.678Z"
+      "updatedAt": "2026-11-16T13:55:17.739Z"
     },
     {
       "locale": "nl",

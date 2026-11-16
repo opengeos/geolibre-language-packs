@@ -8,8 +8,9 @@ Usage (needs ``pip install opencc``)::
 
 ``translations/zh.json`` is the source. Taiwan uses OpenCC's ``s2twp`` config
 (Taiwan characters and phrasing) plus the term fixes below. Hong Kong uses
-``s2hk`` (Hong Kong characters, Hong Kong vocabulary), and Macau, which follows
-Hong Kong conventions and has no OpenCC config of its own, gets the same text.
+``s2hk`` (Hong Kong characters, Hong Kong vocabulary, with 户 written 戶), and
+Macau, which follows Hong Kong conventions and has no OpenCC config of its
+own, gets the same text.
 All three switch “…” quotes to 「…」. GeoLibre's bundled zh-TW/zh-HK/zh-MO
 interface catalogs are generated the same way, so the two stay consistent.
 """
@@ -115,6 +116,9 @@ def convert_memory(memory, config):
         text = converter.convert(simplified)
         if config == "s2twp":
             text = taiwan_terms(text)
+        elif config == "s2hk":
+            # s2hk emits the HK-standard 户, which reads as Simplified; HK software uses 戶.
+            text = text.replace("户", "戶")
         out[english] = corner_quotes(text)
     return out
 
