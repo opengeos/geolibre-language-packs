@@ -34,6 +34,30 @@
       "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
+      "locale": "zh-HK",
+      "name": "繁體中文（香港）Whitebox 語言包",
+      "scope": "whitebox",
+      "url": "https://languages.geolibre.app/v1/whitebox/zh-HK.json",
+      "bytes": 1535736,
+      "updatedAt": "2026-11-16T13:55:17.898Z"
+    },
+    {
+      "locale": "zh-MO",
+      "name": "繁體中文（澳門）Whitebox 語言包",
+      "scope": "whitebox",
+      "url": "https://languages.geolibre.app/v1/whitebox/zh-MO.json",
+      "bytes": 1535736,
+      "updatedAt": "2026-11-16T13:55:18.064Z"
+    },
+    {
+      "locale": "zh-TW",
+      "name": "繁體中文（台灣）Whitebox 語言包",
+      "scope": "whitebox",
+      "url": "https://languages.geolibre.app/v1/whitebox/zh-TW.json",
+      "bytes": 1539450,
+      "updatedAt": "2026-11-16T13:55:17.739Z"
+    },
+    {
       "locale": "nl",
       "name": "Nederlands Whitebox-taalpakket",
       "scope": "whitebox",
