@@ -1,10 +1,12 @@
 # Translating a Whitebox pack
 
-GeoLibre ships catalogs for 21 languages, and **all 21 have a complete
+GeoLibre ships catalogs for 24 languages, and **all 24 have a complete
 Whitebox pack**. This document is the workflow that produced the nineteen —
 `ar`, `az`, `de`, `es`, `fa`, `fr`, `he`, `hi`, `id`, `it`, `ja`, `ka`, `ko`, `nl`,
 `pt`, `ru`, `th`, `tr`, `vi` — and the reference for re-running it when
-`en.json` changes, or when GeoLibre adds a language.
+`en.json` changes, or when GeoLibre adds a language. The three Traditional
+Chinese packs are derived from `zh` instead; see
+[Traditional Chinese](#traditional-chinese).
 
 ## Why there is a pipeline
 
@@ -97,15 +99,16 @@ there pins it; leaving it out stamps the build date.
 
 ## Where each locale stands
 
-All 20 translated locales are complete: 7,913 / 7,913 distinct source strings
-each, expanding to 15,670 message leaves per pack. `v1/whitebox/` holds 21 packs
-(the 20 plus the English template) and
+All 23 translated locales are complete: 7,913 / 7,913 distinct source strings
+each, expanding to 15,670 message leaves per pack. `v1/whitebox/` holds 24 packs
+(the 23 plus the English template) and
 `scripts/build.mjs <locale>` reports "complete" for every one without `--partial`.
 
 | Locale | Translated | Notes |
 | --- | --- | --- |
 | `en` | — | the source pack; never edited |
 | `zh` | 7,913 / 7,913 | harvested from the published pack, then normalised |
+| `zh-TW` `zh-HK` `zh-MO` | 7,913 / 7,913 | converted from `zh` by `scripts/zh-traditional.py` |
 | `ar` `az` `de` `es` `fa` `fr` `he` `hi` `id` `it` `ja` `ka` `ko` `nl` `pt` `ru` `th` `tr` `vi` | 7,913 / 7,913 | translated through the loop above |
 
 A handful of strings are deliberately identical to their English source in every
@@ -160,6 +163,33 @@ new name — the same work, emitted twice. When several people or agents transla
 one locale in parallel, extract once at the start, then use `ls work/<locale>/`
 to see what is left; the chunk files themselves are the work queue, and
 `import.mjs` is what retires an entry from it.
+
+## Traditional Chinese
+
+`zh-TW` (Taiwan), `zh-HK` (Hong Kong) and `zh-MO` (Macau) are not translated
+through the loop. Their memories are converted from `translations/zh.json` with
+[OpenCC](https://github.com/BYVoid/OpenCC), the same way GeoLibre generates its
+bundled `zh-TW`/`zh-HK`/`zh-MO` interface catalogs:
+
+```sh
+pip install opencc
+python scripts/zh-traditional.py   # rewrites translations/zh-{TW,HK,MO}.json
+node scripts/build.mjs zh-TW && node scripts/build.mjs zh-HK && node scripts/build.mjs zh-MO
+node scripts/reindex.mjs
+npm test
+```
+
+- **Taiwan** uses OpenCC's `s2twp` config (Taiwan characters and phrasing, such
+  as 軟體 and 檔案), then a list of Taiwan GIS and software term fixes in the
+  script (資料, 偵測, 信賴度, 圖磚, 本機, ...).
+- **Hong Kong** uses `s2hk`: Hong Kong characters with Hong Kong vocabulary.
+- **Macau** follows Hong Kong conventions and OpenCC has no Macau config, so its
+  memory starts as a copy of `zh-HK`.
+
+All three use 「…」 quotes. Re-run the script whenever `translations/zh.json`
+changes, rather than editing the three memories by hand, or the next run will
+overwrite the edits. Corrections from Taiwan, Hong Kong and Macau readers belong
+in the script's term list.
 
 ## Recovering a memory
 
